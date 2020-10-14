@@ -1,0 +1,42 @@
+.wrapper{
+  background-color: #ededbb;
+  width: 100vw;
+  height: 100vh;
+  overflow: scroll;
+}
+
+.title{
+  background-color: #ddc9a6;
+  color: #555555;
+  height: 120px;
+  font-size: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sec-wrapper{
+  height: 80px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.current_user{
+  font-size: 25px;
+  display: flex;
+}
+
+.search-form{
+  font-size: 30px;
+  padding-left: 20px;
+}
+
+.time-line{
+  display: flex;
+  justify-content: space-around;
+  height: calc(100vh - 120px);
+  padding: 50px;
+}
+
+
