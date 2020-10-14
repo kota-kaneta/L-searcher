@@ -15,7 +15,34 @@
   align-items: center;
 }
 
+a.title_link:link,
+a.title_link:visited,
+a.title_link:hover,
+a.title_link:active{
+  color: #555555;
+}
+
+.head_bar{
+  height: 40px;
+  font-size: 25px;
+}
+
+.please{
+  padding: 10px;
+  font-size: 18px;
+  color: red;
+}
+
+.field{
+  font-size: 25px;
+}
+
+.actions{
+  padding-top: 10px;
+}
+
 .sec-wrapper{
+  font-size: 25px;
   height: 80px;
   display: flex;
   justify-content: space-around;
@@ -23,20 +50,31 @@
 }
 
 .current_user{
-  font-size: 25px;
   display: flex;
 }
 
 .search-form{
-  font-size: 30px;
   padding-left: 20px;
 }
 
 .time-line{
+  font-size: 25px;
   display: flex;
   justify-content: space-around;
   height: calc(100vh - 120px);
   padding: 50px;
+}
+
+a{
+  text-decoration: none;
+}
+
+a:hover {
+  color: red;
+}
+
+a:active {
+  color: green;
 }
 
 

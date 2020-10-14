@@ -1,8 +1,6 @@
-<div class="wrapper">
-    <%= render "title" %>
-  <div class="sec-wrapper">
+<div class="sec-wrapper">
     <div class="current_user">
-  ユーザ名
+      <%= current_user.name%>
     </div>
     <div class="search-form">
       <%= form_with(url: "", local: true, method: :get) do |form| %>
@@ -11,5 +9,12 @@
       <% end %>
     </div>
   </div>
-    <%= render "main"%>
+  <div class="time-line">
+    <div class="l_user">
+      暇なユーザ名
+    </div>
+    <div class="times">
+      from_timeからto_timeまで
+    </div>
+  </div>
 </div>

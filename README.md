@@ -23,7 +23,7 @@
 | w_day        | integer | null: false |
 | from_time_id | integer | null: false |
 | to_time_id   | integer | null: false |
-| location_id  | integer | null: false | 
+| location     | string  |             | 
 
 ### Association
 
