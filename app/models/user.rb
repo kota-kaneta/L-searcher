@@ -5,6 +5,8 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   validates :name, :search_number, presence: true
+  validates :search_number, uniqueness: true, format: { with: /\A\d{8}\z/ }
 
   has_many :schedules
+  has_one_attached :image
 end

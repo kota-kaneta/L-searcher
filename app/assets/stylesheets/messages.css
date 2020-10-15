@@ -27,6 +27,17 @@ a.title_link:active{
   font-size: 25px;
 }
 
+
+
+.user_nav{
+  display: flex;
+  justify-content: space-around;
+}
+
+.log_nav{
+  justify-content: left;
+}
+
 .please{
   padding: 10px;
   font-size: 18px;
@@ -76,5 +87,6 @@ a:hover {
 a:active {
   color: green;
 }
+
 
 

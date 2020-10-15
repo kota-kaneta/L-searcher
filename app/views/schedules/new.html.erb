@@ -1,1 +1,7 @@
 新規スケジュール登録画面
+<%= form_with(model: @schedule, local: true) do |f| %>
+  <%= f.collection_select(:w_day_id, W_day.all, :id, :name, {} , {class:"w_day-select"}) %>
+  
+  <%= f.submit "SEND" %>
+<% end %>
+<%= link_to "Back", :back %>
