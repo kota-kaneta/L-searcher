@@ -5,4 +5,6 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   validates :name, :search_number, presence: true
+
+  has_many :schedules
 end

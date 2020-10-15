@@ -18,6 +18,7 @@
       <% if user_signed_in? %>
         <div class="user_nav grid-6">
         <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+        <%= link_to "スケジュールを登録する", new_schedule_path %>
         </div>
       <% else %>
         <div class="grid-6">

@@ -1,6 +1,6 @@
 <div class="sec-wrapper">
     <div class="current_user">
-      <%= current_user.name%>
+      <%= link_to current_user.name, edit_user_path(current_user.id) %>
     </div>
     <div class="search-form">
       <%= form_with(url: "", local: true, method: :get) do |form| %>
