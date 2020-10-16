@@ -1,0 +1,16 @@
+<p><%= current_user.name %>の暇な時間</p>
+<div class="current_search">
+<%= "ユーザーID：#{current_user.search_number}"%>
+</div>
+
+
+
+
+
+
+
+<% unless current_user.schedule %>
+  <%= link_to "スケジュールを登録する", new_schedule_path %>
+<% else %>
+  <%= link_to "スケジュールを変更する", "" %>
+<% end %>

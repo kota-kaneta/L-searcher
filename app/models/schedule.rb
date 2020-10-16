@@ -1,10 +1,6 @@
 class Schedule < ApplicationRecord
-  extend ActiveHash::Associations::ActiveRecordExtensions
-  belongs_to_active_hash :w_day
-  belongs_to_active_hash :from_time
-  belongs_to_active_hash :to_time
-  belongs_to :user
+  belongs_to :user, optional: true
 
-  validates :w_day_id, :from_time_id, :to_time_id, presence: true
-  validates :w_day_id, :from_time_id, :to_time_id, numericality: { other_than: 1 }
+  validates :from_time_sun, :to_time_sun, :from_time_mon, :to_time_mon, :from_time_tue, :to_time_tue, :from_time_wed, :to_time_wed, :from_time_thu, :to_time_thu, :from_time_fri, :to_time_fri, :from_time_sat, :to_time_sat, numericality: { only_integer: true,
+                                                                                                                                                                                                                                              greater_than: 0, less_than: 25 }, allow_blank: true
 end

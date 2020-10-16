@@ -34,12 +34,25 @@ ActiveRecord::Schema.define(version: 2020_10_15_030704) do
   end
 
   create_table "schedules", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.integer "w_day_id", null: false
-    t.integer "from_time_id", null: false
-    t.integer "to_time_id", null: false
+    t.integer "from_time_sun"
+    t.integer "to_time_sun"
+    t.integer "from_time_mon"
+    t.integer "to_time_mon"
+    t.integer "from_time_tue"
+    t.integer "to_time_tue"
+    t.integer "from_time_wed"
+    t.integer "to_time_wed"
+    t.integer "from_time_thu"
+    t.integer "to_time_thu"
+    t.integer "from_time_fri"
+    t.integer "to_time_fri"
+    t.integer "from_time_sat"
+    t.integer "to_time_sat"
     t.string "location"
+    t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_schedules_on_user_id"
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -57,4 +70,5 @@ ActiveRecord::Schema.define(version: 2020_10_15_030704) do
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "schedules", "users"
 end

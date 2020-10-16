@@ -27,8 +27,6 @@ a.title_link:active{
   font-size: 25px;
 }
 
-
-
 .user_nav{
   display: flex;
   justify-content: space-around;
@@ -42,6 +40,12 @@ a.title_link:active{
   padding: 10px;
   font-size: 18px;
   color: red;
+}
+
+.new_schedule{
+  padding: 10px;
+  font-size: 25px;
+  color: violet;
 }
 
 .field{

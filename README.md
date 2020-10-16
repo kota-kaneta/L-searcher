@@ -20,9 +20,8 @@
 
 | Column       | Type    | Options     |
 | ------------ | ------- | ----------- |
-| w_day        | integer | null: false |
-| from_time_id | integer | null: false |
-| to_time_id   | integer | null: false |
+| from_time    | integer | null: false |
+| to_time      | integer | null: false |
 | location     | string  |             | 
 
 ### Association

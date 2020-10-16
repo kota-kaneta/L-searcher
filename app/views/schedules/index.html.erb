@@ -1,6 +1,16 @@
+<div class="head_bar">
+    <div class="user_nav">
+      <div class="log_nav">
+        <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+      </div>
+      <div class="follow_nav">
+        <%= link_to "ユーザーをフォローする", "" %>
+      </div>
+    </div>
+</div>
 <div class="sec-wrapper">
     <div class="current_user">
-      <%= link_to "#{current_user.name}：#{current_user.search_number}", edit_user_registration_path(current_user.id) %>
+    <%= link_to "#{current_user.name}のマイページへ", user_path(current_user.id)%>
     </div>
     <div class="search-form">
       <%= form_with(url: "", local: true, method: :get) do |form| %>
