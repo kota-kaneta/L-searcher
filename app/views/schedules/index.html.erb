@@ -2,6 +2,9 @@
     <div class="user_nav">
       <div class="log_nav">
         <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+        <% unless current_user.schedule %>
+          <%= link_to "スケジュールを登録する", new_schedule_path %>
+        <% end %>
       </div>
       <div class="follow_nav">
         <%= link_to "ユーザーをフォローする", "" %>
@@ -9,9 +12,13 @@
     </div>
 </div>
 <div class="sec-wrapper">
+  <% if @schedule %>
     <div class="current_user">
-    <%= link_to "#{current_user.name}のマイページへ", user_path(current_user.id)%>
+      <%= link_to "#{current_user.name}のマイページへ", user_path(current_user.id)%>
     </div>
+  <% else %>
+      <%= "#{current_user.name}：#{current_user.search_number}"%>
+  <% end %>
     <div class="search-form">
       <%= form_with(url: "", local: true, method: :get) do |form| %>
       <%= form.text_field :keyword, placeholder: "lacation検索", class: "search-input" %>

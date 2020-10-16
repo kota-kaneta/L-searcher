@@ -1,1 +1,38 @@
-スケジュール編集画面
+<div class="head_bar">
+  <p class="new_schedule">スケジュールを編集しましょう</p>
+
+  <%= form_with url: schedule_path, local: true, method: :patch do|f| %>
+    <div class="day_of_week">
+      <div class="sun-new">
+        日曜日:<%= f.text_area :from_time_sun, rows: "1", maxlength: "2", placeholder: "00", value: @schedule.from_time_sun %>〜<%= f.text_area :to_time_sun, rows: "1", maxlength: "2", placeholder: "00", value: @schedule.to_time_sun %>
+      </div>
+      <div class="mon-new">
+        月曜日:<%= f.text_area :from_time_mon, rows: "1", maxlength: "2", placeholder: "00", value: @schedule.from_time_mon %>〜<%= f.text_area :to_time_mon, rows: "1", maxlength: "2", placeholder: "00", value: @schedule.to_time_mon %>
+      </div>
+      <div class="tue-new">
+        火曜日:<%= f.text_area :from_time_tue, rows: "1", maxlength: "2", placeholder: "00", value: @schedule.from_time_tue %>〜<%= f.text_area :to_time_tue, rows: "1", maxlength: "2", placeholder: "00", value: @schedule.to_time_tue %>
+      </div>
+      <div class="wed-new">
+        水曜日:<%= f.text_area :from_time_wed, rows: "1", maxlength: "2", placeholder: "00", value: @schedule.from_time_wed %>〜<%= f.text_area :to_time_wed, rows: "1", maxlength: "2", placeholder: "00", value: @schedule.to_time_wed %>
+      </div>
+      <div class="thu-new">
+        木曜日:<%= f.text_area :from_time_thu, rows: "1", maxlength: "2", placeholder: "00", value: @schedule.from_time_thu %>〜<%= f.text_area :to_time_thu, rows: "1", maxlength: "2", placeholder: "00", value: @schedule.to_time_thu %>
+      </div>
+      <div class="fri-new">
+        金曜日:<%= f.text_area :from_time_fri, rows: "1", maxlength: "2", placeholder: "00", value: @schedule.from_time_fri %>〜<%= f.text_area :to_time_fri, rows: "1", maxlength: "2", placeholder: "00", value: @schedule.to_time_fri %>
+      </div>
+      <div class="sat-new">
+        土曜日:<%= f.text_area :from_time_sat, rows: "1", maxlength: "2", placeholder: "00", value: @schedule.from_time_sat %>〜<%= f.text_area :to_time_sat, rows: "1", maxlength: "2", placeholder: "00", value: @schedule.to_time_sat %>
+      </div>
+      <div class="location">
+        居住地：<%= f.text_area :location, rows: "1", maxlength: "10", placeholder: "東京", value: @schedule.location %>
+      </div>
+    </div>
+    <div class="submit">
+      <%= f.submit "変更する" %>
+    </div>
+  <% end %>
+  <div class="back-link">
+    <%= link_to ">>トップページへ", root_path %>
+  </div>
+</div>

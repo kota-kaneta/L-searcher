@@ -1,16 +1,53 @@
-<p><%= current_user.name %>の暇な時間</p>
-<div class="current_search">
-<%= "ユーザーID：#{current_user.search_number}"%>
+<div class=my-page>
+  <div class="schedule-top">
+    <div class="apotime">
+      <%= current_user.name %>の空き時間
+    </div>
+    <div class="current_search_number">
+      <%= "ユーザーID：#{current_user.search_number}"%>
+    </div>
+  </div>
+  <div class="week-of-schedule">
+    <div class="sunday">
+      <div class="sun">日曜日</div>
+      <div class="sun-s"><% unless @schedule.from_time_sun.present? %><%="00"%><% end %><%= "#{@schedule.from_time_sun}"%>：00 〜 <% unless @schedule.to_time_sun.present? %><%="00"%><% end %><%= "#{@schedule.to_time_sun}：00" %></div>
+    </div>
+    <div class="monday">
+      <div class="mon">月曜日</div>
+      <div class="mon-s"><% unless @schedule.from_time_mon.present? %><%="00"%><% end %><%= "#{@schedule.from_time_mon}"%>：00 〜 <% unless @schedule.to_time_mon.present? %><%="00"%><% end %><%= "#{@schedule.to_time_mon}：00"%></div>
+    </div>
+    <div class="tuesday">
+      <div class="tue">火曜日</div>
+      <div class="tue-s"><% unless @schedule.from_time_tue.present? %><%="00"%><% end %><%= "#{@schedule.from_time_tue}"%>：00 〜 <% unless @schedule.to_time_tue.present? %><%="00"%><% end %><%= "#{@schedule.to_time_tue}：00"%></div>
+    </div>
+    <div class="wednesday">
+      <div class="wed">水曜日</div>
+      <div class="wed-s"><% unless @schedule.from_time_wed.present? %><%="00"%><% end %><%= "#{@schedule.from_time_wed}"%>：00 〜 <% unless @schedule.to_time_wed.present? %><%="00"%><% end %><%= "#{@schedule.to_time_wed}：00"%></div>
+    </div>
+    <div class="thursday">
+      <div class="thu">木曜日</div>
+      <div class="thu-s"><% unless @schedule.from_time_thu.present? %><%="00"%><% end %><%= "#{@schedule.from_time_thu}"%>：00 〜 <% unless @schedule.to_time_thu.present? %><%="00"%><% end %><%= "#{@schedule.to_time_thu}：00"%></div>
+    </div>
+    <div class="friday">
+      <div class="fri">金曜日</div>
+      <div class="fri-s"><% unless @schedule.from_time_fri.present? %><%="00"%><% end %><%= "#{@schedule.from_time_fri}"%>：00 〜 <% unless @schedule.to_time_fri.present? %><%="00"%><% end %><%= "#{@schedule.to_time_fri}：00"%></div>
+    </div>
+    <div class="saturday">
+      <div class="sat">土曜日</div>
+      <div class="sat-s"><% unless @schedule.from_time_sat.present? %><%="00"%><% end %><%= "#{@schedule.from_time_sat}"%>：00 〜 <% unless @schedule.to_time_sat.present? %><%="00"%><% end %><%= "#{@schedule.to_time_sat}：00"%></div>
+    </div>
+  </div>
+  <div class="current-location">
+    <%= "生息地：#{@schedule.location}"%>
+  </div>
+  <div class="edit-schedule-link">
+    <% unless @schedule %>
+       <%= link_to "スケジュールを登録する", new_schedule_path %>
+    <% else %>
+        <%= link_to "スケジュールを変更する", edit_schedule_path(@schedule.id), method: :get %>
+    <% end %>
+  </div>
+  <div class="back-link">
+    <%= link_to ">>トップページへ", root_path %>
+  </div>
 </div>
-
-
-
-
-
-
-
-<% unless current_user.schedule %>
-  <%= link_to "スケジュールを登録する", new_schedule_path %>
-<% else %>
-  <%= link_to "スケジュールを変更する", "" %>
-<% end %>

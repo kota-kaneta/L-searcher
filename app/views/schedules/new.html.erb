@@ -1,44 +1,29 @@
 <div class="head_bar">
-      <% if user_signed_in? %>
-        <div class="user_nav">
-          <div class="log_nav">
-            <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
-          </div>
-          <div class="follow_nav">
-            <%= link_to "ユーザーをフォローする", "" %>
-          </div>
-        </div>
-      <% else %>
-        <div class="user_nav_new">
-          <%= link_to "ログイン", new_user_session_path, class: "post" %>
-          <%= link_to "新規登録", new_user_registration_path, class: "post" %>
-        </div>
-      <% end %>
-  </div>
-  <p class="new_schedule">仕事がない時間帯を記入しましょう</p>
+  <p class="new_schedule">仕事がない時間帯を記入してください</p>
+  <p class="please">※時間が埋まっている曜日は12〜12のように同じ数字にしてください</p>
 
 <%= form_with(model: @schedule, local: true) do |f| %>
   <div class="day_of_week">
-    <div class="monday">
-      日曜日:<%= f.text_area :from_time_sun, rows: "1", maxlength: "2", placeholder: 12 %>〜<%= f.text_area :to_time_sun, rows: "1", maxlength: "2", placeholder: 20 %>
+    <div class="sun-new">
+      日曜日:<%= f.text_area :from_time_sun, rows: "1", maxlength: "2", placeholder: "12" %>〜<%= f.text_area :to_time_sun, rows: "1", maxlength: "2", placeholder: "18" %>
     </div>
-    <div class="monday">
-      月曜日:<%= f.text_area :from_time_mon, rows: "1", maxlength: "2", placeholder: 20 %>〜<%= f.text_area :to_time_mon, rows: "1", maxlength: "2", placeholder: 24 %>
+    <div class="mon-new">
+      月曜日:<%= f.text_area :from_time_mon, rows: "1", maxlength: "2", placeholder: "12" %>〜<%= f.text_area :to_time_mon, rows: "1", maxlength: "2", placeholder: "18" %>
     </div>
-    <div class="monday">
-      火曜日:<%= f.text_area :from_time_tue, rows: "1", maxlength: "2", placeholder: 20 %>〜<%= f.text_area :to_time_tue, rows: "1", maxlength: "2", placeholder: 24 %>
+    <div class="tue-new">
+      火曜日:<%= f.text_area :from_time_tue, rows: "1", maxlength: "2", placeholder: "00" %>〜<%= f.text_area :to_time_tue, rows: "1", maxlength: "2", placeholder: "00" %>
     </div>
-    <div class="monday">
-      水曜日:<%= f.text_area :from_time_wed, rows: "1", maxlength: "2", placeholder: 20 %>〜<%= f.text_area :to_time_wed, rows: "1", maxlength: "2", placeholder: 24 %>
+    <div class="wed-new">
+      水曜日:<%= f.text_area :from_time_wed, rows: "1", maxlength: "2", placeholder: "18" %>〜<%= f.text_area :to_time_wed, rows: "1", maxlength: "2", placeholder: "22" %>
     </div>
-    <div class="monday">
-      木曜日:<%= f.text_area :from_time_thu, rows: "1", maxlength: "2", placeholder: 20 %>〜<%= f.text_area :to_time_thu, rows: "1", maxlength: "2", placeholder: 24 %>
+    <div class="thu-new">
+      木曜日:<%= f.text_area :from_time_thu, rows: "1", maxlength: "2", placeholder: "18" %>〜<%= f.text_area :to_time_thu, rows: "1", maxlength: "2", placeholder: "22" %>
     </div>
-    <div class="monday">
-      金曜日:<%= f.text_area :from_time_fri, rows: "1", maxlength: "2", placeholder: 20 %>〜<%= f.text_area :to_time_fri, rows: "1", maxlength: "2", placeholder: 24 %>
+    <div class="fri-new">
+      金曜日:<%= f.text_area :from_time_fri, rows: "1", maxlength: "2", placeholder: "18" %>〜<%= f.text_area :to_time_fri, rows: "1", maxlength: "2", placeholder: "22" %>
     </div>
-    <div class="monday">
-      土曜日:<%= f.text_area :from_time_sat, rows: "1", maxlength: "2", placeholder: 12 %>〜<%= f.text_area :to_time_sat, rows: "1", maxlength: "2", placeholder: 24 %>
+    <div class="sat-new">
+      土曜日:<%= f.text_area :from_time_sat, rows: "1", maxlength: "2", placeholder: "12" %>〜<%= f.text_area :to_time_sat, rows: "1", maxlength: "2", placeholder: "22" %>
     </div>
     <div class="location">
       居住地：<%= f.text_area :location, rows: "1", maxlength: "10", placeholder: "東京" %>
@@ -46,6 +31,7 @@
   </div>
   <%= f.submit "登録" %>
 <% end %>
-<%= link_to "Back", :back %>
-<%# (:from_time_sun, :from_time_mon, :from_time_tue, :from_time_wed, :from_time_thu, :from_time_fri, :from_time_stu,
-    :to_time_sun, :to_time_mon ,:to_time_tue, :to_time_wed ,:to_time_thu ,:to_time_fri, :to_time_stu, :location) %>
+  <div class="back-link">
+    <%= link_to ">>トップページへ", root_path%>
+  </div>
+</div>
