@@ -1,0 +1,23 @@
+<div class="search-parent">
+  <div class="new_schedule">ユーザー検索ページ</div>
+  <div class="search-form">
+    <%= form_with(url: search_users_path, local: true, method: :get, class: "search-form") do |form| %>
+    <%= form.text_field :keyword, placeholder: "8桁の数字を入力", class: "search-input" %>
+    <%= submit_tag '検索' %>
+    <% end %>
+  </div>
+</div>
+<div class="match-id">
+  <%= "⬇︎検索されたIDと一致したユーザーが以下に表示されます⬇︎" %>
+</div>
+<% @users.each do |user| %>
+  <% if user %>
+    <div class="user-candidate">
+      <%= link_to "#{user.name}さんをフォローする", "#"%>
+    </div>
+  <% end %>
+<% end %>
+
+ <div class="back-link">
+    <%= link_to ">>トップページへ", root_path %>
+</div>

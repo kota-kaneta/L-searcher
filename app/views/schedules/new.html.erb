@@ -1,3 +1,4 @@
+<%= render shared/errors%>
 <div class="head_bar">
   <p class="new_schedule">仕事がない時間帯を記入してください</p>
   <p class="please">※時間が埋まっている曜日は12〜12のように同じ数字にしてください</p>
@@ -26,7 +27,7 @@
       土曜日:<%= f.text_area :from_time_sat, rows: "1", maxlength: "2", placeholder: "12" %>〜<%= f.text_area :to_time_sat, rows: "1", maxlength: "2", placeholder: "22" %>
     </div>
     <div class="location">
-      居住地：<%= f.text_area :location, rows: "1", maxlength: "10", placeholder: "東京" %>
+      住んでいる都道府県：<%= f.text_area :location, rows: "1", maxlength: "10", placeholder: "東京" %>
     </div>
   </div>
   <%= f.submit "登録" %>

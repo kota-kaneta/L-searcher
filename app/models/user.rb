@@ -9,4 +9,12 @@ class User < ApplicationRecord
 
   has_one :schedule
   has_one_attached :image
+
+  def self.search(search)   
+    if search != ""
+      User.where(['search_number LIKE (?)', "#{search}"])
+    else
+      User.where(search_number: nil)
+    end  
+  end
 end

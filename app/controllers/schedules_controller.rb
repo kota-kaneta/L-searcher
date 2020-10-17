@@ -1,6 +1,7 @@
 class SchedulesController < ApplicationController
   before_action :set_schedule, only: [:edit, :update]
-  
+  before_action :move_to_index
+
   def index
     @schedule = current_user.schedule
   end
@@ -45,5 +46,11 @@ class SchedulesController < ApplicationController
 
   def schedule_edit_params
     params.permit(:from_time_sun, :to_time_sun, :from_time_mon, :to_time_mon, :from_time_tue, :to_time_tue, :from_time_wed, :to_time_wed, :from_time_thu, :to_time_thu, :from_time_fri, :to_time_fri, :from_time_sat, :to_time_sat, :location).merge(user_id: current_user.id)
+  end
+
+  def move_to_index
+    unless user_signed_in?
+      redirect_to root_path
+    end
   end
 end

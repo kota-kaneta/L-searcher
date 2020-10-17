@@ -45,7 +45,7 @@ a.title_link:active{
 .new_schedule{
   padding: 10px;
   font-size: 25px;
-  color: violet;
+  color: olivedrab;
 }
 
 .field{
@@ -78,6 +78,8 @@ a.title_link:active{
   justify-content: space-around;
   height: calc(100vh - 120px);
   padding: 50px;
+  border: solid 4px lightgray;
+  background-color: cadetblue;
 }
 
 .my-page{
@@ -146,6 +148,34 @@ a.title_link:active{
   font-size: 25px;
   display: flex;
   justify-content: center;
+}
+
+.search-parent{
+  display: flex;
+  justify-content: space-around;
+}
+
+.search-form{
+  padding-top: 5px;
+  font-size: 22px;
+}
+
+.match-id{
+  display: flex;
+  justify-content: center;
+  font-size: 22px;
+  padding-top: 50px;
+  color: olivedrab;
+}
+
+.user-candidate{
+  display: flex;
+  justify-content: center;
+  margin: 30px 25vw 20px 25vw;
+  border: solid 4px lightgray;
+  border-radius: 100px;
+  background-color: lightsteelblue;
+  font-size: 25px;
 }
 
 .back-link{
