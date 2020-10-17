@@ -1,17 +1,23 @@
 <div class="match-user">
   <%= "#{@user.name}さんのページ"%>
 </div>
+
 <div class="follow-list">
-  <%= @user.follow_count %>
-  <%= link_to "フォロー", {controller: :users,action: :follow_list,user_id: @user.id}, method: :get %>
-  <%= @user.followers_count %>
-  <%= link_to "フォロワー", {controller: :users,action: :follower_list,user_id: @user.id}, method: :get %>
+  <div class="u-f">
+    <%= @user.follow_count %>フォロー
+  </div>
+  <div class="u-f-er">
+    <%= @user.followers_count %>フォロワー
+  </div>
+</div>
+ <div class="rap">
+<% unless current_user.id == @user.id %>
+  <div class="unless-follow">
+    <%= render 'follow_form' %>
+  </div>
+<% end %>
 </div>
 
-<% unless current_user.id == @user.id %>
-  <%= render 'follow_form' %>
-<% end %>
-
 <div class="back-link">
-    <%= link_to ">>トップページへ", root_path %>
+    <%= link_to ">>トップページへ", root_path%>
 </div>

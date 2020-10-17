@@ -1,0 +1,14 @@
+<% @user.followers.each do |user| %>
+  <div class="aaa">
+    <div class="wrapping">
+      <div class="follow-name">
+        <%= "#{user.name}さん" %> 
+        <%= link_to '詳細', user_path(user), class: "syousai" %>
+      </div>
+    </div>
+  </div>
+<% end %>
+
+<div class="back-link">
+  <%= link_to ">>トップページへ", root_path%>
+</div>

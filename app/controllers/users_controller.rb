@@ -2,7 +2,8 @@ class UsersController < ApplicationController
   before_action :set_user, only: [:follow, :unfollow, :follow_list, :follower_list]
 
   def show
-    @schedule = current_user.schedule
+    @user = User.find(params[:id])
+    @schedule = @user.schedule
   end
 
   def search
@@ -15,12 +16,12 @@ class UsersController < ApplicationController
 
   def follow
     current_user.follow(@user)
-    redirect_to user_path(@user)
+    redirect_to match_user_path(@user)
   end
 
   def unfollow
     current_user.stop_following(@user)
-    redirect_to user_path(@user)
+    redirect_to match_user_path(@user)
   end
 
   def follow_list
@@ -34,4 +35,5 @@ class UsersController < ApplicationController
   def set_user
     @user = User.find(params[:user_id])
   end
+
 end
