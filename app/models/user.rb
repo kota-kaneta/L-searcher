@@ -10,6 +10,9 @@ class User < ApplicationRecord
   has_one :schedule
   has_one_attached :image
 
+  acts_as_followable
+  acts_as_follower
+
   def self.search(search)   
     if search != ""
       User.where(['search_number LIKE (?)', "#{search}"])
