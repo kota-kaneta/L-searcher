@@ -188,7 +188,7 @@ a.my-page_link:hover{
 .thursday,
 .friday,
 .saturday{
-  height: 8vh;
+  height: 10vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -363,6 +363,7 @@ a:active {
 .tl-each{
   
 }
+
 
 .in-each{
   display: flex;

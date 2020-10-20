@@ -1,22 +1,20 @@
 
+
 <div class="back-link">
     <%= link_to ">>トップページへ", root_path%>
 </div>
-
-<div class="tl-title">
-  〜タイムライン〜
-</div>
-
   <div class="time-line">
     <% unless current_user.all_following.present? %>
       <div class="nothing-follow">
         ここにフォロー中のユーザーが表示されます
       </div>
-    <% end %>
+    <% else %>
       <div class="tl-each">
         <div class="time-line-message">
           <span style="border-bottom: solid 2px ;">今日の曜日のスケジュールを設定しているユーザーが表示されます</span>
         </div>
+    <% end %>
+      <div class="tl-border">
         <% current_user.all_following.each do |user| %>
           <% @schedules = Schedule.where(user_id: user.id) %>
           <% @schedules.each do |schedule| %>
@@ -29,15 +27,14 @@
                 </div>
                 <div class="tl-right">
                   <div class="times">
-                    <%= "#{schedule.from_time_sun}〜#{schedule.to_time_sun}" %>
+                    <%= "#{schedule.from_time_sun}：00〜#{schedule.to_time_sun}：00" %>
                   </div>
                   <div class="tl-location">
                     <%= schedule.location %>
                   </div>
                 </div>
               </div>
-            <% end %>
-            <% if Date.today.wday == 1 && schedule.from_time_mon != nil && schedule.to_time_mon != nil%>
+            <% elsif Date.today.wday == 1 && schedule.from_time_mon != nil && schedule.to_time_mon != nil%>
               <div class="in-each">
                 <div class="tl-left">
                   <div class="l_user">
@@ -46,15 +43,14 @@
                 </div>
                 <div class="tl-right">
                   <div class="times">
-                    <%= "#{schedule.from_time_mon}〜#{schedule.to_time_mon}" %>
+                    <%= "#{schedule.from_time_mon}：00〜#{schedule.to_time_mon}：00" %>
                   </div>
                   <div class="tl-location">
                     <%= schedule.location %>
                   </div>
                 </div>
               </div>
-            <% end %>
-            <% if Date.today.wday == 2 && schedule.from_time_tue != nil && schedule.to_time_tue != nil%>
+            <% elsif Date.today.wday == 2 && schedule.from_time_tue != nil && schedule.to_time_tue != nil%>
               <div class="in-each">
                 <div class="tl-left">
                   <div class="l_user">
@@ -63,15 +59,14 @@
                 </div>
                 <div class="tl-right">
                   <div class="times">
-                    <%= "#{schedule.from_time_tue}〜#{schedule.to_time_tue}" %>
+                    <%= "#{schedule.from_time_tue}：00〜#{schedule.to_time_tue}：00" %>
                   </div>
                   <div class="tl-location">
                     <%= schedule.location %>
                   </div>
                 </div>
               </div>
-            <% end %>
-            <% if Date.today.wday == 3 && schedule.from_time_wed != nil && schedule.to_time_wed != nil%>
+            <% elsif Date.today.wday == 3 && schedule.from_time_wed != nil && schedule.to_time_wed != nil%>
               <div class="in-each">
                 <div class="tl-left">
                   <div class="l_user">
@@ -80,15 +75,14 @@
                 </div>
                 <div class="tl-right">
                   <div class="times">
-                    <%= "#{schedule.from_time_wed}〜#{schedule.to_time_wed}" %>
+                    <%= "#{schedule.from_time_wed}：00〜#{schedule.to_time_wed}：00" %>
                   </div>
                   <div class="tl-location">
                     <%= schedule.location %>
                   </div>
                 </div>
               </div>
-            <% end %>
-            <% if Date.today.wday == 4 && schedule.from_time_thu != nil && schedule.to_time_thu != nil%>
+            <% elsif Date.today.wday == 4 && schedule.from_time_thu != nil && schedule.to_time_thu != nil%>
               <div class="in-each">
                 <div class="tl-left">
                   <div class="l_user">
@@ -97,15 +91,14 @@
                 </div>
                 <div class="tl-right">
                   <div class="times">
-                    <%= "#{schedule.from_time_thu}〜#{schedule.to_time_thu}" %>
+                    <%= "#{schedule.from_time_thu}：00〜#{schedule.to_time_thu}：00" %>
                   </div>
                   <div class="tl-location">
                     <%= schedule.location %>
                   </div>
                 </div>
               </div>
-            <% end %>
-            <% if Date.today.wday == 5 && schedule.from_time_fri != nil && schedule.to_time_fri != nil%>
+            <% elsif Date.today.wday == 5 && schedule.from_time_fri != nil && schedule.to_time_fri != nil%>
               <div class="in-each">
                 <div class="tl-left">
                   <div class="l_user">
@@ -114,15 +107,14 @@
                 </div>
                 <div class="tl-right">
                   <div class="times">
-                    <%= "#{schedule.from_time_fri}〜#{schedule.to_time_fri}" %>
+                    <%= "#{schedule.from_time_fri}：00〜#{schedule.to_time_fri}：00" %>
                   </div>
                   <div class="tl-location">
                     <%= schedule.location %>
                   </div>
                 </div>
               </div>
-            <% end %>
-            <% if Date.today.wday == 6 && schedule.from_time_sat != nil && schedule.to_time_sat != nil%>
+            <% elsif Date.today.wday == 6 && schedule.from_time_sat != nil && schedule.to_time_sat != nil%>
               <div class="in-each">
                 <div class="tl-left">
                   <div class="l_user">
@@ -131,7 +123,7 @@
                 </div>
                 <div class="tl-right">
                   <div class="times">
-                    <%= "#{schedule.from_time_sat}〜#{schedule.to_time_sat}" %>
+                    <%= "#{schedule.from_time_sat}：00〜#{schedule.to_time_sat}：00" %>
                   </div>
                   <div class="tl-location">
                     <%= schedule.location %>
@@ -142,4 +134,5 @@
           <% end %>
         <% end %>
       </div>
+    <div>
   </div>

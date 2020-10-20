@@ -18,11 +18,23 @@
 
 ## schedules テーブル
 
-| Column       | Type    | Options     |
-| ------------ | ------- | ----------- |
-| from_time    | integer | null: false |
-| to_time      | integer | null: false |
-| location     | string  |             | 
+| Column           | Type    | Options     |
+| ---------------- | ------- | ----------- |
+| from_time_sun    | integer |             |
+| from_time_mon    | integer |             |
+| from_time_tue    | integer |             |
+| from_time_wed    | integer |             |
+| from_time_thu    | integer |             |
+| from_time_fri    | integer |             |
+| from_time_sat    | integer |             |
+| to_time_sun      | integer |             |
+| to_time_mon      | integer |             |
+| to_time_tue      | integer |             |
+| to_time_wed      | integer |             |
+| to_time_thu      | integer |             |
+| to_time_fri      | integer |             |
+| to_time_sat      | integer |             |
+| location         | string  |             | 
 
 ### Association
 
