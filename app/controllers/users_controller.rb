@@ -30,6 +30,10 @@ class UsersController < ApplicationController
   def follower_list
   end
 
+  def time_line
+    @users = User.all
+  end
+
   private
 
   def set_user

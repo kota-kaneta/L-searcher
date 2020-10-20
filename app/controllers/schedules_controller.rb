@@ -4,6 +4,7 @@ class SchedulesController < ApplicationController
 
   def index
     @schedule = current_user.schedule
+    @users = User.all.order(id: "DESC")
   end
 
   def new
@@ -28,7 +29,7 @@ class SchedulesController < ApplicationController
 
   def update
     if @schedule.update(schedule_edit_params)
-      redirect_to user_path(current_user.schedule)
+      redirect_to user_path(current_user.id)
     else
       render action: :edit
     end

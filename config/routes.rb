@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   resources :users, only: [:show] do
     collection do
       get 'search'
+      get 'time_line'
     end
     member do
       get 'match'

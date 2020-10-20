@@ -1,3 +1,4 @@
+<% unless @user.id == current_user.id%>
 <div class="match-user">
   <%= "#{@user.name}さんのページ"%>
 </div>
@@ -11,13 +12,17 @@
   </div>
 </div>
  <div class="rap">
-<% unless current_user.id == @user.id %>
   <div class="unless-follow">
     <%= render 'follow_form' %>
   </div>
-<% end %>
 </div>
+<% else %>
+  <div class="no-my-id"><%= "※自分をフォローすることはできません"%></div>
+<% end %>
 
+<div class="back-link">
+  <%= link_to ">>マイページへ", user_path(current_user.id)%>
+</div>
 <div class="back-link">
     <%= link_to ">>トップページへ", root_path%>
 </div>

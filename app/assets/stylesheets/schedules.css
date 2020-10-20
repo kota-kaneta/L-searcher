@@ -1,5 +1,17 @@
+html, body {
+  font-family: 'Open Sans', sans-serif;
+  font-family: 'Noto Serif JP', serif;
+}
+
+h2{
+  font-size: 25px;
+  height: 50px;
+  padding: 20px 20px 50px 20px;
+
+}
+
 .wrapper{
-  background-color: #ededbb;
+  background-color: #d4d4a7;
   width: 100vw;
   height: 100vh;
   position: relative;
@@ -38,6 +50,12 @@ input[type="email"] {
   height: 40px;
 }
 
+.input[type="text"] {
+  width: 343px;
+  height: 40px;
+}
+
+
 .user_nav{
   display: flex;
   justify-content: space-around;
@@ -67,27 +85,69 @@ input[type="email"] {
   padding-top: 10px;
 }
 
+.hello-user{
+  font-size: 27px;
+  padding: 40px 0 0 30px;
+  color: #3d3c3c;
+}
+
+.nothing-schedule{
+  display: flex;
+  justify-content: center;
+  font-size: 30px;
+  padding-bottom: 20px;
+  color: rgb(131, 69, 24);
+}
+
+.nothing-follow{
+  display: flex;
+  justify-content: center;
+  font-size: 30px;
+  padding-top: 100px;
+  padding-left: 100px;
+  color: rgb(24, 30, 112);
+}
+
 .sec-wrapper{
   font-size: 25px;
   height: 80px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+  margin-top: 60px;
 }
 
-.current_user{
-  display: flex;
+.top-link{
+  border: hotpink 3px solid;
+  padding: 10px 30px;
+  background-color: black;
+  margin: 30px;
+}
+
+a.my-page_link:link,
+a.my-page_link:visited,
+a.my-page_link:active{
+  color: rgb(236, 82, 216);
+}
+
+a.my-page_link:hover{
+  color: orange;
 }
 
 .search-form{
   padding-left: 20px;
 }
 
+.tl-title{
+  display: flex;
+  justify-content: center;
+  padding-top: 30px;
+  font-size: 30px;
+  color: rgb(163, 82, 50);
+}
+
 .time-line{
   font-size: 25px;
   display: flex;
   justify-content: space-around;
-  height: calc(100vh - 120px);
+  height: 100vh;
   padding: 50px;
   border: solid 4px lightgray;
   background-color: cadetblue;
@@ -106,7 +166,7 @@ input[type="email"] {
 }
 
 .apotime{
-
+  
 }
 
 .current_search_number{
@@ -148,17 +208,18 @@ input[type="email"] {
   font-size: 30px;
   margin: 20px 20vw ;
   border: solid 4px lightgray;
-  background-color: lightblue;
-  color: blue;
+  background-color: rgb(94, 187, 218);
+  color: rgb(99, 45, 224);
   display: flex;
   justify-content: center;
 }
 
 .edit-schedule-link{
-  padding-top: 30px;
   font-size: 25px;
   display: flex;
   justify-content: center;
+  align-items: center;
+  height: 80px;
 }
 
 .search-parent{
@@ -189,10 +250,14 @@ input[type="email"] {
   font-size: 25px;
 }
 
+.search-wrap{
+  height: 250px;
+}
+
 .match-user{
   display: flex;
   justify-content: center;
-  font-size: 30px;
+  font-size: 33px;
   height: 80px;
   padding-top: 30px;
 }
@@ -200,7 +265,7 @@ input[type="email"] {
 .follow-list{
   display: flex;
   justify-content: center;
-  font-size: 20px;
+  font-size: 25px;
 }
 
 .u-f{
@@ -233,7 +298,7 @@ input[type="email"] {
 
 .back-link{
   padding-left: 20px;
-  padding-top: 10px;
+  padding-top: 20px;
   font-size: 20px;
 }
 
@@ -261,14 +326,14 @@ a:active {
 .aaa{
   display: flex;
   justify-content: center;
+  margin-bottom: 40px;
 }
 
 .wrapping{
   border: darkslateblue 3px solid;
   width: 60vw;
   border-radius: 30px;
-  background-color: dodgerblue;
-  margin-top: 30px;
+  background-color: rgb(52, 150, 248);
 }
 
 .follow-name{
@@ -281,4 +346,52 @@ a:active {
   padding-left: 30px;
 }
 
+.follow-count,
+.no-my-id{
+  display: flex;
+  justify-content: center;
+  font-size: 30px;
+  height: 60px;
+  color: lightcoral;
+  padding-bottom: 60px
+}
+
+.follow-c{
+  padding-right: 15px;
+}
+
+.tl-each{
+  
+}
+
+.in-each{
+  display: flex;
+  font-size: 30px;
+  height: 100px;
+}
+
+.time-line-message{
+  display: flex;
+  justify-content: center;
+  padding-bottom: 80px;
+
+}
+
+.tl-left{
+  justify-content: center;
+  width: 400px;
+}
+
+.tl-right{
+  display: flex;
+  justify-content: space-between;
+}
+
+.l_user{
+  padding: 0 120px;
+}
+
+.times{
+  padding:  0 140px;
+}
 

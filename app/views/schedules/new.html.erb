@@ -1,6 +1,5 @@
 <div class="head_bar">
-  <p class="new_schedule">仕事がない時間帯を記入してください</p>
-  <p class="please">※時間が埋まっている曜日は12〜12のように同じ数字にしてください</p>
+  <p class="new_schedule">※暇な時間帯を記入してください</p>
 
 <%= form_with(model: @schedule, local: true) do |f| %>
   <div class="day_of_week">
@@ -17,7 +16,7 @@
       水曜日:<%= f.text_area :from_time_wed, rows: "1", maxlength: "2", placeholder: "18" %>〜<%= f.text_area :to_time_wed, rows: "1", maxlength: "2", placeholder: "22" %>
     </div>
     <div class="thu-new">
-      木曜日:<%= f.text_area :from_time_thu, rows: "1", maxlength: "2", placeholder: "18" %>〜<%= f.text_area :to_time_thu, rows: "1", maxlength: "2", placeholder: "22" %>
+      木曜日:<%= f.text_area :from_time_thu, rows: "1", maxlength: "2", placeholder: "00" %>〜<%= f.text_area :to_time_thu, rows: "1", maxlength: "2", placeholder: "00" %>
     </div>
     <div class="fri-new">
       金曜日:<%= f.text_area :from_time_fri, rows: "1", maxlength: "2", placeholder: "18" %>〜<%= f.text_area :to_time_fri, rows: "1", maxlength: "2", placeholder: "22" %>

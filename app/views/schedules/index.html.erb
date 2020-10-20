@@ -1,37 +1,31 @@
-<div class="head_bar">
-    <div class="user_nav">
-      <div class="log_nav">
-        <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
-        <% unless current_user.schedule %>
-          <%= link_to "スケジュールを登録する", new_schedule_path %>
-        <% end %>
+  <div class="hello-user">
+    <%= "〜こんにちは#{current_user.name}さん〜" %>
+  </div>
+  <div class="sec-wrapper">
+    <% if current_user.schedule %>
+      <div class="top-link">
+        <%= link_to "マイページ", user_path(current_user.id), class: "my-page_link"%>
       </div>
-      <div class="follow_nav">
-        <%= link_to "ユーザーをフォローする", search_users_path %>
+      <div class="top-link">
+        <%= link_to "ユーザーをフォローする", search_users_path, class: "my-page_link" %>
       </div>
+      <div class="top-link">
+        <%= link_to "タイムライン", time_line_users_path, method: :get, class: "my-page_link" %>
+      </div>
+    <% else %>
+      <div class="nothing-schedule">
+        まずはじめにスケジュールを登録しましょう
+      </div>
+    <% end %>
+    <% unless current_user.schedule %>
+      <div class="top-link">
+        <%= link_to "スケジュールを登録する", new_schedule_path, class: "my-page_link" %>
+      </div>
+    <% end %>
+    <div class="top-link">
+      <%= link_to "ユーザー情報変更", edit_user_registration_path(current_user.id), class: "my-page_link"%>
     </div>
-</div>
-<div class="sec-wrapper">
-  <% if @schedule %>
-    <div class="current_user">
-      <%= link_to "#{current_user.name}のマイページへ", user_path(current_user.id)%>
-    </div>
-  <% else %>
-      <%= "#{current_user.name}：#{current_user.search_number}"%>
-  <% end %>
-    <div class="search-form">
-      <%= form_with(url: "", local: true, method: :get) do |form| %>
-      <%= form.text_field :keyword, placeholder: "lacation検索", class: "search-input" %>
-      <%= form.submit "検索", class: "search-btn" %>
-      <% end %>
+    <div class="top-link">
+      <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "my-page_link" %>
     </div>
   </div>
-  <div class="time-line">
-    <div class="l_user">
-      暇なユーザ名
-    </div>
-    <div class="times">
-      from_timeからto_timeまで
-    </div>
-  </div>
-</div>

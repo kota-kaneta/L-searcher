@@ -7,17 +7,28 @@
       <%= "ユーザーID：#{@user.search_number}"%>
     </div>
   </div>
+  <% if @user.id == current_user.id%>
   <div class="follow-list">
-  <div class="">
-    <%= @user.follow_count %>
-    <%= link_to "フォロー", {controller: :users,action: :follow_list,user_id: @user.id}, method: :get %>
+    <div class="">
+      <%= @user.follow_count %>
+      <%= link_to "フォロー", {controller: :users,action: :follow_list,user_id: @user.id}, method: :get %>
+    </div>
+    <div class="">
+      <%= @user.followers_count %>
+      <%= link_to "フォロワー", {controller: :users,action: :follower_list,user_id: @user.id}, method: :get %>
+    </div>
   </div>
-  <div class="">
-    <%= @user.followers_count %>
-    <%= link_to "フォロワー", {controller: :users,action: :follower_list,user_id: @user.id}, method: :get %>
-  </div>
-</div>
-<% if @user.id == current_user.id%>
+  <% else %>
+    <div class="follow-list">
+      <div class="follow-c">
+        <%= "#{@user.follow_count}フォロー" %>
+      </div>
+      <div class="follower-c">
+        <%= "#{@user.followers_count}フォロワー" %>
+      </div>
+    </div>
+  <% end %>
+
   <div class="week-of-schedule">
     <div class="sunday">
       <div class="sun">日曜日</div>
@@ -51,14 +62,14 @@
   <div class="current-location">
     <%= "居住地：#{@schedule.location}"%>
   </div>
-  <% end %>
+
   
   <% if @user.id == current_user.id%>
   <div class="edit-schedule-link">
     <% unless @schedule %>
-       <%= link_to "スケジュールを登録する", new_schedule_path %>
+      <%= link_to "スケジュールを登録する", new_schedule_path%>
     <% else %>
-        <%= link_to "スケジュールを変更する", edit_schedule_path(@schedule.id), method: :get %>
+      <%= link_to "スケジュールを変更する", edit_schedule_path(@schedule.id), method: :get %>
     <% end %>
   </div>
   <% end %>
@@ -70,7 +81,11 @@
   </div>
   </div>
   <% end %>
-
+  <% unless current_user.id == @user.id%>
+  <div class="back-link">
+    <%= link_to ">>マイページへ", user_path(current_user.id)%>
+  </div>
+  <% end %>
   <div class="back-link">
     <%= link_to ">>トップページへ", root_path%>
   </div>

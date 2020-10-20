@@ -1,14 +1,30 @@
-<% @user.followers.each do |user| %>
+<div class="back-link">
+  <%= link_to ">>マイページへ", user_path(current_user.id)%>
+</div>
+<div class="back-link">
+  <%= link_to ">>トップページへ", root_path%>
+</div>
+
+<% if @user.followers.present? %>
+<div class="follow-count"><%= "現在のフォロワーは#{@user.followers_count}人です"%></div>
+ <% @user.followers.each do |user| %>
   <div class="aaa">
     <div class="wrapping">
       <div class="follow-name">
         <%= "#{user.name}さん" %> 
         <%= link_to '詳細', user_path(user), class: "syousai" %>
       </div>
+      <div class="follow-list">
+        <div class="u-f">
+          <%= user.follow_count %>フォロー
+        </div>
+        <div class="u-f-er">
+          <%= user.followers_count %>フォロワー
+        </div>
+      </div>
     </div>
   </div>
 <% end %>
-
-<div class="back-link">
-  <%= link_to ">>トップページへ", root_path%>
-</div>
+<% else %>
+  <div class="follow-count">現在のフォロワーは0人です</div>
+<% end %>
