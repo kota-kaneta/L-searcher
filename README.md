@@ -12,9 +12,8 @@
 ### Association
 
 - has_many :schedules
-- has_many :room_users
-- has_many :messages
-- has_many :rooms, through :room_users
+- has_many :entries, dependent: :destroy
+- has_many :messages, dependent: :destroy
 
 ## schedules テーブル
 
@@ -34,7 +33,7 @@
 | to_time_thu      | integer |             |
 | to_time_fri      | integer |             |
 | to_time_sat      | integer |             |
-| location         | string  |             | 
+| location         | string  |             |
 
 ### Association
 
@@ -48,11 +47,10 @@
 
 ### Association
 
-- has_many :room_users
-- has_many :users, through: room_users
-- has_many :messages
+- has_many :entries, dependent: :destroy
+- has_many :messages, dependent: :destroy
 
-## room_users テーブル
+## entries テーブル
 
 | Column | Type       | Options                        |
 | ------ | ---------- | ------------------------------ |
@@ -68,7 +66,7 @@
 
 | Column  | Type       | Options                        |
 | ------- | ---------- | ------------------------------ |
-| content | string     |                                |
+| content | text       |                                |
 | user    | references | null: false, foreign_key: true |
 | room    | references | null: false, foreign_key: true |
 
@@ -76,3 +74,10 @@
 
 - belongs_to :room
 - belongs_to :user
+
+## follows テーブル
+
+| Column     | Type      | Options                        |
+| ---------- | --------- | ------------------------------ |
+| followable | reference | polymorphic: true, null: false |
+| blocked    | boolean   | default: false, null: false    |

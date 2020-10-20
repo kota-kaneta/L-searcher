@@ -70,3 +70,5 @@ gem "acts_as_follower", github: "tcocca/acts_as_follower"
 group :production do
   gem 'rails_12factor'
 end
+
+gem 'kaminari'

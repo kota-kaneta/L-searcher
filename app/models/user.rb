@@ -8,7 +8,8 @@ class User < ApplicationRecord
   validates :search_number, uniqueness: true, format: { with: /\A\d{8}\z/ }
 
   has_one :schedule
-  has_one_attached :image
+  has_many :messages, dependent: :destroy
+  has_many :entries, dependent: :destroy
 
   acts_as_followable
   acts_as_follower

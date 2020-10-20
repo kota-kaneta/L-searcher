@@ -1,0 +1,43 @@
+<div class="dm-all">
+<div class="back-link">
+  <%= link_to ">>マイページへ", user_path(current_user.id)%>
+</div>
+<div class="back-link">
+  <%= link_to ">>トップページへ", root_path%>
+</div>
+
+<div class="dm-room">
+  <%= "〜DMルーム〜"%>
+</div>
+
+<div class="join">⬇︎参加者⬇︎</div>
+<% @entries.each do |e| %>
+  <div class="join-member"><strong><a href="/users/<%= e.user.id %>"><%= e.user.name%>さん</a></strong></div>
+<% end %>
+
+<hr>
+<% if @messages.present? %>
+  <% @messages.each do |m| %>
+    <div class="dm-wrap">
+      <div class="message-dm"><strong><%= m.content %></strong></div>
+      <div class="join-member-message">
+        <div class="sender-name">by <strong><a href="/users/<%= m.user_id %>"><%= m.user.name %>さん</a></div>
+        <div class="created-at"><%= l m.created_at %></div>
+      </div>
+    </div>
+  <% end %>
+<% else %>
+  <div class="join-member-message">
+    メッセージはまだありません
+  </div>
+<% end %>
+
+<div class="text-field-size">
+<%= form_for @message do |f| %>
+  <%= f.text_field :content, :placeholder => "メッセージを入力して下さい" , :size => 70 %>
+  <%= f.hidden_field :room_id, :value => @room.id %>
+  <br>
+  <%= f.submit "送信する" %>
+<% end %>
+</div>
+</div>

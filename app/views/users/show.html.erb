@@ -29,6 +29,7 @@
     </div>
   <% end %>
 
+<% if @user.id == current_user.id%>
   <div class="week-of-schedule">
     <div class="sunday">
       <div class="sun">日曜日</div>
@@ -62,6 +63,7 @@
   <div class="current-location">
     <%= "居住地：#{@schedule.location}"%>
   </div>
+<% end %>
 
   
   <% if @user.id == current_user.id%>
@@ -76,11 +78,27 @@
 
   <% unless current_user.id == @user.id %>
   <div class="rap">
-  <div class="unless-follow">
-    <%= render 'follow_form' %>
-  </div>
+    <div class="unless-follow">
+      <%= render 'follow_form' %>
+    </div>
   </div>
   <% end %>
+
+  <% unless @user.id == current_user.id %>
+    <% if @isRoom == true %>
+      <div class="to-chat"><a href="/rooms/<%= @roomId %>">DMルームへ</div>
+    <% else %>
+      <%= form_for @room do |f| %>
+        <%= fields_for @entry do |e| %>
+        <%= e.hidden_field :user_id, :value=> @user.id %>
+        <% end %>
+        <div class="to-chat">
+          <%= f.submit "DMルームへ" %>
+        </div>
+      <% end %>
+    <% end %>
+  <% end %>
+
   <% unless current_user.id == @user.id%>
   <div class="back-link">
     <%= link_to ">>マイページへ", user_path(current_user.id)%>
