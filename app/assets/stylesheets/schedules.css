@@ -135,24 +135,6 @@ a.my-page_link:hover{
   padding-left: 20px;
 }
 
-.tl-title{
-  display: flex;
-  justify-content: center;
-  padding-top: 30px;
-  font-size: 30px;
-  color: rgb(163, 82, 50);
-}
-
-.time-line{
-  font-size: 25px;
-  display: flex;
-  justify-content: space-around;
-  height: 100vh;
-  padding: 50px;
-  border: solid 4px lightgray;
-  background-color: cadetblue;
-}
-
 .my-page{
   height: 100vh;
 }
@@ -296,9 +278,10 @@ a.my-page_link:hover{
 
 }
 
+/* リンク */
+
 .back-link{
-  padding-left: 20px;
-  padding-top: 20px;
+  padding: 20px 0 5px 20px;
   font-size: 20px;
 }
 
@@ -360,10 +343,29 @@ a:active {
   padding-right: 15px;
 }
 
+/* タイムライン */
+
+.tl-title{
+  display: flex;
+  justify-content: center;
+  padding-top: 30px;
+  font-size: 30px;
+  color: rgb(163, 82, 50);
+}
+
+.time-line{
+  font-size: 30px;
+  display: flex;
+  justify-content: space-around;
+  height: 100vh;
+  padding: 50px;
+  border: solid 4px lightgray;
+  background-color: cadetblue;
+}
+
 .tl-each{
   
 }
-
 
 .in-each{
   display: flex;
@@ -379,6 +381,7 @@ a:active {
 }
 
 .tl-left{
+  display: flex;
   justify-content: center;
   width: 400px;
 }
@@ -389,10 +392,61 @@ a:active {
 }
 
 .l_user{
-  padding: 0 120px;
+  padding-left: 50px;
 }
 
 .times{
   padding:  0 140px;
 }
 
+/* チャット */
+.dm-all{
+  height: 100vh;
+  background-color: rgb(163, 188, 235);
+}
+
+.to-chat{
+  display: flex;
+  justify-content: center;
+  font-size: 28px;
+}
+
+.dm-room{
+  display: flex;
+  justify-content: center;
+  font-size: 35px;
+}
+
+.join{
+  font-size: 20px;
+}
+
+.join-member{
+  font-size: 25px;
+}
+
+.message-dm{
+  font-size: 23px;
+}
+
+.dm-wrap{
+  border: 1px rgb(124, 123, 123) solid;
+  margin-bottom: 10px;
+}
+
+.join-member-message{
+  display: flex;
+}
+
+.sender-name{
+  font-size: 20px;
+}
+
+.created-at{
+  font-size: 20px;
+  padding: 4px 0 0 20px;
+}
+
+.text-field-size{
+  font-size: 20px;
+}

@@ -4,8 +4,6 @@ class SchedulesController < ApplicationController
   before_action :set_root, only: [:new, :edit]
 
   def index
-    @schedule = current_user.schedule
-    @users = User.all.order(id: "DESC")
   end
 
   def new

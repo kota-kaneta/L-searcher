@@ -2,6 +2,8 @@ Rails.application.routes.draw do
   devise_for :users
   root to: "schedules#index"
   resources :schedules
+  resources :rooms, only: [:create, :show, :index]
+  resources :messages, only: [:create]
   resources :users, only: [:show] do
     collection do
       get 'search'
@@ -16,4 +18,5 @@ Rails.application.routes.draw do
 
   get 'users/follow_list/:user_id' => 'users#follow_list'
   get 'users/follower_list/:user_id' => 'users#follower_list'
+
 end
