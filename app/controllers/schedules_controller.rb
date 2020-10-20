@@ -1,6 +1,7 @@
 class SchedulesController < ApplicationController
   before_action :set_schedule, only: [:edit, :update]
   before_action :move_to_index
+  before_action :set_root, only: [:new, :edit]
 
   def index
     @schedule = current_user.schedule
@@ -19,9 +20,6 @@ class SchedulesController < ApplicationController
       @schedule = Schedule.new
       render action: :new
     end
-  end
-
-  def show
   end
 
   def edit
@@ -51,6 +49,12 @@ class SchedulesController < ApplicationController
 
   def move_to_index
     unless user_signed_in?
+      redirect_to root_path
+    end
+  end
+
+  def set_root
+    if request.referer.nil?
       redirect_to root_path
     end
   end
