@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:follow, :unfollow, :follow_list, :follower_list]
+  before_action :set_root
 
   def show
     @user = User.find(params[:id])
@@ -38,6 +39,12 @@ class UsersController < ApplicationController
 
   def set_user
     @user = User.find(params[:user_id])
+  end
+
+  def set_root
+    if request.referer.nil?
+      redirect_to root_path
+    end
   end
 
 end
