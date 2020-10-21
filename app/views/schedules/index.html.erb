@@ -12,6 +12,9 @@
       <div class="top-link">
         <%= link_to "タイムライン", time_line_users_path, method: :get, class: "my-page_link" %>
       </div>
+      <div class="top-link">
+        <%= link_to "通知",  notifications_path, method: :get, class: "my-page_link" %>
+      </div>
     <% else %>
       <div class="nothing-schedule">
         まずはじめにスケジュールを登録しましょう

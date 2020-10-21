@@ -11,9 +11,11 @@
 
 ### Association
 
-- has_many :schedules
-- has_many :entries, dependent: :destroy
+- has_one :schedule
 - has_many :messages, dependent: :destroy
+- has_many :entries, dependent: :destroy
+- has_many :active_notifications, class_name: 'Notification', foreign_key: 'visitor_id', dependent: :destroy
+- has_many :passive_notifications, class_name: 'Notification', foreign_key: 'visited_id', dependent: :destroy
 
 ## schedules テーブル
 
@@ -49,6 +51,7 @@
 
 - has_many :entries, dependent: :destroy
 - has_many :messages, dependent: :destroy
+- has_many :notifications, dependent: :destroy
 
 ## entries テーブル
 
@@ -74,6 +77,7 @@
 
 - belongs_to :room
 - belongs_to :user
+- has_many :notifications, dependent: :destroy
 
 ## follows テーブル
 
@@ -81,3 +85,21 @@
 | ---------- | --------- | ------------------------------ |
 | followable | reference | polymorphic: true, null: false |
 | blocked    | boolean   | default: false, null: false    |
+
+## notifications テーブル
+
+| Column     | Type      | Options                        |
+| ---------- | --------- | ------------------------------ |
+| visitor    | integer   | null: false                    |
+| visited    | integer   | null: false                    |
+| message    | integer   | null: false                    |
+| room       | integer   | null: false                    |
+| action     | string    | default: '', null: false       |
+| checked    | boolean   | default: false, null: false    |
+
+### Association
+
+- belongs_to :message, optional: true
+- belongs_to :room, optional: true
+- belongs_to :visitor, class_name: 'User', foreign_key: 'visitor_id', optional: true
+- belongs_to :visited, class_name: 'User', foreign_key: 'visited_id', optional: true

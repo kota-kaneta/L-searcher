@@ -6,10 +6,13 @@ class User < ApplicationRecord
 
   validates :name, :search_number, presence: true
   validates :search_number, uniqueness: true, format: { with: /\A\d{8}\z/ }
+  validates :name, format: { with: /\A[ぁ-んァ-ン一-龥]/ }
 
   has_one :schedule
   has_many :messages, dependent: :destroy
   has_many :entries, dependent: :destroy
+  has_many :active_notifications, class_name: 'Notification', foreign_key: 'visitor_id', dependent: :destroy
+  has_many :passive_notifications, class_name: 'Notification', foreign_key: 'visited_id', dependent: :destroy
 
   acts_as_followable
   acts_as_follower

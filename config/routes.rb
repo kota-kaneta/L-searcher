@@ -1,9 +1,11 @@
 Rails.application.routes.draw do
+  get 'notifications/index'
   devise_for :users
   root to: "schedules#index"
   resources :schedules
   resources :rooms, only: [:create, :show, :index]
   resources :messages, only: [:create]
+  resources :notifications, only: [:index]
   resources :users, only: [:show] do
     collection do
       get 'search'
