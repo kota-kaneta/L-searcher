@@ -46,14 +46,10 @@ class SchedulesController < ApplicationController
   end
 
   def move_to_index
-    unless user_signed_in?
-      redirect_to root_path
-    end
+    redirect_to root_path unless user_signed_in?
   end
 
   def set_root
-    if request.referer.nil?
-      redirect_to root_path
-    end
+    redirect_to root_path if request.referer.nil?
   end
 end

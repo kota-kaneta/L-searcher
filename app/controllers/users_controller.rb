@@ -11,13 +11,13 @@ class UsersController < ApplicationController
     unless @user.id == current_user.id
       @currentUserEntry.each do |c|
         @userEntry.each do |u|
-          if c.room_id == u.room_id then
+          if c.room_id == u.room_id
             @isRoom = true
             @roomId = c.room_id
           end
         end
       end
-      
+
       if @isRoom
       else
         @room = Room.new
@@ -61,9 +61,6 @@ class UsersController < ApplicationController
   end
 
   def set_root
-    if request.referer.nil?
-      redirect_to root_path
-    end
+    redirect_to root_path if request.referer.nil?
   end
-
 end

@@ -14,11 +14,11 @@ class User < ApplicationRecord
   acts_as_followable
   acts_as_follower
 
-  def self.search(search)   
-    if search != ""
-      User.where(['search_number LIKE (?)', "#{search}"])
+  def self.search(search)
+    if search != ''
+      User.where(['search_number LIKE (?)', search.to_s])
     else
       User.where(search_number: nil)
-    end  
+    end
   end
 end
