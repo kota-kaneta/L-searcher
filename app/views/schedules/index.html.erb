@@ -1,34 +1,41 @@
-  <div class="hello-user">
-    <%= "〜こんにちは#{current_user.name}さん〜" %>
-  </div>
   <div class="sec-wrapper">
     <% if current_user.schedule %>
+      <div class="hello-user">
+        <%= "〜こんにちは#{current_user.name}さん〜" %>
+      </div>
+      <div class="new-notifications">
+        <%= link_to "通知",  notifications_path, method: :get, class: "notification-index_link" %>
+      </div>
       <div class="top-link">
         <%= link_to "マイページ", user_path(current_user.id), class: "my-page_link"%>
       </div>
       <div class="top-link">
-        <%= link_to "ユーザーをフォローする", search_users_path, class: "my-page_link" %>
+        <%= link_to "ユーザー検索", search_users_path, class: "my-page_link" %>
       </div>
       <div class="top-link">
         <%= link_to "タイムライン", time_line_users_path, method: :get, class: "my-page_link" %>
       </div>
       <div class="top-link">
-        <%= link_to "通知",  notifications_path, method: :get, class: "my-page_link" %>
+        <%= link_to "スケジュールを変更する", edit_schedule_path(current_user.id), class: "my-page_link" %>
       </div>
     <% else %>
+      <div class="hello-user">
+        <%= "〜はじめまして#{current_user.name}さん〜" %>
+      </div>
       <div class="nothing-schedule">
         まずはじめにスケジュールを登録しましょう
       </div>
-    <% end %>
-    <% unless current_user.schedule %>
       <div class="top-link">
         <%= link_to "スケジュールを登録する", new_schedule_path, class: "my-page_link" %>
       </div>
     <% end %>
     <div class="top-link">
-      <%= link_to "ユーザー情報変更", edit_user_registration_path(current_user.id), class: "my-page_link"%>
+      <%= link_to "ユーザー情報を変更する", edit_user_registration_path(current_user.id), class: "my-page_link"%>
     </div>
     <div class="top-link">
       <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "my-page_link" %>
+    </div>
+    <div class="how-to">
+      <%= link_to ">>取り扱い説明", how_to_schedules_path, method: :get %>
     </div>
   </div>

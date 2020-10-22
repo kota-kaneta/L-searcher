@@ -2,7 +2,11 @@ Rails.application.routes.draw do
   get 'notifications/index'
   devise_for :users
   root to: "schedules#index"
-  resources :schedules
+  resources :schedules do
+    collection do
+      get 'how_to'
+    end
+  end
   resources :rooms, only: [:create, :show, :index]
   resources :messages, only: [:create]
   resources :notifications, only: [:index]

@@ -2,8 +2,7 @@
   <p class="new_schedule">※暇な時間帯を記入してください</p>
 
 <%= form_with(model: @schedule, local: true) do |f| %>
-  <%= render 'shared/error', model: f.object%>
-  <div class="day_of_week">
+  <div class="day-of-week">
     <div class="sun-new">
       日曜日:<%= f.text_area :from_time_sun, rows: "1", maxlength: "2", placeholder: "12" %>〜<%= f.text_area :to_time_sun, rows: "1", maxlength: "2", placeholder: "18" %>
     </div>
@@ -28,8 +27,8 @@
     <div class="location">
       住んでいる都道府県：<%= f.text_area :location, rows: "1", maxlength: "10", placeholder: "東京" %>
     </div>
+  <%= f.submit "登録する" %>
   </div>
-  <%= f.submit "登録" %>
 <% end %>
   <div class="back-link">
     <%= link_to ">>トップページへ", root_path%>

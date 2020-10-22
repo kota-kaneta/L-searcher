@@ -40,21 +40,38 @@ a.title_link:active{
   font-size: 25px;
 }
 
+/* フィールド */
+
 input[type="password"] {
-  width: 343px;
+  width: 400px;
   height: 40px;
 }
 
 input[type="email"] {
-  width: 343px;
+  width: 400px;
   height: 40px;
 }
 
-.input[type="text"] {
-  width: 343px;
+input[type="text"] {
+  width: 400px;
   height: 40px;
 }
 
+/* スケジュール */
+
+.head_bar{
+  position: relative;
+}
+
+.day-of-week{
+  position: absolute;
+  top: 150px;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  font-size: 30px;
+}
 
 .user_nav{
   display: flex;
@@ -72,9 +89,14 @@ input[type="email"] {
 }
 
 .new_schedule{
-  padding: 10px;
-  font-size: 25px;
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
   color: olivedrab;
+  font-size: 35px;
 }
 
 .field{
@@ -86,9 +108,10 @@ input[type="email"] {
 }
 
 .hello-user{
-  font-size: 27px;
-  padding: 40px 0 0 30px;
+  font-size: 30px;
+  padding: 40px 0 40px 30px;
   color: #3d3c3c;
+  position: relative;
 }
 
 .nothing-schedule{
@@ -110,25 +133,7 @@ input[type="email"] {
 
 .sec-wrapper{
   font-size: 25px;
-  height: 80px;
-  margin-top: 60px;
-}
-
-.top-link{
-  border: hotpink 3px solid;
-  padding: 10px 30px;
-  background-color: black;
-  margin: 30px;
-}
-
-a.my-page_link:link,
-a.my-page_link:visited,
-a.my-page_link:active{
-  color: rgb(236, 82, 216);
-}
-
-a.my-page_link:hover{
-  color: orange;
+  height: 100vh;
 }
 
 .search-form{
@@ -137,6 +142,8 @@ a.my-page_link:hover{
 
 .my-page{
   height: 100vh;
+  background-color: rgb(136, 175, 143);
+  overflow: scroll;
 }
 
 .schedule-top{
@@ -210,8 +217,14 @@ a.my-page_link:hover{
 }
 
 .search-form{
-  padding-top: 5px;
-  font-size: 22px;
+  padding-top: 8px;
+  font-size: 25px;
+}
+
+.search-page{
+  font-size: 30px;
+  padding-top: 20px;
+  color: #313030;
 }
 
 .match-id{
@@ -280,9 +293,63 @@ a.my-page_link:hover{
 
 /* リンク */
 
+.new-notifications{
+  border: rgb(110, 177, 110) 2px solid;
+  border-radius: 15px;
+  background-color: rgb(64, 156, 118);
+  height: 55px;
+  width: 110px;
+  left: 450px;
+  top: -90px;
+}
+
+div.new-notifications {
+  position: relative;
+}
+div.new-notifications a {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.top-link{
+  border: hotpink 3px solid;
+  padding: 10px 30px;
+  background-color: black;
+  margin: 0 30px 30px 30px;
+}
+
+a.notification-index_link:link,
+a.notification-index_link:visited,
+a.notification-index_link:active{
+  color: rgb(68, 30, 5);
+}
+
+a.my-page_link:link,
+a.my-page_link:visited,
+a.my-page_link:active{
+  color: rgb(236, 82, 216);
+}
+
+a.notification-index_link:hover,
+a.my-page_link:hover{
+  color: orange;
+}
+
 .back-link{
   padding: 20px 0 5px 20px;
   font-size: 20px;
+}
+
+.how-to{
+  position: absolute;
+  left: 40px;
+  bottom: 40px;
 }
 
 .submit{
@@ -361,6 +428,7 @@ a:active {
   padding: 50px;
   border: solid 4px lightgray;
   background-color: cadetblue;
+  overflow: scroll;
 }
 
 .no-follow-now{
@@ -404,7 +472,8 @@ a:active {
   padding:  0 140px;
 }
 
-/* チャット */
+/* dm */
+
 .dm-all{
   height: 100vh;
   background-color: rgb(162, 175, 201);
@@ -433,13 +502,13 @@ a:active {
 }
 
 .message-dm{
-  font-size: 23px;
+  font-size: 27px;
 }
 
 .current-dm-wrap{
   border: 1px black solid;
   border-radius: 20px;
-  background-color:rgb(118, 114, 128);
+  background-color:rgb(136, 132, 148);
   color: white;
   padding: 0 15px;
   margin: 0 3px 10px 3px;
@@ -478,26 +547,34 @@ a:active {
   padding-bottom: 20px;
 }
 
-/* dm */
+/* 通知 */
+
+.notifications{
+  overflow: scroll;
+}
 
 .notification{
   font-size: 25px;
-  padding: 10px 0 10px 30px;
+  padding: 10px 0 10px 10px;
   display: flex;
   border: black 1px solid;
   border-radius: 20px;
-  margin: 15px 10px 10px 10px;
-  width: 50vw;
+  margin: 15px 10px 10px 30vw;
+  width: 38vw;
   background-color: rgb(115, 194, 36);
 } 
 
 .v-name{
-  padding-left: 10px;
+  padding-left: 20px;
   width: 250px;
 }
 
 .v-name-dm{
-  
+  color: rgb(21, 21, 202);
+}
+
+.v-name-follow{
+  color: rgb(194, 20, 20);
 }
 
 .notification-nothing{
@@ -505,4 +582,127 @@ a:active {
   font-size: 30px;
   display: flex;
   justify-content: center;
+}
+
+/* 取説 */
+
+.how-to-all{
+  background-color: rgb(136, 174, 175);
+  height: 100vh;
+  overflow: scroll;
+}
+
+.how-to-title{
+  font-size: 35px;
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+}
+
+.how-to-start{
+  font-size: 20px;
+  position: relative;
+}
+
+.how-to-list{
+  padding-top: 55px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+}
+
+.how-to-link{
+  color: rgb(231, 79, 8);
+  font-size: 22px;
+}
+
+.how-to-please{
+  color: red;
+}
+
+.new-schedule-image{
+  padding-top: 180px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+}
+
+.under-arrow-one{
+  font-size: 180px;
+  position: absolute;
+  top: 790px;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+}
+
+.how-to-follow{
+  position: absolute;
+  top: 1050px;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+}
+
+.follow-image{
+  position: absolute;
+  top: 1220px;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+}
+
+.under-arrow-two{
+  font-size: 180px;
+  position: absolute;
+  top: 1810px;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+}
+
+.how-to-dm{
+  position: absolute;
+  top: 2070px;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+}
+
+.dm-image{
+  position: absolute;
+  top: 2220px;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+}
+
+.under-arrow-three{
+  font-size: 180px;
+  position: absolute;
+  top: 2810px;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+}
+
+.how-to-timeline{
+  position: absolute;
+  top: 3080px;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
 }

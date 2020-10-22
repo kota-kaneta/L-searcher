@@ -23,7 +23,7 @@
 
   <div class="field">
     <%= f.label "名前" %><br />
-    <%= f.text_area :name, id:"name", placeholder:"例) 田中太郎", rows: "1", maxlength: "10", cols: "25"  %>
+    <%= f.text_field :name, id:"name", placeholder:"例) 山田太郎", rows: "1", maxlength: "10"  %>
   </div>
 
   <div class="field">
@@ -46,7 +46,7 @@
 
   <div class="field">
     <%= f.label "ユーザーID" %><br />
-    <%= f.text_area :search_number, id:"search_number", placeholder:"任意の数字8文字", rows: "1", maxlength: "8", cols: "25"%>
+    <%= f.text_field :search_number, id:"search_number", placeholder:"任意の数字8文字", rows: "1", maxlength: "8", cols: "25"%>
         <p class="please">ユーザーのID検索に使用します（先頭の数字は0以外にしてください）</p>
     <p class="please">※登録された番号は変更できないのでご注意ください</p>
   </div>

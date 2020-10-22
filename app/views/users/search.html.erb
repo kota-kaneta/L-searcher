@@ -1,9 +1,9 @@
 <div class="search-wrap">
 <div class="search-parent">
-  <div class="new_schedule">ユーザー検索ページ</div>
+  <div class="search-page">〜ユーザー検索ページ〜</div>
   <div class="search-form">
     <%= form_with(url: search_users_path, local: true, method: :get, class: "search-form") do |f| %>
-    <%= f.text_field :keyword, placeholder: "8桁の数字を入力", class: "search-input", minlength: "8", cols: "25"%>
+    <%= f.text_field :keyword, placeholder: "8桁の数字を入力", class: "search-input", minlength: "8", size: "30x20"%>
     <%= submit_tag '検索' %>
     <% end %>
   </div>

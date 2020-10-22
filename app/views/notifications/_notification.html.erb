@@ -6,5 +6,7 @@
   <% end %>
   <% if notification.action=='direct' %>
     <div class="v-name-dm">からDMが届きました。</div>
+  <% else notification.action=='follow'%>
+    <div class="v-name-follow">があなたをフォローしました。</div>
   <% end %>
 </div>

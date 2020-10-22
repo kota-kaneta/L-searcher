@@ -17,7 +17,7 @@
 
 <div class="text-field-size">
 <%= form_for @message do |f| %>
-  <%= f.text_field :content, :placeholder => "メッセージを入力して下さい" , :size => 70 %>
+  <%= f.text_field :content, :placeholder => "メッセージを入力して下さい", size: "60x20" %>
   <%= f.hidden_field :room_id, :value => @room.id %>
   <%= f.submit "送信する" %>
 <% end %>
@@ -37,7 +37,7 @@
       <div class="visited-dm-wrap">
         <div class="message-dm"><strong><%= m.content %></strong></div>
         <div class="join-member-message">
-          <div class="sender-name">by <strong><a href="/users/<%= m.user_id %>"><%= m.user.name %>さん</a></div>
+          <div class="sender-name">by <strong><a href="/users/<%= m.user_id %>"><%= m.user.name %></a></div>
           <div class="created-at"><%= l m.created_at %></div>
         </div>
       </div>

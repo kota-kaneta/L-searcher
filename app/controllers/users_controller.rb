@@ -36,6 +36,7 @@ class UsersController < ApplicationController
 
   def follow
     current_user.follow(@user)
+    @user.create_notification_follow(current_user)
     redirect_to user_path(@user)
   end
 
@@ -51,7 +52,6 @@ class UsersController < ApplicationController
   end
 
   def time_line
-    @users = User.all
   end
 
   private

@@ -1,4 +1,6 @@
 class RoomsController < ApplicationController
+  before_action :set_root
+
   def create
     @room = Room.create
     @entry1 = Entry.create(room_id: @room.id, user_id: current_user.id)
@@ -15,5 +17,11 @@ class RoomsController < ApplicationController
     else
       redirect_back(fallback_location: root_path)
     end
+  end
+
+  private
+
+  def set_root
+    redirect_to root_path if request.referer.nil?
   end
 end

@@ -2,7 +2,8 @@
   <p class="new_schedule">スケジュールを編集しましょう</p>
 
   <%= form_with url: schedule_path, local: true, method: :patch do|f| %>
-    <div class="day_of_week">
+    <%= render 'shared/error', model: @schedule%>
+    <div class="day-of-week">
       <div class="sun-new">
         日曜日:<%= f.text_area :from_time_sun, rows: "1", maxlength: "2", placeholder: "00", value: @schedule.from_time_sun %>〜<%= f.text_area :to_time_sun, rows: "1", maxlength: "2", placeholder: "00", value: @schedule.to_time_sun %>
       </div>
@@ -27,9 +28,9 @@
       <div class="location">
         居住地：<%= f.text_area :location, rows: "1", maxlength: "10", placeholder: "東京", value: @schedule.location %>
       </div>
-    </div>
-    <div class="submit">
-      <%= f.submit "変更する" %>
+      <div class="submit">
+        <%= f.submit "変更する" %>
+      </div>
     </div>
   <% end %>
   <div class="back-link">
