@@ -5,6 +5,11 @@ ja:
        name: 名前
        search_number: ユーザーID
 ja:
+ activerecord:
+   attributes:
+     schedule:
+      location: 居住地
+ja:
   time:
     formats:
       default: "%Y/%m/%d %H:%M:%S"
