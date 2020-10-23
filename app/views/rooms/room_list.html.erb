@@ -1,0 +1,25 @@
+
+
+<div class="room-list">
+  <div class="back-link">
+    <%= link_to ">>トップページへ", root_path%>
+  </div>
+  <div class="room-list-title">〜ルーム一覧〜</div>
+
+  <div class="room-list-name-wrap">
+    <% current_user.all_following.each do |user| %>
+    <% @room = Entry.where(user_id: current_user.id) %>
+    <% @rooms = Entry.where(user_id: user.id)%>
+      <% @room.each do |room| %>
+        <% @rooms.each do |rooms| %>
+          <% if room.room_id == rooms.room_id %>
+            <div class="room-list-name">
+              <a href="/rooms/<%= room.room_id %>">
+              <%= "#{user.name}のルーム" %>
+            </div>
+          <% end %>
+        <% end %>
+      <% end %>
+    <% end %>
+  </div>
+</div>

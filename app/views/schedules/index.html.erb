@@ -16,6 +16,9 @@
         <%= link_to "タイムライン", time_line_users_path, method: :get, class: "my-page_link" %>
       </div>
       <div class="top-link">
+        <%= link_to "ルーム一覧", room_list_room_path(current_user.id), method: :get, class: "my-page_link" %>
+      </div>
+      <div class="top-link">
         <%= link_to "スケジュールを変更する", edit_schedule_path(current_user.id), class: "my-page_link" %>
       </div>
     <% else %>

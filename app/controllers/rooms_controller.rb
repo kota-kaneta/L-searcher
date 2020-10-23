@@ -19,6 +19,9 @@ class RoomsController < ApplicationController
     end
   end
 
+  def room_list
+  end
+
   private
 
   def set_root

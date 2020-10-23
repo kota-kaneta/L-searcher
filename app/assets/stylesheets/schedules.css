@@ -371,9 +371,7 @@ a.my-page_link:hover{
 }
 
 .how-to{
-  position: absolute;
-  left: 40px;
-  bottom: 40px;
+  padding: 10px 0 0 20px;
 }
 
 .submit{
@@ -774,4 +772,37 @@ a:active {
   transform: translateX(-50%);
   -webkit-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
+}
+
+/* ルーム一覧 */
+
+.room-list{
+  height: 100vh;
+  overflow: scroll;
+  position: relative;
+  background-color: rgb(114, 155, 156);
+}
+
+.room-list-title{
+  display: flex;
+  justify-content: center;
+  font-size: 35px;
+  padding-top: 30px;
+}
+
+.room-list-name-wrap{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-size: 25px;
+  position: absolute;
+}
+
+.room-list-name{
+  margin: 10px;
+  border: blanchedalmond 3px solid;
+  background-color: rgb(112, 173, 100);
+  width: 300px;
+  display: flex;
+  justify-content: center;
 }

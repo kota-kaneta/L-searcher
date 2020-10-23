@@ -7,7 +7,11 @@ Rails.application.routes.draw do
       get 'how_to'
     end
   end
-  resources :rooms, only: [:create, :show, :index]
+  resources :rooms, only: [:create, :show, :index] do
+    member do
+      get 'room_list'
+    end
+  end
   resources :messages, only: [:create]
   resources :notifications, only: [:index]
   resources :users, only: [:show] do
