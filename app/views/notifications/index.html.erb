@@ -1,18 +1,20 @@
 <div class="notifications">
-<div class="back-link">
-  <%= link_to ">>マイページへ", user_path(current_user.id)%>
-</div>
-<div class="back-link">
-  <%= link_to ">>トップページへ", root_path%>
-</div>
-
-<% notifications = @notifications.where.not(visitor_id: current_user.id) %>
-<% if notifications.exists? %>
-    <%= render notifications %>
-    <%= paginate notifications %>
-<% else %>
-　<div class="notification-nothing">
-    通知はありません
+  <div class="back-link">
+    <%= link_to ">>マイページへ", user_path(current_user.id)%>
   </div>
-<% end %>
+  <div class="back-link">
+    <%= link_to ">>トップページへ", root_path%>
+  </div>
+
+  <% notifications = @notifications.where.not(visitor_id: current_user.id) %>
+  <% if notifications.exists? %>
+      <%= render notifications %>
+    <div class="pagenation">
+      <%= paginate notifications %>
+    <div>
+  <% else %>
+    <div class="notification-nothing">
+      通知はありません
+    </div>
+  <% end %>
 </div>

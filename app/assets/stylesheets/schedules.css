@@ -57,6 +57,14 @@ input[type="text"] {
   height: 40px;
 }
 
+/* ユーザー情報 */
+
+.user-wrap{
+  padding-left: 600px;
+  padding-top: 30px;
+}
+
+
 /* スケジュール */
 
 .head_bar{
@@ -65,12 +73,18 @@ input[type="text"] {
 
 .day-of-week{
   position: absolute;
-  top: 150px;
-  left: 50%;
-  transform: translateX(-50%);
-  -webkit-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  font-size: 30px;
+  left: 350px;
+  top: 170px;
+}
+
+.sun-new,
+.mon-new,
+.tue-new,
+.wed-new,
+.thu-new,
+.fri-new,
+.sat-new{
+  padding-bottom: 10px;
 }
 
 .user_nav{
@@ -100,7 +114,7 @@ input[type="text"] {
 }
 
 .field{
-  font-size: 25px;
+  font-size: 30px;
 }
 
 .actions{
@@ -166,7 +180,7 @@ input[type="text"] {
   margin: 0 20vw ;
   border: solid 4px lightgray;
   border-radius: 100px;
-  background-color: #FFCCCC;
+  background-color: #d8afaf;
   font-size: 25px;
 }
 
@@ -179,7 +193,7 @@ input[type="text"] {
 .saturday{
   height: 10vh;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
 }
 
@@ -190,7 +204,17 @@ input[type="text"] {
 .thu,
 .fri,
 .sat{
-  padding-right: 10vw;
+  padding-left: 220px;
+}
+
+.sun-s,
+.mon-s,
+.tue-s,
+.wed-s,
+.thu-s,
+.fri-s,
+.sat-s{
+  padding-right: 220px;
 }
 
 .current-location{
@@ -412,13 +436,6 @@ a:active {
 
 /* タイムライン */
 
-.tl-title{
-  display: flex;
-  justify-content: center;
-  padding-top: 30px;
-  font-size: 30px;
-  color: rgb(163, 82, 50);
-}
 
 .time-line{
   font-size: 33px;
@@ -432,7 +449,7 @@ a:active {
 }
 
 .no-follow-now{
-  padding-left: 25vw;
+  padding-left: 23vw;
   padding-top: 100px;
 }
 
@@ -470,6 +487,11 @@ a:active {
 
 .times{
   padding:  0 140px;
+  width: 600px;
+}
+
+.tl-location{
+
 }
 
 /* dm */
@@ -550,7 +572,16 @@ a:active {
 /* 通知 */
 
 .notifications{
+  height: 100vh;
   overflow: scroll;
+  position: relative;
+}
+
+.pagenation{
+  font-size: 24px;
+  position: absolute;
+  top: 50px;
+  left: 44vw;
 }
 
 .notification{
@@ -587,6 +618,7 @@ a:active {
 /* 取説 */
 
 .how-to-all{
+  padding: 10px;
   background-color: rgb(136, 174, 175);
   height: 100vh;
   overflow: scroll;
@@ -701,6 +733,43 @@ a:active {
 .how-to-timeline{
   position: absolute;
   top: 3080px;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+}
+
+.tl-image{
+  position: absolute;
+  top: 3200px;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+}
+
+.under-arrow-four{
+  font-size: 180px;
+  position: absolute;
+  top: 3800px;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+}
+
+.how-to-notifications{
+  position: absolute;
+  top: 4070px;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+}
+
+.notifications-image{
+  position: absolute;
+  top: 4190px;
   left: 50%;
   transform: translateX(-50%);
   -webkit-transform: translateX(-50%);

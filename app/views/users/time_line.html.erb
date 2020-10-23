@@ -1,12 +1,12 @@
 
-
+<div class="tl-wrap">
 <div class="back-link">
     <%= link_to ">>トップページへ", root_path%>
 </div>
   <div class="time-line">
     <% unless current_user.all_following.present? %>
       <div class="no-follow-now">
-        ここにフォロー中のユーザーが表示されます
+        ※ここにフォロー中のユーザーが表示されます
       </div>
     <% else %>
       <div class="tl-each">
@@ -27,7 +27,7 @@
                 </div>
                 <div class="tl-right">
                   <div class="times">
-                    <%= "#{schedule.from_time_sun}：00〜#{schedule.to_time_sun}：00" %>
+                    <%= "#{schedule.from_time_sun}：00 〜 #{schedule.to_time_sun}：00" %>
                   </div>
                   <div class="tl-location">
                     <%= schedule.location %>
@@ -43,7 +43,7 @@
                 </div>
                 <div class="tl-right">
                   <div class="times">
-                    <%= "#{schedule.from_time_mon}：00〜#{schedule.to_time_mon}：00" %>
+                    <%= "#{schedule.from_time_mon}：00 〜 #{schedule.to_time_mon}：00" %>
                   </div>
                   <div class="tl-location">
                     <%= schedule.location %>
@@ -59,7 +59,7 @@
                 </div>
                 <div class="tl-right">
                   <div class="times">
-                    <%= "#{schedule.from_time_tue}：00〜#{schedule.to_time_tue}：00" %>
+                    <%= "#{schedule.from_time_tue}：00 〜 #{schedule.to_time_tue}：00" %>
                   </div>
                   <div class="tl-location">
                     <%= schedule.location %>
@@ -75,7 +75,7 @@
                 </div>
                 <div class="tl-right">
                   <div class="times">
-                    <%= "#{schedule.from_time_wed}：00〜#{schedule.to_time_wed}：00" %>
+                    <%= "#{schedule.from_time_wed}：00 〜 #{schedule.to_time_wed}：00" %>
                   </div>
                   <div class="tl-location">
                     <%= schedule.location %>
@@ -91,7 +91,7 @@
                 </div>
                 <div class="tl-right">
                   <div class="times">
-                    <%= "#{schedule.from_time_thu}：00〜#{schedule.to_time_thu}：00" %>
+                    <%= "#{schedule.from_time_thu}：00 〜 #{schedule.to_time_thu}：00" %>
                   </div>
                   <div class="tl-location">
                     <%= schedule.location %>
@@ -107,7 +107,7 @@
                 </div>
                 <div class="tl-right">
                   <div class="times">
-                    <%= "#{schedule.from_time_fri}：00〜#{schedule.to_time_fri}：00" %>
+                    <%= "#{schedule.from_time_fri}：00 〜 #{schedule.to_time_fri}：00" %>
                   </div>
                   <div class="tl-location">
                     <%= schedule.location %>
@@ -123,7 +123,7 @@
                 </div>
                 <div class="tl-right">
                   <div class="times">
-                    <%= "#{schedule.from_time_sat}：00〜#{schedule.to_time_sat}：00" %>
+                    <%= "#{schedule.from_time_sat}：00 〜 #{schedule.to_time_sat}：00" %>
                   </div>
                   <div class="tl-location">
                     <%= schedule.location %>
@@ -136,3 +136,4 @@
       </div>
     <div>
   </div>
+</div>

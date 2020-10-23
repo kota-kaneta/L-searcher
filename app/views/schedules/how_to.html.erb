@@ -6,7 +6,7 @@
   <div class="how-to-start">
     <div class="how-to-list">✔︎新規登録をしたらまず<b class="how-to-link">"スケジュールを登録する"</b>のリンクから以下の画像ように各曜日ごとに<b>"タスクのない時間帯"</b>と居住地を登録します。忙しい時間は空欄にしましょう。<p class="how-to-please">※登録可能な時間は00:00〜24:00までです。</p></div>
     <div class="new-schedule-image">
-      <%= image_tag 'new_schedule.png' , size: '1000x600' %>
+      <%= image_tag 'schedule2.png' , size: '1000x600' %>
     </div>
   <div>
   <div class="under-arrow-one">⬇︎</div>
@@ -18,6 +18,13 @@
   <div class="how-to-dm">✔︎ユーザーをフォローすると、<b>"DM（ダイレクトメッセージ）ルーム"</b>を作成することができます。<b class="how-to-link">"DMルームを作成"</b>のリンクをクリックするとルーム内でDMを送ることができます。ルーム作成後は相手アカウントの詳細ページ（フォローリストやタイムライン、通知から遷移可能）からルームへ入ることができます。</div>
   <div class="dm-image"><%= video_tag 'dm.mp4', :autoplay => true, :loop => true, :autobuffer => true, size: '1000x600' %></div>
   <div class="under-arrow-three">⬇︎</div>
-  <div class="how-to-timeline">✔︎ここから</div>
-
+  <div class="how-to-timeline">✔︎トップページの<b class="how-to-link">"タイムライン"</b>のリンクから、フォローしたユーザーのその日のスケジュールを確認することができます。また、タイムラインに表示されている名前をクリックすると詳細ページに遷移します。相手の暇な時間を狙ってアポを取ってしまいましょう。</div>
+  <div class="tl-image">
+      <%= video_tag 'tl.mp4', :autoplay => true, :loop => true, :autobuffer => true, size: '1000x600' %>
+  </div>
+  <div class="under-arrow-four">⬇︎</div>
+  <div class="how-to-notifications">✔︎他のアカウントからフォローされたりDMが送られてくると、通知が送られてきます。トップページの<b class="how-to-link">通知</b>のリンクをクリックすると新規通知が降順で表示されます。このページでも先ほどと同様に名前のリンクから詳細ページに遷移できます。</div>
+  <div class="notifications-image">
+      <%= video_tag 'notifications.mp4', :autoplay => true, :loop => true, :autobuffer => true, size: '1000x600' %>
+  </div>
 </div>

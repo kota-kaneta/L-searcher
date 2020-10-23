@@ -4,28 +4,28 @@
 <%= form_with(model: @schedule, local: true) do |f| %>
   <div class="day-of-week">
     <div class="sun-new">
-      日曜日:<%= f.text_area :from_time_sun, rows: "1", maxlength: "2", placeholder: "12" %>〜<%= f.text_area :to_time_sun, rows: "1", maxlength: "2", placeholder: "18" %>
+      日曜日:<%= f.text_field :from_time_sun, rows: "1", maxlength: "2", placeholder: "0" %>〜<%= f.text_field :to_time_sun, rows: "1", maxlength: "2", placeholder: "0" %>
     </div>
     <div class="mon-new">
-      月曜日:<%= f.text_area :from_time_mon, rows: "1", maxlength: "2", placeholder: "12" %>〜<%= f.text_area :to_time_mon, rows: "1", maxlength: "2", placeholder: "18" %>
+      月曜日:<%= f.text_field :from_time_mon, rows: "1", maxlength: "2", placeholder: "0" %>〜<%= f.text_field :to_time_mon, rows: "1", maxlength: "2", placeholder: "0" %>
     </div>
     <div class="tue-new">
-      火曜日:<%= f.text_area :from_time_tue, rows: "1", maxlength: "2", placeholder: "00" %>〜<%= f.text_area :to_time_tue, rows: "1", maxlength: "2", placeholder: "00" %>
+      火曜日:<%= f.text_field :from_time_tue, rows: "1", maxlength: "2", placeholder: "0" %>〜<%= f.text_field :to_time_tue, rows: "1", maxlength: "2", placeholder: "0" %>
     </div>
     <div class="wed-new">
-      水曜日:<%= f.text_area :from_time_wed, rows: "1", maxlength: "2", placeholder: "18" %>〜<%= f.text_area :to_time_wed, rows: "1", maxlength: "2", placeholder: "22" %>
+      水曜日:<%= f.text_field :from_time_wed, rows: "1", maxlength: "2", placeholder: "0" %>〜<%= f.text_field :to_time_wed, rows: "1", maxlength: "2", placeholder: "0" %>
     </div>
     <div class="thu-new">
-      木曜日:<%= f.text_area :from_time_thu, rows: "1", maxlength: "2", placeholder: "00" %>〜<%= f.text_area :to_time_thu, rows: "1", maxlength: "2", placeholder: "00" %>
+      木曜日:<%= f.text_field :from_time_thu, rows: "1", maxlength: "2", placeholder: "0" %>〜<%= f.text_field :to_time_thu, rows: "1", maxlength: "2", placeholder: "0" %>
     </div>
     <div class="fri-new">
-      金曜日:<%= f.text_area :from_time_fri, rows: "1", maxlength: "2", placeholder: "18" %>〜<%= f.text_area :to_time_fri, rows: "1", maxlength: "2", placeholder: "22" %>
+      金曜日:<%= f.text_field :from_time_fri, rows: "1", maxlength: "2", placeholder: "0" %>〜<%= f.text_field :to_time_fri, rows: "1", maxlength: "2", placeholder: "0" %>
     </div>
     <div class="sat-new">
-      土曜日:<%= f.text_area :from_time_sat, rows: "1", maxlength: "2", placeholder: "12" %>〜<%= f.text_area :to_time_sat, rows: "1", maxlength: "2", placeholder: "22" %>
+      土曜日:<%= f.text_field :from_time_sat, rows: "1", maxlength: "2", placeholder: "0" %>〜<%= f.text_field :to_time_sat, rows: "1", maxlength: "2", placeholder: "0" %>
     </div>
     <div class="location">
-      住んでいる都道府県：<%= f.text_area :location, rows: "1", maxlength: "10", placeholder: "東京" %>
+      住んでいる都道府県：<%= f.text_field :location, rows: "1", maxlength: "10", placeholder: "東京" %>
     </div>
   <%= f.submit "登録する" %>
   </div>
