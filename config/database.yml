@@ -50,5 +50,6 @@ test:
 production:
   <<: *default
   database: L_searcher_production
-  username: L_searcher
-  password: <%= ENV['L_SEARCHER_DATABASE_PASSWORD'] %>
+  username: root
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+  socket: /var/lib/mysql/mysql.sock
