@@ -2,7 +2,7 @@ class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :validatable
+         :recoverable, :rememberable, :validatable, :omniauthable, omniauth_providers: [:facebook]
 
   validates :name, :search_number, presence: true
   validates :search_number, uniqueness: true, format: { with: /\A\d{8}\z/ }
@@ -14,6 +14,7 @@ class User < ApplicationRecord
   has_many :entries, dependent: :destroy
   has_many :active_notifications, class_name: 'Notification', foreign_key: 'visitor_id', dependent: :destroy
   has_many :passive_notifications, class_name: 'Notification', foreign_key: 'visited_id', dependent: :destroy
+  has_many :sns_credentials
 
   acts_as_followable
   acts_as_follower
@@ -35,5 +36,9 @@ class User < ApplicationRecord
       )
       notification.save if notification.valid?
     end
+  end
+
+  def self.from_omniauth(auth)
+    binding.pry
   end
 end
