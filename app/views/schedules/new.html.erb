@@ -25,7 +25,7 @@
       土曜日:<%= f.text_field :from_time_sat, rows: "1", maxlength: "2", placeholder: "0" %>〜<%= f.text_field :to_time_sat, rows: "1", maxlength: "2", placeholder: "0" %>
     </div>
     <div class="location">
-      住んでいる都道府県：<%= f.text_field :location, rows: "1", maxlength: "10", placeholder: "東京" %>
+      住んでいる都道府県（※必須）：<%= f.text_field :location, rows: "1", maxlength: "10", placeholder: "東京" %>
     </div>
   <%= f.submit "登録する" %>
   </div>

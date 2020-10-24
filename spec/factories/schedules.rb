@@ -1,5 +1,5 @@
 FactoryBot.define do
-  factory :room do
+  factory :schedule do
     location {'東京'}
     from_time_sun {12}
     to_time_sun {18}
