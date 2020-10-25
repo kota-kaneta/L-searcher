@@ -200,4 +200,12 @@ RSpec.describe Schedule, type: :model do
       expect(@schedule.errors.full_messages).to include("To time satは数値で入力してください")
     end
   end
+
+  describe 'association' do
+
+    it 'userアソシエーション' do
+      t = Schedule.reflect_on_association(:user) 
+      expect(t.macro).to eq(:belongs_to) 
+    end
+  end
 end

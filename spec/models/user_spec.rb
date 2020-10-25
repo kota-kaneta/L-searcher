@@ -118,4 +118,37 @@ RSpec.describe User, type: :model do
       expect(another_user.errors.full_messages).to include("ユーザーIDはすでに存在します")
     end
   end
+
+  describe 'association' do
+
+    it 'scheduleアソシエーション' do
+      t = User.reflect_on_association(:schedule) 
+      expect(t.macro).to eq(:has_one) 
+    end
+    
+    it 'messageアソシエーション' do
+      t = User.reflect_on_association(:messages) 
+      expect(t.macro).to eq(:has_many)
+    end
+
+    it 'entryアソシエーション' do
+      t = User.reflect_on_association(:entries) 
+      expect(t.macro).to eq(:has_many)
+    end
+
+    it 'active_notificationアソシエーション' do
+      t = User.reflect_on_association(:active_notifications) 
+      expect(t.macro).to eq(:has_many)
+    end
+
+    it 'passive_notificationアソシエーション' do
+      t = User.reflect_on_association(:passive_notifications) 
+      expect(t.macro).to eq(:has_many)
+    end
+
+    it 'sns_credentialsアソシエーション' do
+      t = User.reflect_on_association(:sns_credentials) 
+      expect(t.macro).to eq(:has_many)
+    end
+  end
 end

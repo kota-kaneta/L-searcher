@@ -28,4 +28,22 @@ RSpec.describe Message, type: :model do
       expect(@message.errors.full_messages).to include("Userを入力してください")
     end
   end
+
+  describe 'association' do
+
+    it 'userアソシエーション' do
+      t = Message.reflect_on_association(:user) 
+      expect(t.macro).to eq(:belongs_to) 
+    end
+
+    it 'roomアソシエーション' do
+      t = Message.reflect_on_association(:room) 
+      expect(t.macro).to eq(:belongs_to) 
+    end
+
+    it 'notificationアソシエーション' do
+      t = Message.reflect_on_association(:notifications) 
+      expect(t.macro).to eq(:has_many) 
+    end
+  end
 end
