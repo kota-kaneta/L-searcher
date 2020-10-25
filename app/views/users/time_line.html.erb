@@ -11,7 +11,8 @@
       </div>
       <div class="tl-each">〜タイムライン〜</div>
         <div class="time-line-message">
-          <span style="border-bottom: solid 2px ;"><%= "本日：#{Date.today.strftime("%m月 %d日")}の暇な時間"%></span>
+          <% wday = ["日", "月", "火", "水", "木", "金", "土"] %>
+          <span style="border-bottom: solid 2px ;"><%= "本日：#{Date.today.strftime("%m月 %d日")}（#{wday[Date.today.wday]}）の暇な時間"%></span>
         </div>
     <% end %>
       <div class="tl-border">
