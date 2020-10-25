@@ -60,8 +60,20 @@ input[type="text"] {
 /* ユーザー情報 */
 
 .user-wrap{
-  padding-left: 600px;
-  padding-top: 30px;
+  position: absolute;
+  top: 200px;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+}
+.new-user-wrap{
+  position: absolute;
+  top: 220px;
+  left: 56%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
 }
 
 
@@ -114,7 +126,7 @@ input[type="text"] {
 }
 
 .field{
-  font-size: 30px;
+  font-size: 33px;
 }
 
 .actions{
@@ -153,6 +165,8 @@ input[type="text"] {
 .search-form{
   padding-left: 20px;
 }
+
+/* マイページ */
 
 .my-page{
   height: 100vh;
