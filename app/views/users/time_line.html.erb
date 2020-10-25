@@ -1,17 +1,17 @@
 
 <div class="tl-wrap">
-<div class="back-link">
-    <%= link_to ">>トップページへ", root_path%>
-</div>
   <div class="time-line">
     <% unless current_user.all_following.present? %>
       <div class="no-follow-now">
         ※ここにフォロー中のユーザーが表示されます
       </div>
     <% else %>
-      <div class="tl-each">
+      <div class="back-link">
+        <%= link_to ">>トップページへ", root_path%>
+      </div>
+      <div class="tl-each">〜タイムライン〜</div>
         <div class="time-line-message">
-          <span style="border-bottom: solid 2px ;">本日の空き時間</span>
+          <span style="border-bottom: solid 2px ;"><%= "本日：#{Date.today.strftime("%m月 %d日")}の暇な時間"%></span>
         </div>
     <% end %>
       <div class="tl-border">
@@ -134,6 +134,6 @@
           <% end %>
         <% end %>
       </div>
-    <div>
+    
   </div>
 </div>

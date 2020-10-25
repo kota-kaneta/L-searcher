@@ -465,12 +465,16 @@ a:active {
 
 .time-line{
   font-size: 33px;
-  display: flex;
-  justify-content: space-around;
+  position: relative;
   height: 100vh;
-  padding: 50px;
-  background-color: cadetblue;
+  background-color: rgb(112, 181, 184);
   overflow: scroll;
+}
+
+.tl-border{
+  position: absolute;
+  top: 290px;
+  left: 16%;
 }
 
 .no-follow-now{
@@ -479,20 +483,28 @@ a:active {
 }
 
 .tl-each{
-  
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  font-size: 40px;
 }
 
 .in-each{
   display: flex;
+  align-items: center;
+  margin-bottom: 15px;
   font-size: 35px;
   height: 100px;
+  border: rgb(163, 144, 144) 3px solid;
+  background-color: rgb(233, 156, 132);
+  width: 70vw;
 }
 
 .time-line-message{
   display: flex;
   justify-content: center;
   padding-bottom: 80px;
-
+  color: rgb(238, 32, 32);
 }
 
 .tl-left{
@@ -511,7 +523,7 @@ a:active {
 }
 
 .times{
-  padding:  0 140px;
+  padding: 0 140px;
   width: 600px;
 }
 

@@ -1,4 +1,5 @@
 class Schedule < ApplicationRecord
+  default_scope -> { order(updated_at: :desc) }
   belongs_to :user, optional: true
 
   validates :location, presence: true, format: { with: /\A[ぁ-んァ-ン一-龥]/ }

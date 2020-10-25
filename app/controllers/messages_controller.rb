@@ -1,4 +1,6 @@
 class MessagesController < ApplicationController
+  before_action :set_root, only: [:create]
+
   def create
     if Entry.where(user_id: current_user.id, room_id: params[:message][:room_id]).present?
       @message = Message.create(message_params)
@@ -31,5 +33,9 @@ class MessagesController < ApplicationController
 
   def message_params
     params.require(:message).permit(:user_id, :content, :room_id).merge(user_id: current_user.id)
+  end
+
+  def set_root
+    redirect_to root_path if request.referer.nil?
   end
 end
