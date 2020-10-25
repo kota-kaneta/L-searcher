@@ -60,19 +60,26 @@ input[type="text"] {
 
 .user-wrap{
   position: absolute;
-  top: 200px;
-  left: 50%;
+  top: 250px;
+  left: 54%;
   transform: translateX(-50%);
   -webkit-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
 }
+
 .new-user-wrap{
   position: absolute;
-  top: 220px;
+  top: 160px;
   left: 56%;
   transform: translateX(-50%);
   -webkit-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
+}
+
+.edit-user-title{
+  position: absolute;
+  top: -100px;
+  left: -30px;
 }
 
 
@@ -120,7 +127,6 @@ input[type="text"] {
   transform: translateX(-50%);
   -webkit-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
-  color: olivedrab;
   font-size: 35px;
 }
 
@@ -129,7 +135,16 @@ input[type="text"] {
 }
 
 .actions{
-  padding-top: 10px;
+  margin-top: 20px;
+  padding-right: 15px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.log-actions{
+  font-size: 23px;
 }
 
 .hello-user{
@@ -454,7 +469,6 @@ a:active {
   justify-content: space-around;
   height: 100vh;
   padding: 50px;
-  border: solid 4px lightgray;
   background-color: cadetblue;
   overflow: scroll;
 }
@@ -552,7 +566,7 @@ a:active {
   border: 1px white solid;
   border-radius: 20px;
   background-color: rgb(194, 197, 214);
-  color: black;
+  color: rgb(32, 32, 32);
   padding: 0 15px;
   margin: 0 3px 10px 50vw;
   width: 830px;
@@ -639,7 +653,6 @@ a:active {
   font-size: 35px;
   display: flex;
   justify-content: center;
-  padding-top: 20px;
 }
 
 .how-to-start{
@@ -648,9 +661,8 @@ a:active {
 }
 
 .how-to-list{
-  padding-top: 55px;
   position: absolute;
-  top: 0;
+  top: 50px;
   left: 50%;
   transform: translateX(-50%);
   -webkit-transform: translateX(-50%);
@@ -787,6 +799,34 @@ a:active {
   -ms-transform: translateX(-50%);
 }
 
+.under-arrow-five{
+  font-size: 180px;
+  position: absolute;
+  top: 4790px;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+}
+
+.how-to-room-list{
+  position: absolute;
+  top: 5060px;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+}
+
+.room-list-image{
+  position: absolute;
+  top: 5180px;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+}
+
 /* ルーム一覧 */
 
 .room-list{
@@ -813,8 +853,8 @@ a:active {
 
 .room-list-name{
   margin: 10px;
-  border: blanchedalmond 3px solid;
-  background-color: rgb(112, 173, 100);
+  border: rgb(114, 189, 120) 3px solid;
+  background-color: rgb(125, 194, 112);
   width: 300px;
   display: flex;
   justify-content: center;

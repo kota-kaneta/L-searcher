@@ -1,59 +1,46 @@
-<div class="head_bar">
-      <% if user_signed_in? %>
-        <div class="user_nav">
-          <div class="log_nav">
-            <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
-            <%= link_to "スケジュールを登録する", new_schedule_path %>
-          </div>
-          <div class="follow_nav">
-            <%= link_to "ユーザーをフォローする", "" %>
-          </div>
-        </div>
-      <% else %>
+    <div class="head_bar">
+      <% unless user_signed_in? %>
         <div class="user_nav_new">
           <%= link_to "ログイン", new_user_session_path, class: "post" %>
           <%= link_to "新規登録", new_user_registration_path, class: "post" %>
         </div>
       <% end %>
-  </div>
-  <div class="new-user-wrap">
-<p class="please">新規登録済みの方はログインしてください</p>
+    </div>
+<div class="new-user-wrap">
+  <p class="please">新規登録済みの方はログインしてください</p>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
 
-  <div class="field">
-    <%= f.label "名前" %><br />
-    <%= f.text_field :name, id:"name", placeholder:"例) 山田太郎", rows: "1", maxlength: "10"  %>
-  </div>
+    <div class="field">
+      <%= f.label "名前" %><br />
+      <%= f.text_field :name, id:"name", placeholder:"例) 山田太郎", rows: "1", maxlength: "10"  %>
+    </div>
 
-  <div class="field">
-    <%= f.label "Eメール" %><br />
-    <%= f.email_field :email, id:"email", placeholder:"携帯、PCどちらでも可", autofocus: true, autocomplete: "email", cols: "25" %>
-  </div>
+    <div class="field">
+      <%= f.label "Eメール" %><br />
+      <%= f.email_field :email, id:"email", placeholder:"携帯、PCどちらでも可", autofocus: true, autocomplete: "email", cols: "25" %>
+    </div>
 
-  <div class="field">
-    <%= f.label "パスワード" %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> 文字以上,半角英数字)</em>
-    <% end %><br />
-    <%= f.password_field :password, placeholder: "半角英数字6文字以上",autocomplete: "new-password", cols: "25" %>
-  </div>
+    <div class="field">
+      <%= f.label "パスワード" %>
+      <% if @minimum_password_length %>
+      <em>(<%= @minimum_password_length %> 文字以上,半角英数字)</em>
+      <% end %><br />
+      <%= f.password_field :password, placeholder: "半角英数字6文字以上",autocomplete: "new-password", cols: "25" %>
+    </div>
 
-  <div class="field">
-    <%= f.label "パスワード（確認用）" %><br />
-    <%= f.password_field :password_confirmation, placeholder: "半角英数字6文字以上", autocomplete: "new-password", cols: "25" %>
-  </div>
+    <div class="field">
+      <%= f.label "パスワード（確認用）" %><br />
+      <%= f.password_field :password_confirmation, placeholder: "半角英数字6文字以上", autocomplete: "new-password", cols: "25" %>
+    </div>
 
-  <div class="field">
-    <%= f.label "ユーザーID" %><br />
-    <%= f.text_field :search_number, id:"search_number", placeholder:"任意の数字8文字", rows: "1", maxlength: "8", cols: "25"%>
+    <div class="field">
+      <%= f.label "ユーザーID" %><br />
+      <%= f.text_field :search_number, id:"search_number", placeholder:"任意の数字8文字", rows: "1", maxlength: "8", cols: "25"%>
+      <%= f.submit "登録する", class: "actions" %>
         <p class="please">ユーザーのID検索に使用します（先頭の数字は0以外にしてください）</p>
-    <p class="please">※登録された番号は変更できないのでご注意ください</p>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "登録する" %>
-  </div>
-<% end %>
-<div>
+        <p class="please">※登録された番号は変更できないのでご注意ください</p>
+    </div>
+  <% end %>
+</div>
