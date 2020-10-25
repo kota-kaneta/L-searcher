@@ -84,3 +84,6 @@ gem 'kaminari'
 
 gem 'omniauth-facebook'
 gem "omniauth-rails_csrf_protection"
+
+gem 'bootstrap'  
+gem 'jquery-rails'  
