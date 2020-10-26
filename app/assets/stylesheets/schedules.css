@@ -39,6 +39,21 @@ a.title_link:active{
   font-size: 25px;
 }
 
+.errors{
+  position: absolute;
+  width: 100vw;
+  top: -100px;
+  left: -300px;
+}
+
+.ul-errors{
+  padding-top:100px;
+}
+
+.errors-list{
+  font-size: large;
+  padding-top: 5px;
+}
 /* フィールド */
 
 input[type="password"] {
@@ -65,11 +80,12 @@ input[type="text"] {
   transform: translateX(-50%);
   -webkit-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
+  overflow: scroll;
 }
 
 .new-user-wrap{
   position: absolute;
-  top: 160px;
+  top: 220px;
   left: 56%;
   transform: translateX(-50%);
   -webkit-transform: translateX(-50%);
@@ -262,6 +278,13 @@ input[type="text"] {
   align-items: center;
   height: 80px;
 }
+
+.last-edit{
+  padding-left: 260px;
+  font-size: 20px;
+}
+
+/* 検索 */
 
 .search-parent{
   display: flex;
@@ -587,6 +610,7 @@ a:active {
 
 .join-member-message{
   display: flex;
+  justify-content: space-between;
 }
 
 .sender-name{
@@ -596,7 +620,6 @@ a:active {
 
 .created-at{
   font-size: 22px;
-  padding: 4px 0 0 570px;
 }
 
 .text-field-size{
