@@ -5,6 +5,13 @@ require 'rails/all'
 require "date"
 
 require 'securerandom'
+
+module ApplicationHelper
+  def date_format(datetime)
+    time_ago_in_words(datetime) + '前'
+  end
+end
+
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)

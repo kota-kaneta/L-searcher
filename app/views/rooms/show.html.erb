@@ -31,7 +31,11 @@
         <div class="message-dm"><strong><%= m.content %></strong></div>
         <div class="join-member-message">
           <div class="sender-name">by <strong><a href="/users/<%= m.user_id %>"><%= m.user.name %></a></div>
-          <div class="created-at"><%= l m.created_at %></div>
+          <div class="created-at">
+            <time datetime="<%= m.created_at %>">
+              <%= time_ago_in_words(m.created_at) %>前
+            </time>
+          </div>
         </div>
       </div>
     <% else %>
@@ -39,7 +43,11 @@
         <div class="message-dm"><strong><%= m.content %></strong></div>
         <div class="join-member-message">
           <div class="sender-name">by <strong><a href="/users/<%= m.user_id %>"><%= m.user.name %></a></div>
-          <div class="created-at"><%= l m.created_at %></div>
+          <div class="created-at">
+            <time datetime="<%= m.created_at %>">
+              <%= time_ago_in_words(m.created_at) %>前
+            </time>
+          </div>
         </div>
       </div>
     <% end %>
