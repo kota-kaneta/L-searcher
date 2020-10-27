@@ -7,7 +7,6 @@ class User < ApplicationRecord
   validates :name, :search_number, presence: true
   validates :search_number, uniqueness: true, format: { with: /\A\d{8}\z/ }
   validates :name, format: { with: /\A[ぁ-んァ-ン一-龥]/ }
-  validates :password, format: { with: /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]{6,}+\z/i }
 
   has_one :schedule
   has_many :messages, dependent: :destroy
