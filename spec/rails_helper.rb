@@ -63,4 +63,5 @@ RSpec.configure do |config|
   config.include SignInSupport
   config.include ScheduleRegistration
   config.include FollowSupport
+  config.include DmSupport
 end
