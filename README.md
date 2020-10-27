@@ -6,7 +6,9 @@
 # 制作の背景
 - 私は友達と複数人でプレイをするゲームをする際に、 『この時間空いてるかな？』『土日はバイトだったっけ？』などと考えることがよくありました。満を辞してメッセージを送ってみたら案の定予定が入っていたり、、、
 - 帰省をした際などに久しぶりに飲み会に誘いたい友達がいたとして、その人は今どこに住んでいるのだろうと思うことが多々ありました。
-### このような問題を解決するべく、知人のその日空いてる時間帯が一覧に表示できるようにしました。
+
+このような問題を解決するべく、知人のその日空いてる時間帯が一覧に表示できるようにしました。
+
 # 主な機能
 - ユーザー機能
 - スケジュール機能
@@ -18,116 +20,47 @@
 
 # URL：
 
-# 
+# テスト用アカウント
+## アカウント1
+- メールアドレス：test@1
+- パスワード：101010k
+- ユーザーID：79847326
 
+## アカウント2
+- メールアドレス：test@2
+- パスワード：101010y
+- ユーザーID：61345231
 
+##　利用方法
+新規登録後、スケジュールを登録のリンクより、一週間のうち空いている時間を登録します。
+ユーザー検索ページでフォローしたい人のユーザーIDを入力することで検索が可能です。
+タイムラインにフォローしたユーザーの今日の空き時間が表示されます。
 
+# 環境・使用技術
 
+## フロントエンド  
+- HTML/CSS
+- JavaScript
+- jQuery
 
+## バックエンド  
+- Ruby 2.6.5
+- Rails 6.0.3
 
+## Webサーバー  
+- Nginx : 1.18.0
 
-# テーブル設計
+## アプリケーションサーバー  
+- （開発環境）Puma : 4.3.3
+- （本番環境）Unicorn : 5.4.1
 
-## users テーブル 
+## データベース  
+- （開発環境）MySQL 5.6.47
+- （本番環境）MariaDB : 5.5.64
 
-| Column                | Type    | Options     |
-| --------------------- | ------- | ----------- |
-| name                  | string  | null: false |
-| email                 | string  | null: false |
-| password              | string  | null: false |
-| search_number         | integer | null: false |
+##　インフラ  
+- AWS (EC2, S3, VPC, Route53, ALB, ACM)
+- Git, GitHub
+- Capistrano : 3.14.1
 
-### Association
-
-- has_one :schedule
-- has_many :messages, dependent: :destroy
-- has_many :entries, dependent: :destroy
-- has_many :active_notifications, class_name: 'Notification', foreign_key: 'visitor_id', dependent: :destroy
-- has_many :passive_notifications, class_name: 'Notification', foreign_key: 'visited_id', dependent: :destroy
-
-## schedules テーブル
-
-| Column           | Type    | Options     |
-| ---------------- | ------- | ----------- |
-| from_time_sun    | integer |             |
-| from_time_mon    | integer |             |
-| from_time_tue    | integer |             |
-| from_time_wed    | integer |             |
-| from_time_thu    | integer |             |
-| from_time_fri    | integer |             |
-| from_time_sat    | integer |             |
-| to_time_sun      | integer |             |
-| to_time_mon      | integer |             |
-| to_time_tue      | integer |             |
-| to_time_wed      | integer |             |
-| to_time_thu      | integer |             |
-| to_time_fri      | integer |             |
-| to_time_sat      | integer |             |
-| location         | string  |             |
-
-### Association
-
-- belongs_to :user
-
-## rooms テーブル
-
-| Column | Type   | Options     |
-| ------ | ------ | ----------- |
-| name   | string |             |
-
-### Association
-
-- has_many :entries, dependent: :destroy
-- has_many :messages, dependent: :destroy
-- has_many :notifications, dependent: :destroy
-
-## entries テーブル
-
-| Column | Type       | Options                        |
-| ------ | ---------- | ------------------------------ |
-| user   | references | null: false, foreign_key: true |
-| room   | references | null: false, foreign_key: true |
-
-### Association
-
-- belongs_to :room
-- belongs_to :user
-
-## messages テーブル
-
-| Column  | Type       | Options                        |
-| ------- | ---------- | ------------------------------ |
-| content | text       |                                |
-| user    | references | null: false, foreign_key: true |
-| room    | references | null: false, foreign_key: true |
-
-### Association
-
-- belongs_to :room
-- belongs_to :user
-- has_many :notifications, dependent: :destroy
-
-## follows テーブル
-
-| Column     | Type      | Options                        |
-| ---------- | --------- | ------------------------------ |
-| followable | reference | polymorphic: true, null: false |
-| blocked    | boolean   | default: false, null: false    |
-
-## notifications テーブル
-
-| Column     | Type      | Options                        |
-| ---------- | --------- | ------------------------------ |
-| visitor    | integer   | null: false                    |
-| visited    | integer   | null: false                    |
-| message    | integer   | null: false                    |
-| room       | integer   | null: false                    |
-| action     | string    | default: '', null: false       |
-| checked    | boolean   | default: false, null: false    |
-
-### Association
-
-- belongs_to :message, optional: true
-- belongs_to :room, optional: true
-- belongs_to :visitor, class_name: 'User', foreign_key: 'visitor_id', optional: true
-- belongs_to :visited, class_name: 'User', foreign_key: 'visited_id', optional: true
+# テスト
