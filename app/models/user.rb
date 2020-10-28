@@ -38,6 +38,21 @@ class User < ApplicationRecord
   end
 
   def self.from_omniauth(auth)
-    binding.pry
+  end
+
+  def self.guest
+    find_or_create_by!(email: 'guest@example.com') do |user|
+      user.password = SecureRandom.urlsafe_base64
+      user.name = "ゲスト1"
+      user.search_number = 10000000
+    end
+  end
+
+  def self.guest_two
+    find_or_create_by!(email: 'guest2@example.com') do |user|
+      user.password = SecureRandom.urlsafe_base64
+      user.name = "ゲスト2"
+      user.search_number = 20000000
+    end
   end
 end

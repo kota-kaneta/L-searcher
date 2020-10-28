@@ -2,7 +2,10 @@
 
 <div class="room-list">
   <div class="room-list-title">〜ルーム一覧〜</div>
-
+  <% @room = Entry.where(user_id: current_user.id) %>
+  <% unless @room.present?%>
+    <div class="no-room">まだルームはありません</div>
+  <% end %>
   <div class="room-list-name-wrap">
     <% current_user.all_following.each do |user| %>
     <% @room = Entry.where(user_id: current_user.id) %>

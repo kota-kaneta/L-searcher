@@ -7,6 +7,11 @@ crumb :how_to do
   parent :root
 end
 
+crumb :notifications do
+  link "通知"
+  parent :root
+end
+
 crumb :new_schedule do
   link "スケジュール登録"
   parent :root

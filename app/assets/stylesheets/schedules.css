@@ -98,11 +98,36 @@ input[type="text"] {
   left: -30px;
 }
 
+.guest-alert{
+  display: flex;
+  justify-content: center;
+  font-size: 35px;
+  color: red;
+  padding-top: 25vh;
+}
 
 /* スケジュール */
 
+.user_nav_new{
+  display: flex;
+}
+
+.guest{
+  position: absolute;
+  right: 0;
+}
+
+.new-guest{
+  position: absolute;
+  right: 0;
+  top: 0;
+}
 .head_bar{
   position: relative;
+}
+
+.post{
+  padding-right: 10px;
 }
 
 .day-of-week{
@@ -633,6 +658,13 @@ a:active {
   padding-bottom: 20px;
 }
 
+.no-room{
+  display: flex;
+  justify-content: center;
+  font-size: 30px;
+  padding-top: 250px;
+}
+
 /* 通知 */
 
 .notifications{
@@ -646,6 +678,10 @@ a:active {
   position: absolute;
   top: 50px;
   left: 44vw;
+}
+
+.notifications{
+  padding-top: 100px;
 }
 
 .notification{
