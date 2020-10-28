@@ -1,10 +1,4 @@
-<div class="back-link">
-  <%= link_to ">>トップページへ", root_path%>
-</div>
-<div class="back-link">
-  <%= link_to ">>マイページへ", user_path(current_user.id)%>
-</div>
-
+  <% breadcrumb :follower %>
 <% if @user.followers.present? %>
 <div class="follow-count"><%= "現在のフォロワーは#{@user.followers_count}人です"%></div>
  <% @user.followers.each do |user| %>

@@ -1,17 +1,11 @@
-
+<% breadcrumb :time_line %>
 <div class="tl-wrap">
   <div class="time-line">
     <% unless current_user.all_following.present? %>
-      <div class="back-link">
-        <%= link_to ">>トップページへ", root_path%>
-      </div>
       <div class="no-follow-now">
         ※ここにフォロー中のユーザーが表示されます
       </div>
     <% else %>
-      <div class="back-link">
-        <%= link_to ">>トップページへ", root_path%>
-      </div>
       <div class="tl-each">〜タイムライン〜</div>
         <div class="time-line-message">
           <% wday = ["日", "月", "火", "水", "木", "金", "土"] %>

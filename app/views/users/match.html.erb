@@ -1,5 +1,6 @@
+<% breadcrumb :match %>
 <div class=my-page>
-<% unless @user.id == current_user.id%>
+  <% unless @user.id == current_user.id%>
 <div class="match-user">
   <%= "#{@user.name}さんのページ"%>
 </div>
@@ -20,14 +21,4 @@
 <% else %>
   <div class="no-my-id"><%= "※自分をフォローすることはできません"%></div>
 <% end %>
-
-<div class="back-link">
-  <%= link_to ">>トップページへ", root_path%>
-</div>
-<div class="back-link">
-  <%= link_to ">>ユーザー検索へ", search_users_path%>
-</div>
-<div class="back-link">
-  <%= link_to ">>マイページへ", user_path(current_user.id)%>
-</div>
 </div>

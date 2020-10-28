@@ -10,11 +10,13 @@
   </head>
 
   <body>
-  <div class="wrapper">
+  <div class="wrapper">  
     <div class="title">
       <i><%= link_to "L-searcher", root_path, class: "title_link"%></i>
     </div>
-     
+    <div class="back-link">
+      <%= breadcrumbs separator: " &rsaquo; " %> 
+    </div>
     <%= yield %>
   </div>
   </body>

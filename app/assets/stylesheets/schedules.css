@@ -417,8 +417,8 @@ a.my-page_link:hover{
 }
 
 .back-link{
-  padding: 20px 0 5px 20px;
-  font-size: 20px;
+  font-size: 22px;
+  background-color: #cab899;
 }
 
 .how-to{
@@ -467,6 +467,10 @@ a:active {
 
 .syousai{
   padding-left: 30px;
+}
+
+.follow-count{
+  padding-top: 80px;
 }
 
 .follow-count,
