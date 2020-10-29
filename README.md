@@ -66,7 +66,7 @@
 - （開発環境）MySQL 5.6.47
 - （本番環境）MariaDB : 5.5.64
 
-##　インフラ  
+## インフラ  
 - AWS (EC2, S3, VPC, Route53, ALB, ACM)
 - Git, GitHub
 - Capistrano : 3.14.1
