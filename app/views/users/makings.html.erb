@@ -1,0 +1,20 @@
+<% breadcrumb :favorite %>
+<div class="favorite-all">
+<% if @users.present? %>
+  <div class="favorite-title">★お気に入りのユーザー★</div>
+<% end %>
+<div class="favorites">
+<% @users.each do |user|%>
+  <% if user.present? %>
+    <div class="favorite-user">
+      <%= link_to "★#{user.name}さん★", user_path(user.id) %>
+    </div>
+  <% end %>
+<% end %>
+</div>
+<% unless @users.present? %>
+    <div class="favorite-title">
+      ※お気に入りユーザーがいません
+    </div>
+<% end %>
+</div>

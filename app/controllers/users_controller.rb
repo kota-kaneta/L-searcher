@@ -54,6 +54,11 @@ class UsersController < ApplicationController
   def time_line
   end
 
+  def makings
+    @user = User.find(params[:user_id])
+    @users = @user.makings
+  end
+
   private
 
   def set_user

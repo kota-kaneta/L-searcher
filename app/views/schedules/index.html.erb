@@ -6,6 +6,10 @@
       <div class="new-notifications">
         <%= link_to "通知",  notifications_path, method: :get, class: "notification-index_link" %>
       </div>
+      <b class="favorite-link">
+        <%= link_to "★",{controller: :users,action: :makings,user_id: current_user.id}, method: :get, class: "f-link" %>
+      </b>
+    <div class="link-wrap">
       <div class="top-link">
         <%= link_to "マイページ", user_path(current_user.id), class: "my-page_link"%>
       </div>
@@ -40,5 +44,6 @@
     </div>
     <div class="how-to">
       <%= link_to ">>取り扱い説明", how_to_schedules_path, method: :get %>
+    </div>
     </div>
   </div>

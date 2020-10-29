@@ -90,6 +90,8 @@
   </div>
   <div class="follow_form">
   <% end %>
+  
+  <%= render 'favorite_form', user: @user %>
 
   <% unless @user.id == current_user.id %>
     <% if @isRoom == true %>

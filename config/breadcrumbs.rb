@@ -12,6 +12,11 @@ crumb :notifications do
   parent :root
 end
 
+crumb :favorite do
+  link "お気に入り"
+  parent :root
+end
+
 crumb :new_schedule do
   link "スケジュール登録"
   parent :root

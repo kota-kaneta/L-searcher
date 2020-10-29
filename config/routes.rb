@@ -26,11 +26,16 @@ Rails.application.routes.draw do
       get 'match'
     end
   end
+
+  resources :favorites, only: [:create, :destroy]
+
   put 'users/follow/:user_id' => 'users#follow'
   put 'users/unfollow/:user_id' => 'users#unfollow'
 
   get 'users/follow_list/:user_id' => 'users#follow_list'
   get 'users/follower_list/:user_id' => 'users#follower_list' 
+
+  get 'users/making/:user_id' => 'users#makings' 
 
   devise_scope :user do
     post 'users/guest_sign_in', to: 'users/sessions#new_guest'
