@@ -7,7 +7,7 @@ RSpec.describe 'Rooms', type: :system do
 
   context 'ルームを作成したとき' do
     it 'フォロー後、DMを送るためのルームを作成できること' do
-      # 　ユーザーをフォローする
+      # ユーザーをフォローする
       follow(@user)
 
       # ルームを作成するとDBに保存されている
@@ -22,7 +22,7 @@ RSpec.describe 'Rooms', type: :system do
 
   context 'ルーム作成後' do
     it 'ルーム一覧に表示されていること' do
-      # 　ユーザーをフォローする
+      # ユーザーをフォローする
       follow(@user)
 
       # ルームを作成する

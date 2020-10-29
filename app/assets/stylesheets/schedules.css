@@ -40,6 +40,7 @@ a.title_link:active{
 }
 
 .errors{
+  color: red;
   position: absolute;
   width: 100vw;
   top: -80px;

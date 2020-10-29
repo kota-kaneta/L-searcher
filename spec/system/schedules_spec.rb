@@ -5,8 +5,6 @@ RSpec.describe 'Schedules', type: :system do
     @user = FactoryBot.create(:user)
   end
 
-  # 中略
-
   context '登録に成功したとき' do
     it 'スケジュールの登録に成功するとトップページにリンクが追加される' do
       # サインインする
