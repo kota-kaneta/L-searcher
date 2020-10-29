@@ -1,7 +1,7 @@
 class Follow < ActiveRecord::Base
   extend ActsAsFollower::FollowerLib
   extend ActsAsFollower::FollowScopes
-  default_scope -> { order(created_at: "DESC") }
+  default_scope -> { order(created_at: 'DESC') }
 
   # NOTE: Follows belong to the "followable" and "follower" interface
   belongs_to :followable, polymorphic: true

@@ -1,5 +1,5 @@
 module DmSupport
-  def direct_message(user)
+  def direct_message(_user)
     click_on('DMルーム作成')
     @message = FactoryBot.build(:message)
     fill_in 'message[content]', with: @message

@@ -3,7 +3,7 @@ module SignInSupport
     visit root_path
     fill_in 'user[email]', with: user.email
     fill_in 'user[password]', with: user.password
-    click_on("ログインする")
+    click_on('ログインする')
     expect(current_path).to eq root_path
   end
 end

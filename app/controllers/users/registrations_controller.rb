@@ -70,7 +70,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # end
   class Users::RegistrationsController < Devise::RegistrationsController
     before_action :check_guest, only: [:destroy, :update]
-  
+
     def check_guest
       if resource.email == 'guest@example.com'
         redirect_to root_path, alert: 'ゲストユーザーの情報は変更できません。'
@@ -78,6 +78,5 @@ class Users::RegistrationsController < Devise::RegistrationsController
         redirect_to root_path, alert: 'ゲストユーザーの情報は変更できません。'
       end
     end
-  
   end
 end

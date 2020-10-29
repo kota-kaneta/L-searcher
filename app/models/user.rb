@@ -29,7 +29,7 @@ class User < ApplicationRecord
   end
 
   def create_notification_follow(current_user)
-    temp = Notification.where(["visitor_id = ? and visited_id = ? and action = ? ", current_user.id, id, 'follow'])
+    temp = Notification.where(['visitor_id = ? and visited_id = ? and action = ? ', current_user.id, id, 'follow'])
     if temp.blank?
       notification = current_user.active_notifications.new(
         visited_id: id,
@@ -45,7 +45,7 @@ class User < ApplicationRecord
     # 無ければemailでユーザー検索して取得orビルド(保存はしない)
     user = User.where(email: auth.info.email).first_or_initialize(
       name: auth.info.name,
-        email: auth.info.email
+      email: auth.info.email
     )
     # userが登録済みの場合はそのままログインの処理へ行くので、ここでsnsのuser_idを更新しておく
     if user.persisted?
@@ -58,16 +58,16 @@ class User < ApplicationRecord
   def self.guest
     find_or_create_by!(email: 'guest@example.com') do |user|
       user.password = SecureRandom.urlsafe_base64
-      user.name = "ゲスト1"
-      user.search_number = 10000000
+      user.name = 'ゲスト1'
+      user.search_number = 10_000_000
     end
   end
 
   def self.guest_two
     find_or_create_by!(email: 'guest2@example.com') do |user|
       user.password = SecureRandom.urlsafe_base64
-      user.name = "ゲスト2"
-      user.search_number = 20000000
+      user.name = 'ゲスト2'
+      user.search_number = 20_000_000
     end
   end
 end
