@@ -13,8 +13,13 @@ crumb :notifications do
 end
 
 crumb :favorite do
-  link "お気に入り"
+  link "お気に入り", :back
   parent :root
+end
+
+crumb :favorite_time_line do
+  link "お気に入りタイムライン"
+  parent :favorite
 end
 
 crumb :new_schedule do

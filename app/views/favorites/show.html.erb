@@ -1,0 +1,136 @@
+<% breadcrumb :favorite_time_line %>
+<div class="tl-wrap">
+  <div class="time-line">
+<% unless current_user.all_following.present? %>
+      <div class="no-follow-now">
+        ※ここにフォロー中のユーザーが表示されます
+      </div>
+    <% else %>
+      <div class="tl-each">★お気に入りタイムライン★</div>
+        <div class="time-line-message">
+          <% wday = ["日", "月", "火", "水", "木", "金", "土"] %>
+          <span style="border-bottom: solid 2px ;"><%= "本日：#{Date.today.strftime("%m月 %d日")}（#{wday[Date.today.wday]}）の暇な時間"%></span>
+        </div>
+    <% end %>
+      <div class="tl-border">
+        <% current_user.makings.each do |user| %>
+          <% @schedules = Schedule.where(user_id: user.id) %>
+          <% @schedules.each do |schedule| %>
+            <% if Date.today.wday == 0 && schedule.from_time_sun != nil && schedule.to_time_sun != nil%>
+              <div class="in-each">
+                <div class="tl-left">
+                  <div class="l_user">
+                    <%= link_to "#{user.name}", user_path(user) %>
+                  </div>
+                </div>
+                <div class="tl-right">
+                  <div class="times">
+                    <%= "#{schedule.from_time_sun}：00 〜 #{schedule.to_time_sun}：00" %>
+                  </div>
+                  <div class="tl-location">
+                    <%= schedule.location %>
+                  </div>
+                </div>
+              </div>
+            <% elsif Date.today.wday == 1 && schedule.from_time_mon != nil && schedule.to_time_mon != nil%>
+              <div class="in-each">
+                <div class="tl-left">
+                  <div class="l_user">
+                    <%= link_to "#{user.name}", user_path(user) %>
+                  </div>
+                </div>
+                <div class="tl-right">
+                  <div class="times">
+                    <%= "#{schedule.from_time_mon}：00 〜 #{schedule.to_time_mon}：00" %>
+                  </div>
+                  <div class="tl-location">
+                    <%= schedule.location %>
+                  </div>
+                </div>
+              </div>
+            <% elsif Date.today.wday == 2 && schedule.from_time_tue != nil && schedule.to_time_tue != nil%>
+              <div class="in-each">
+                <div class="tl-left">
+                  <div class="l_user">
+                    <%= link_to "#{user.name}", user_path(user) %>
+                  </div>
+                </div>
+                <div class="tl-right">
+                  <div class="times">
+                    <%= "#{schedule.from_time_tue}：00 〜 #{schedule.to_time_tue}：00" %>
+                  </div>
+                  <div class="tl-location">
+                    <%= schedule.location %>
+                  </div>
+                </div>
+              </div>
+            <% elsif Date.today.wday == 3 && schedule.from_time_wed != nil && schedule.to_time_wed != nil%>
+              <div class="in-each">
+                <div class="tl-left">
+                  <div class="l_user">
+                    <%= link_to "#{user.name}", user_path(user) %>
+                  </div>
+                </div>
+                <div class="tl-right">
+                  <div class="times">
+                    <%= "#{schedule.from_time_wed}：00 〜 #{schedule.to_time_wed}：00" %>
+                  </div>
+                  <div class="tl-location">
+                    <%= schedule.location %>
+                  </div>
+                </div>
+              </div>
+            <% elsif Date.today.wday == 4 && schedule.from_time_thu != nil && schedule.to_time_thu != nil%>
+              <div class="in-each">
+                <div class="tl-left">
+                  <div class="l_user">
+                    <%= link_to "#{user.name}", user_path(user) %>
+                  </div>
+                </div>
+                <div class="tl-right">
+                  <div class="times">
+                    <%= "#{schedule.from_time_thu}：00 〜 #{schedule.to_time_thu}：00" %>
+                  </div>
+                  <div class="tl-location">
+                    <%= schedule.location %>
+                  </div>
+                </div>
+              </div>
+            <% elsif Date.today.wday == 5 && schedule.from_time_fri != nil && schedule.to_time_fri != nil%>
+              <div class="in-each">
+                <div class="tl-left">
+                  <div class="l_user">
+                    <%= link_to "#{user.name}", user_path(user) %>
+                  </div>
+                </div>
+                <div class="tl-right">
+                  <div class="times">
+                    <%= "#{schedule.from_time_fri}：00 〜 #{schedule.to_time_fri}：00" %>
+                  </div>
+                  <div class="tl-location">
+                    <%= schedule.location %>
+                  </div>
+                </div>
+              </div>
+            <% elsif Date.today.wday == 6 && schedule.from_time_sat != nil && schedule.to_time_sat != nil%>
+              <div class="in-each">
+                <div class="tl-left">
+                  <div class="l_user">
+                    <%= link_to "#{user.name}", user_path(user) %>
+                  </div>
+                </div>
+                <div class="tl-right">
+                  <div class="times">
+                    <%= "#{schedule.from_time_sat}：00 〜 #{schedule.to_time_sat}：00" %>
+                  </div>
+                  <div class="tl-location">
+                    <%= schedule.location %>
+                  </div>
+                </div>
+              </div>
+            <% end %>
+          <% end %>
+        <% end %>
+      </div>
+  </div>
+</div>

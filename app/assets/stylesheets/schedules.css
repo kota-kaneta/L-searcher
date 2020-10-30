@@ -400,6 +400,25 @@ input[type="text"] {
 
 /* リンク */
 
+.button-center {
+  display       : inline-block;
+  font-size     : 18pt;
+  text-align    : center;
+  cursor        : pointer;
+  padding       : 12px 13px;
+  background    : #00b3b3;
+  color         : #ffffff;
+  line-height   : 1em;
+  transition    : .3s;
+  box-shadow    : 8px 8px 8px #666666;
+  border        : 2px solid #00b3b3;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+}
+
 .button {
   display       : inline-block;
   font-size     : 18pt;
@@ -412,6 +431,22 @@ input[type="text"] {
   transition    : .3s;
   box-shadow    : 8px 8px 8px #666666;
   border        : 2px solid #00b3b3;
+}
+
+.button-favo-time{
+  position: absolute;
+  right: 100px;
+  top: 210px;
+  display       : inline-block;
+  font-size     : 18pt;
+  text-align    : center;
+  cursor        : pointer;
+  padding       : 12px 13px;
+  background    : #d5eeee;
+  line-height   : 1em;
+  transition    : .3s;
+  box-shadow    : 8px 8px 8px #666666;
+  border        : 5px solid #3158d8;
 }
 
 .button-new {
@@ -644,6 +679,15 @@ a:active {
 }
 
 .to-chat{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 28px;
+  height: 100px;
+  margin: 0 40vw;
+}
+
+.to-chat-already{
   display: flex;
   justify-content: center;
   align-items: center;

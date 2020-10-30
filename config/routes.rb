@@ -27,7 +27,7 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :favorites, only: [:create, :destroy]
+  resources :favorites, only: [:show, :create, :destroy]
 
   put 'users/follow/:user_id' => 'users#follow'
   put 'users/unfollow/:user_id' => 'users#unfollow'

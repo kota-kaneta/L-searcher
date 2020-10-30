@@ -94,7 +94,7 @@
 <% unless @user.id == current_user.id %>
   <%= render 'favorite_form', user: @user %>
     <% if @isRoom == true %>
-      <div class="to-chat"><a href="/rooms/<%= @roomId %>">DMルームへ</div>
+      <div class="button-center"><a href="/rooms/<%= @roomId %>">DMルームへ</div>
     <% else %>
       <%= form_for @room do |f| %>
         <%= fields_for @entry do |e| %>

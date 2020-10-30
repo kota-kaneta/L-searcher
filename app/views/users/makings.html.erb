@@ -2,6 +2,9 @@
 <div class="favorite-all">
 <% if @users.present? %>
   <div class="favorite-title">★お気に入りのユーザー★</div>
+  <div class="button-favo-time">
+    <%= link_to "お気に入りタイムラインへ", favorite_path(current_user.id)%>
+  </div>
 <% end %>
 <div class="favorites">
 <% @users.each do |user|%>
