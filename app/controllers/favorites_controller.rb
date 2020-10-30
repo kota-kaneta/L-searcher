@@ -14,6 +14,7 @@ class FavoritesController < ApplicationController
   end
 
   def show
+    redirect_to root_path if request.referer.nil?
     @user = User.find(params[:id])
-    end
+  end
 end
