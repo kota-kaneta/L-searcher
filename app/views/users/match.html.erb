@@ -1,9 +1,15 @@
 <% breadcrumb :match %>
 <div class=my-page>
   <% unless @user.id == current_user.id%>
-<div class="match-user">
-  <%= "#{@user.name}さんのページ"%>
-</div>
+  <% if current_user.making_ids.include?(@user.id) %>
+    <div class="match-user">
+      <%= "★#{@user.name}さん★のページ"%>
+    </div>
+  <% else %>
+    <div class="match-user">
+      <%= "#{@user.name}さんのページ"%>
+    </div>
+  <% end %>
 
 <div class="follow-list">
   <div class="u-f">

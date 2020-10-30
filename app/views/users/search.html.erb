@@ -14,9 +14,15 @@
 </div>
 <% @users.each do |user| %>
   <% if user %>
-    <div class="user-candidate">
-      <%= link_to "#{user.name}さんのページへ", match_user_path(user.id) %>
-    </div>
+    <% if current_user.making_ids.include?(user.id) %>
+      <div class="user-candidate">
+        <%= link_to "★#{user.name}さん★のページへ", match_user_path(user.id) %>
+      </div>
+    <% else %>
+      <div class="user-candidate">
+        <%= link_to "#{user.name}さんのページへ", match_user_path(user.id) %>
+      </div>
+    <% end %>
   <% end %>
 <% end %>
 </div>

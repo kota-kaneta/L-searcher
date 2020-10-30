@@ -622,8 +622,9 @@ a:active {
 }
 
 .no-follow-now{
-  padding-left: 23vw;
-  padding-top: 100px;
+  display: flex;
+  justify-content: center;
+  padding-top: 150px;
 }
 
 .tl-each{
