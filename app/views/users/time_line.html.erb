@@ -18,11 +18,19 @@
           <% @schedules.each do |schedule| %>
             <% if Date.today.wday == 0 && schedule.from_time_sun != nil && schedule.to_time_sun != nil%>
               <div class="in-each">
-                <div class="tl-left">
-                  <div class="l_user">
-                    <%= link_to "#{user.name}", user_path(user) %>
+                <% if current_user.making_ids.include?(user.id) %>
+                  <div class="tl-left">
+                    <div class="l_user">
+                      <%= link_to "★#{user.name}★", user_path(user) %>
+                    </div>
                   </div>
-                </div>
+                <% else %>
+                  <div class="tl-left">
+                    <div class="l_user">
+                      <%= link_to "#{user.name}", user_path(user) %>
+                    </div>
+                  </div>
+                <% end %>
                 <div class="tl-right">
                   <div class="times">
                     <%= "#{schedule.from_time_sun}：00 〜 #{schedule.to_time_sun}：00" %>
@@ -34,11 +42,19 @@
               </div>
             <% elsif Date.today.wday == 1 && schedule.from_time_mon != nil && schedule.to_time_mon != nil%>
               <div class="in-each">
-                <div class="tl-left">
-                  <div class="l_user">
-                    <%= link_to "#{user.name}", user_path(user) %>
+                <% if current_user.making_ids.include?(user.id) %>
+                  <div class="tl-left">
+                    <div class="l_user">
+                      <%= link_to "★#{user.name}★", user_path(user) %>
+                    </div>
                   </div>
-                </div>
+                <% else %>
+                  <div class="tl-left">
+                    <div class="l_user">
+                      <%= link_to "#{user.name}", user_path(user) %>
+                    </div>
+                  </div>
+                <% end %>
                 <div class="tl-right">
                   <div class="times">
                     <%= "#{schedule.from_time_mon}：00 〜 #{schedule.to_time_mon}：00" %>
@@ -50,11 +66,19 @@
               </div>
             <% elsif Date.today.wday == 2 && schedule.from_time_tue != nil && schedule.to_time_tue != nil%>
               <div class="in-each">
-                <div class="tl-left">
-                  <div class="l_user">
-                    <%= link_to "#{user.name}", user_path(user) %>
+                <% if current_user.making_ids.include?(user.id) %>
+                  <div class="tl-left">
+                    <div class="l_user">
+                      <%= link_to "★#{user.name}★", user_path(user) %>
+                    </div>
                   </div>
-                </div>
+                <% else %>
+                  <div class="tl-left">
+                    <div class="l_user">
+                      <%= link_to "#{user.name}", user_path(user) %>
+                    </div>
+                  </div>
+                <% end %>
                 <div class="tl-right">
                   <div class="times">
                     <%= "#{schedule.from_time_tue}：00 〜 #{schedule.to_time_tue}：00" %>
@@ -66,11 +90,19 @@
               </div>
             <% elsif Date.today.wday == 3 && schedule.from_time_wed != nil && schedule.to_time_wed != nil%>
               <div class="in-each">
-                <div class="tl-left">
-                  <div class="l_user">
-                    <%= link_to "#{user.name}", user_path(user) %>
+                <% if current_user.making_ids.include?(user.id) %>
+                  <div class="tl-left">
+                    <div class="l_user">
+                      <%= link_to "★#{user.name}★", user_path(user) %>
+                    </div>
                   </div>
-                </div>
+                <% else %>
+                  <div class="tl-left">
+                    <div class="l_user">
+                      <%= link_to "#{user.name}", user_path(user) %>
+                    </div>
+                  </div>
+                <% end %>
                 <div class="tl-right">
                   <div class="times">
                     <%= "#{schedule.from_time_wed}：00 〜 #{schedule.to_time_wed}：00" %>
@@ -82,11 +114,19 @@
               </div>
             <% elsif Date.today.wday == 4 && schedule.from_time_thu != nil && schedule.to_time_thu != nil%>
               <div class="in-each">
-                <div class="tl-left">
-                  <div class="l_user">
-                    <%= link_to "#{user.name}", user_path(user) %>
+                <% if current_user.making_ids.include?(user.id) %>
+                  <div class="tl-left">
+                    <div class="l_user">
+                      <%= link_to "★#{user.name}★", user_path(user) %>
+                    </div>
                   </div>
-                </div>
+                <% else %>
+                  <div class="tl-left">
+                    <div class="l_user">
+                      <%= link_to "#{user.name}", user_path(user) %>
+                    </div>
+                  </div>
+                <% end %>
                 <div class="tl-right">
                   <div class="times">
                     <%= "#{schedule.from_time_thu}：00 〜 #{schedule.to_time_thu}：00" %>
@@ -98,11 +138,19 @@
               </div>
             <% elsif Date.today.wday == 5 && schedule.from_time_fri != nil && schedule.to_time_fri != nil%>
               <div class="in-each">
-                <div class="tl-left">
-                  <div class="l_user">
-                    <%= link_to "#{user.name}", user_path(user) %>
+                <% if current_user.making_ids.include?(user.id) %>
+                  <div class="tl-left">
+                    <div class="l_user">
+                      <%= link_to "★#{user.name}★", user_path(user) %>
+                    </div>
                   </div>
-                </div>
+                <% else %>
+                  <div class="tl-left">
+                    <div class="l_user">
+                      <%= link_to "#{user.name}", user_path(user) %>
+                    </div>
+                  </div>
+                <% end %>
                 <div class="tl-right">
                   <div class="times">
                     <%= "#{schedule.from_time_fri}：00 〜 #{schedule.to_time_fri}：00" %>
@@ -114,11 +162,19 @@
               </div>
             <% elsif Date.today.wday == 6 && schedule.from_time_sat != nil && schedule.to_time_sat != nil%>
               <div class="in-each">
-                <div class="tl-left">
-                  <div class="l_user">
-                    <%= link_to "#{user.name}", user_path(user) %>
+                <% if current_user.making_ids.include?(user.id) %>
+                  <div class="tl-left">
+                    <div class="l_user">
+                      <%= link_to "★#{user.name}★", user_path(user) %>
+                    </div>
                   </div>
-                </div>
+                <% else %>
+                  <div class="tl-left">
+                    <div class="l_user">
+                      <%= link_to "#{user.name}", user_path(user) %>
+                    </div>
+                  </div>
+                <% end %>
                 <div class="tl-right">
                   <div class="times">
                     <%= "#{schedule.from_time_sat}：00 〜 #{schedule.to_time_sat}：00" %>
@@ -132,6 +188,8 @@
           <% end %>
         <% end %>
       </div>
-    
   </div>
+</div>
+<div class="button-favo-time">
+  <%= link_to "お気に入りタイムラインへ", favorite_path(current_user.id)%>
 </div>

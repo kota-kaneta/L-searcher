@@ -5,10 +5,17 @@
 <% @user.all_following.each do |user| %>
   <div class="aaa">
     <div class="wrapping">
-      <div class="follow-name">
-        <%= "#{user.name}さん" %> 
-        <%= link_to '詳細', user_path(user), class: "syousai" %>
-      </div>
+      <% if current_user.making_ids.include?(user.id) %>
+        <div class="follow-name">
+          <%= "★#{user.name}さん★" %> 
+          <%= link_to '詳細', user_path(user), class: "syousai" %>
+        </div>
+      <% else %>
+        <div class="follow-name">
+          <%= "#{user.name}さん" %> 
+          <%= link_to '詳細', user_path(user), class: "syousai" %>
+        </div>
+      <% end %>
       <div class="follow-list">
         <div class="u-f">
           <%= user.follow_count %>フォロー

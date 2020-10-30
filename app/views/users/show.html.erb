@@ -1,9 +1,15 @@
 <% breadcrumb :mypage %>
 <div class=my-page>   
   <div class="schedule-top">
+  <% if current_user.making_ids.include?(@user.id) %>
+    <div class="apotime">
+      ★<%= @user.name %>のマイページ★
+    </div>
+  <% else %>
     <div class="apotime">
       <%= @user.name %>のマイページ
     </div>
+  <% end %>
     <div class="current_search_number">
       <%= "ユーザーID：#{@user.search_number}"%>
     </div>
