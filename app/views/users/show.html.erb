@@ -90,10 +90,9 @@
   </div>
   <div class="follow_form">
   <% end %>
-  
-  <%= render 'favorite_form', user: @user %>
 
-  <% unless @user.id == current_user.id %>
+<% unless @user.id == current_user.id %>
+  <%= render 'favorite_form', user: @user %>
     <% if @isRoom == true %>
       <div class="to-chat"><a href="/rooms/<%= @roomId %>">DMルームへ</div>
     <% else %>
@@ -102,7 +101,7 @@
         <%= e.hidden_field :user_id, :value=> @user.id %>
         <% end %>
         <div class="to-chat">
-          <%= f.submit "DMルーム作成" %>
+          <%= f.submit "DMルーム作成", class: "button" %>
         </div>
       <% end %>
     <% end %>

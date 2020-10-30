@@ -3,13 +3,13 @@ class FavoritesController < ApplicationController
     @user = User.find(params[:making_id])
     making = current_user.make(@user)
     making.save
-    redirect_to root_path
+    redirect_to user_path(@user)
   end
 
   def destroy
     @user = User.find(params[:making_id])
     making = current_user.release(@user)
     making.destroy
-    redirect_to root_path
+    redirect_to user_path(@user)
   end
 end

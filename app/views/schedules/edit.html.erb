@@ -30,7 +30,7 @@
         居住地：<%= f.text_field :location, rows: "1", maxlength: "10", placeholder: "東京", value: @schedule.location %>
       </div>
       <div class="submit">
-        <%= f.submit "変更する" %>
+        <%= f.submit "変更する", class: "button" %>
       </div>
     </div>
   <% end %>
