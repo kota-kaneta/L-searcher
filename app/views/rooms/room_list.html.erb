@@ -13,10 +13,17 @@
       <% @room.each do |room| %>
         <% @rooms.each do |rooms| %>
           <% if room.room_id == rooms.room_id %>
-            <div class="room-list-name">
-              <a href="/rooms/<%= room.room_id %>">
-              <%= "#{user.name}のルーム" %>
-            </div>
+            <% if current_user.making_ids.include?(user.id) %>
+              <div class="room-list-name">
+                <a href="/rooms/<%= room.room_id %>">
+                <%= "★#{user.name}のルーム★" %>
+              </div>
+            <% else %>
+              <div class="room-list-name">
+                <a href="/rooms/<%= room.room_id %>">
+                <%= "#{user.name}のルーム" %>
+              </div>
+            <% end %>
           <% end %>
         <% end %>
       <% end %>

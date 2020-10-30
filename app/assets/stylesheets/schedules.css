@@ -447,6 +447,7 @@ input[type="text"] {
   transition    : .3s;
   box-shadow    : 8px 8px 8px #666666;
   border        : 5px solid #3158d8;
+  border-radius: 18px;
 }
 
 .button-new {
@@ -590,8 +591,13 @@ a:active {
   justify-content: center;
   font-size: 30px;
   height: 60px;
-  color: lightcoral;
+  color: red;
   padding-bottom: 60px
+}
+
+.no-my-id{
+  padding-top: 200px;
+  font-size: 35px;
 }
 
 .follow-c{
