@@ -135,5 +135,25 @@ RSpec.describe User, type: :model do
       t = User.reflect_on_association(:sns_credentials)
       expect(t.macro).to eq(:has_many)
     end
+
+    it 'making_relationshipsアソシエーション' do
+      t = User.reflect_on_association(:making_relationships)
+      expect(t.macro).to eq(:has_many)
+    end
+
+    it 'makingsアソシエーション' do
+      t = User.reflect_on_association(:makings)
+      expect(t.macro).to eq(:has_many)
+    end
+
+    it 'maked_relationshipsアソシエーション' do
+      t = User.reflect_on_association(:maked_relationships)
+      expect(t.macro).to eq(:has_many)
+    end
+
+    it 'makedsアソシエーション' do
+      t = User.reflect_on_association(:makeds)
+      expect(t.macro).to eq(:has_many)
+    end
   end
 end
