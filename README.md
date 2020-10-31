@@ -76,7 +76,7 @@
 
 ## ER図
 
-![ER図](https://github.com/kota-kaneta/L-searcher/erd.pdf)
+![画像の説明](images/l-searcher.png "ER")
 
 # テスト
 - RSpec
