@@ -1,7 +1,6 @@
 html, body {
-  font-family: 'Open Sans', sans-serif;
-  font-family: 'Noto Serif JP', serif;
   overflow: scroll;
+  text-shadow : 0 1px 1px #3d3c3c;
 }
 
 h2{
@@ -11,13 +10,17 @@ h2{
 }
 
 .wrapper{
-  background-color: #d4d4a7;
+  font-family: 'Open Sans', sans-serif;
+  font-family: 'Noto Serif JP', serif;
+  background-color: #bdb294;
   width: 100vw;
   height: 100vh;
   overflow: scroll;
 }
 
 .title{
+  font-family: 'Open Sans', sans-serif;
+  font-family: 'Noto Serif JP', serif;
   background-color: #ddc9a6;
   color: #555555;
   height: 120px;
@@ -25,6 +28,15 @@ h2{
   display: flex;
   justify-content: center;
   align-items: center;
+  text-shadow    : 
+  2px  2px 1px rgba(255, 77, 77, 0.57),
+ -2px  2px 1px rgba(255, 77, 77, 0.57),
+  2px -2px 1px rgba(255, 77, 77, 0.57),
+ -2px -2px 1px rgba(255, 77, 77, 0.57),
+  2px  0px 1px rgba(255, 77, 77, 0.57),
+  0px  2px 1px rgba(255, 77, 77, 0.57),
+ -2px  0px 1px rgba(255, 77, 77, 0.57),
+  0px -2px 1px rgba(255, 77, 77, 0.57); 
 }
 
 a.title_link:link,
@@ -32,6 +44,30 @@ a.title_link:visited,
 a.title_link:hover,
 a.title_link:active{
   color: #555555;
+}
+
+.hello-user,
+.schedule-top,
+.search-page,
+.match-user,
+.room-list-title,
+.favorite-title,
+.dm-room,
+.tl-each,
+.new_schedule{
+  text-shadow : 3px 5px 14px #ffff1a;
+}
+
+.week-of-schedule{
+  text-shadow : 2px 2px 5px #ff1ad9;
+}
+
+.tl-left{
+  text-shadow : 1px 1px 1px #080808;
+}
+
+.tl-right{
+  text-shadow : 2px 2px 14px #ff481a;
 }
 
 .head_bar{

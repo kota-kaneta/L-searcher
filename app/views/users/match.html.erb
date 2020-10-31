@@ -1,5 +1,5 @@
 <% breadcrumb :match %>
-<div class=my-page>
+<div class="my-page">
   <% unless @user.id == current_user.id%>
   <% if current_user.making_ids.include?(@user.id) %>
     <div class="match-user">
