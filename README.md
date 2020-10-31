@@ -76,7 +76,7 @@
 
 ## ER図
 
-![画像の説明](images/l-searcher.png "ER")
+![ER](images/l-searcher.png "l-searcher")
 
 # テスト
 - RSpec
