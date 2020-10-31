@@ -76,7 +76,7 @@
 
 ## ER図
 
-![ER](images/l-searcher.png "l-searcher")
+![ER](app/asset/images/l-searcher.png "l-searcher")
 
 # テスト
 - RSpec
