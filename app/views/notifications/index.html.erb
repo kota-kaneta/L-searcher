@@ -1,5 +1,8 @@
 <% breadcrumb :notifications %>
 <div class="notifications">
+<div class="new-notification-list">
+  新規通知
+</div>
   <% notifications = @notifications.where.not(visitor_id: current_user.id) %>
   <% if notifications.exists? %>
       <%= render notifications %>

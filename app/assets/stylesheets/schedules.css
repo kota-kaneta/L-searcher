@@ -54,8 +54,16 @@ a.title_link:active{
 .favorite-title,
 .dm-room,
 .tl-each,
-.new_schedule{
+.new_schedule,
+.new-notification-list{
   text-shadow : 3px 5px 14px #ffff1a;
+}
+
+.new-notification-list{
+  display: flex;
+  justify-content: center;
+  font-size: 35px;
+  padding-bottom: 30px;
 }
 
 .week-of-schedule{
@@ -868,6 +876,7 @@ a:active {
   position: relative;
   top: -150px;
   left: 600px;
+  text-shadow: 8px 8px 8px #666666;
 }
 
 .favorite-all{
@@ -1090,6 +1099,34 @@ a:active {
 .room-list-image{
   position: absolute;
   top: 5180px;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+}
+
+.under-arrow-six{
+  font-size: 180px;
+  position: absolute;
+  top: 5780px;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+}
+
+.how-to-favorite{
+  position: absolute;
+  top: 6050px;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+}
+
+.favorite-image{
+  position: absolute;
+  top: 6170px;
   left: 50%;
   transform: translateX(-50%);
   -webkit-transform: translateX(-50%);
