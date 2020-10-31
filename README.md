@@ -74,6 +74,10 @@
 - Git, GitHub
 - Capistrano : 3.14.1
 
+## ER図
+
+![ER図](https://raw.github.com/wiki/kota-kaneta/L-searcher/app/assets/lsearcher.png)
+
 # テスト
 - RSpec
 
