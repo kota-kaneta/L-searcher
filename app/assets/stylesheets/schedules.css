@@ -779,6 +779,7 @@ a:active {
   height: 100vh;
   overflow: scroll;
   position: relative;
+  background-color: rgb(137, 187, 160);
 }
 
 .pagenation{
@@ -796,8 +797,9 @@ a:active {
   font-size: 25px;
   padding: 10px 0 10px 10px;
   display: flex;
-  border: black 1px solid;
+  border: rgb(58, 153, 55) 2px solid;
   border-radius: 20px;
+  box-shadow    : 8px 8px 8px #666666;
   margin: 15px 10px 10px 30vw;
   width: 38vw;
   background-color: rgb(131, 201, 117);
