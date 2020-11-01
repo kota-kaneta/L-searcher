@@ -14,13 +14,17 @@
   <div class="wrapper"> 
     <div class="title">
       <i><%= link_to "L-searcher", root_path, class: "title_link"%></i>
-      <%= link_to image_tag("home.png", size: '50x40'), user_path(current_user.id), class: "home" %> 
+      <% if user_signed_in? %>
+        <%= link_to image_tag("home.png", size: '50x40'), user_path(current_user.id), class: "home" %> 
+      <% end %>
     </div>
     <div class="back-link">
       <%= breadcrumbs separator: " &rsaquo; " %>
     </div>
     <%= yield %>
   </div>
-  <span class="home-top">マイページへ</span>
+  <% if user_signed_in? %>
+    <span class="home-top">マイページへ</span>
+  <% end %>
   </body>
 </html>
