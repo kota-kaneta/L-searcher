@@ -59,6 +59,20 @@ a.title_link:active{
   text-shadow : 3px 5px 14px #ffff1a;
 }
 
+.home{
+  size: 200 * 50;
+  position: relative;
+  right: -550px;
+}
+
+.home-top{
+  position: absolute;
+  position: fixed;
+  top: 20px;
+  right: 45px;
+  color: #3380d8;
+}
+
 .new-notification-list{
   display: flex;
   justify-content: center;
@@ -574,7 +588,9 @@ a.my-page_link:hover{
 
 .back-link{
   font-size: 25px;
-  background-color: #cab899;
+  background-color: #cab899; 
+  display: flex;
+  
 }
 
 .how-to{

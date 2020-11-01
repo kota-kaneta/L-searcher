@@ -11,14 +11,16 @@
   </head>
 
   <body>
-  <div class="wrapper">  
+  <div class="wrapper"> 
     <div class="title">
       <i><%= link_to "L-searcher", root_path, class: "title_link"%></i>
+      <%= link_to image_tag("home.png", size: '50x40'), user_path(current_user.id), class: "home" %> 
     </div>
     <div class="back-link">
-      <%= breadcrumbs separator: " &rsaquo; " %> 
+      <%= breadcrumbs separator: " &rsaquo; " %>
     </div>
     <%= yield %>
   </div>
+  <span class="home-top">マイページへ</span>
   </body>
 </html>
