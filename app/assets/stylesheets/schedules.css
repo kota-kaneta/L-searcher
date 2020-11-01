@@ -66,11 +66,12 @@ a.title_link:active{
 }
 
 .home-top{
-  position: absolute;
-  position: fixed;
-  top: 20px;
-  right: 45px;
+  position: relative;
+  top: -30px;
+  right: -487px;
   color: #3380d8;
+  font-size: 16px;
+  text-shadow: none;
 }
 
 .new-notification-list{

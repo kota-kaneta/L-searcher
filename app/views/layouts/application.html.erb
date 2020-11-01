@@ -16,6 +16,7 @@
       <i><%= link_to "L-searcher", root_path, class: "title_link"%></i>
       <% if user_signed_in? %>
         <%= link_to image_tag("home.png", size: '50x40'), user_path(current_user.id), class: "home" %> 
+        <span class="home-top">マイページ</span>
       <% end %>
     </div>
     <div class="back-link">
@@ -23,8 +24,5 @@
     </div>
     <%= yield %>
   </div>
-  <% if user_signed_in? %>
-    <span class="home-top">マイページへ</span>
-  <% end %>
   </body>
 </html>
