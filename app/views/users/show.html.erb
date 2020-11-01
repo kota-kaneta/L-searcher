@@ -13,7 +13,7 @@
     <div class="current_search_number">
       <%= "ユーザーID：#{@user.search_number}"%>
     </div>
-</div>
+  </div>
 
   <% if @user.schedule.present? %>
     <div class="last-edit">
@@ -22,11 +22,11 @@
   <% end %>
   <% if @user.id == current_user.id%>
   <div class="follow-list">
-    <div class="">
+    <div class="follow-count-show">
       <%= @user.follow_count %>
       <%= link_to "フォロー", {controller: :users,action: :follow_list,user_id: @user.id}, method: :get %>
     </div>
-    <div class="">
+    <div class="follower-count-show">
       <%= @user.followers_count %>
       <%= link_to "フォロワー", {controller: :users,action: :follower_list,user_id: @user.id}, method: :get %>
     </div>
@@ -83,7 +83,7 @@
     <% unless @schedule %>
       <%= link_to "スケジュールを登録する", new_schedule_path%>
     <% else %>
-      <%= link_to "スケジュールを変更する", edit_schedule_path(@schedule.id), method: :get %>
+      <%= link_to ">>スケジュールを変更する<<", edit_schedule_path(@schedule.id), method: :get %>
     <% end %>
   </div>
   <% end %>

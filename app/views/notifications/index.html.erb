@@ -1,14 +1,12 @@
 <% breadcrumb :notifications %>
 <div class="notifications">
-<div class="new-notification-list">
-  新規通知
-</div>
+  <div class="new-notification-list">
+    〜新規通知〜
+  </div>
   <% notifications = @notifications.where.not(visitor_id: current_user.id) %>
+    <span class="pagenation"><%= paginate notifications %></span>
   <% if notifications.exists? %>
       <%= render notifications %>
-    <div class="pagenation">
-      <%= paginate notifications %>
-    <div>
   <% else %>
     <div class="notification-nothing">
       通知はありません

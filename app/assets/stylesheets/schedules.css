@@ -62,7 +62,7 @@ a.title_link:active{
 .home{
   size: 200 * 50;
   position: relative;
-  right: -550px;
+  right: -550px; 
 }
 
 .home-top{
@@ -309,7 +309,7 @@ input[type="text"]:focus{
   justify-content: space-around;
   align-items: center;
   height: 100px;
-  font-size: 25px;
+  font-size: 28px;
 }
 
 .apotime{
@@ -322,9 +322,9 @@ input[type="text"]:focus{
 
 .week-of-schedule{
   margin: 0 20vw ;
-  border: solid 4px lightgray;
+  border: solid 4px #35557f;
   border-radius: 100px;
-  background-color: #d8afaf;
+  background-color: #B0C4DE;
   font-size: 25px;
 }
 
@@ -364,8 +364,9 @@ input[type="text"]:focus{
 .current-location{
   font-size: 30px;
   margin: 20px 20vw ;
-  border: solid 4px lightgray;
-  background-color: rgb(94, 187, 218);
+  border: solid 4px #35557f;
+  background-color: #B0C4DE;
+  border-radius: 10px;
   color: rgb(99, 45, 224);
   display: flex;
   justify-content: center;
@@ -382,6 +383,7 @@ input[type="text"]:focus{
 .last-edit{
   padding-left: 260px;
   font-size: 20px;
+  color: rgb(250, 21, 21);
 }
 
 /* 検索 */
@@ -405,9 +407,9 @@ input[type="text"]:focus{
 .match-id{
   display: flex;
   justify-content: center;
-  font-size: 22px;
+  font-size: 25px;
   padding-top: 50px;
-  color: olivedrab;
+  color: rgb(43, 151, 175);
 }
 
 .user-candidate{
@@ -436,6 +438,7 @@ input[type="text"]:focus{
   display: flex;
   justify-content: center;
   font-size: 25px;
+  padding: 20px 0;
 }
 
 .u-f{
@@ -502,7 +505,7 @@ input[type="text"]:focus{
 }
 
 .button-favo-time{
-  position: absolute;
+  position: fixed;
   right: 100px;
   top: 210px;
   display       : inline-block;
@@ -600,7 +603,6 @@ a.my-page_link:hover{
   font-size: 25px;
   background-color: #cab899; 
   display: flex;
-  
 }
 
 .how-to{
@@ -651,8 +653,16 @@ a:active {
   padding-left: 30px;
 }
 
+.follow-count-show{
+  padding-right: 10px;
+}
+
+.follower-count-show{
+  padding-left: 10px;
+}
+
 .follow-count{
-  padding-top: 80px;
+  padding: 60px 0;
 }
 
 .follow-count,
@@ -843,6 +853,13 @@ a:active {
   padding-top: 250px;
 }
 
+.nothing-message{
+  font-size: 25px;
+  display: flex;
+  justify-content: center;
+  padding-top: 200px;
+}
+
 /* 通知 */
 
 .notifications{
@@ -850,18 +867,17 @@ a:active {
   overflow: scroll;
   position: relative;
   background-color: rgb(137, 187, 160);
+  padding: 50px 0;
 }
 
 .pagenation{
   font-size: 24px;
-  position: absolute;
-  top: 50px;
-  left: 44vw;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 30px;
 }
 
-.notifications{
-  padding-top: 100px;
-}
+
 
 .notification{
   font-size: 25px;
