@@ -2,6 +2,11 @@ crumb :root do
   link "トップページ", root_path
 end
 
+crumb :edit_user do
+  link "ユーザー情報変更", root_path
+  parent :root
+end
+
 crumb :how_to do
   link "取り扱い説明"
   parent :root

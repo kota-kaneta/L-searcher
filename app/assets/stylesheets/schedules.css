@@ -95,7 +95,7 @@ a.title_link:active{
 
 .head_bar{
   height: 40px;
-  font-size: 25px;
+  font-size: 30px;
 }
 
 .errors{
@@ -116,8 +116,9 @@ a.title_link:active{
 }
 
 .facebook{
-  margin: 5px 0 0 10px;
+  margin: 10px 0 0 10px;
   position: relative;
+  left: 1400px;
 }
 
 /* フィールド */
@@ -137,6 +138,15 @@ input[type="text"] {
   height: 60px;
 }
 
+input[type="password"],
+input[type="email"],
+input[type="text"]{
+  box-sizing    : border-box;
+  border        : 2px solid #1e6bb9;
+  border-radius : 8px;
+  background-color: rgb(240, 249, 255);
+}
+
 input[type="password"]:focus,
 input[type="email"]:focus,
 input[type="text"]:focus{
@@ -149,6 +159,7 @@ input[type="text"]:focus{
 /* ユーザー情報 */
 
 .user-wrap{
+  height: 100vh;
   position: absolute;
   top: 250px;
   left: 51%;
@@ -161,7 +172,7 @@ input[type="text"]:focus{
 .new-user-wrap{
   position: absolute;
   top: 220px;
-  left: 52%;
+  left: 51%;
   transform: translateX(-50%);
   -webkit-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
@@ -261,6 +272,7 @@ input[type="text"]:focus{
 
 .log-actions{
   font-size: 23px;
+  padding-top: 10px;
 }
 
 .hello-user{
@@ -522,7 +534,7 @@ input[type="text"]:focus{
 }
 
 .button-new {
-  display       : inline-block;
+  
   font-size     : 18pt;
   text-align    : center;
   cursor        : pointer;
@@ -533,9 +545,9 @@ input[type="text"]:focus{
   transition    : .3s;
   box-shadow    : 8px 8px 8px #666666;
   border        : 2px solid #00b3b3;
-  position: relative;
-  top: 80px;
-  right: 470px;
+  position: absolute;
+  top: 610px;
+  right: 330px;
 }
 
 .button:hover {

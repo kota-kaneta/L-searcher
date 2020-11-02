@@ -1,6 +1,4 @@
-  <div class="back-link">
-    <%= link_to ">>トップページへ", root_path%>
-  </div>
+<% breadcrumb :edit_user %>
   <% if current_user.email == "guest@example.com" || current_user.email == "guest2@example.com" %>
     <div class="guest-alert">
       ※ゲストはユーザー情報を変更することはできません。

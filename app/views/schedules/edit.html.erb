@@ -6,25 +6,25 @@
     <%= render 'shared/error', model: @schedule%>
     <div class="day-of-week">
       <div class="sun-new">
-        日曜日:<%= f.text_field :from_time_sun, rows: "1", maxlength: "2", placeholder: "0", value: @schedule.from_time_sun %>〜<%= f.text_field :to_time_sun, rows: "1", maxlength: "2", placeholder: "0", value: @schedule.to_time_sun %>
+        日曜日: <%= f.text_field :from_time_sun, rows: "1", maxlength: "2", placeholder: "0", value: @schedule.from_time_sun %>〜<%= f.text_field :to_time_sun, rows: "1", maxlength: "2", placeholder: "0", value: @schedule.to_time_sun %>
       </div>
       <div class="mon-new">
-        月曜日:<%= f.text_field :from_time_mon, rows: "1", maxlength: "2", placeholder: "0", value: @schedule.from_time_mon %>〜<%= f.text_field :to_time_mon, rows: "1", maxlength: "2", placeholder: "0", value: @schedule.to_time_mon %>
+        月曜日: <%= f.text_field :from_time_mon, rows: "1", maxlength: "2", placeholder: "0", value: @schedule.from_time_mon %>〜<%= f.text_field :to_time_mon, rows: "1", maxlength: "2", placeholder: "0", value: @schedule.to_time_mon %>
       </div>
       <div class="tue-new">
-        火曜日:<%= f.text_field :from_time_tue, rows: "1", maxlength: "2", placeholder: "0", value: @schedule.from_time_tue %>〜<%= f.text_field :to_time_tue, rows: "1", maxlength: "2", placeholder: "0", value: @schedule.to_time_tue %>
+        火曜日: <%= f.text_field :from_time_tue, rows: "1", maxlength: "2", placeholder: "0", value: @schedule.from_time_tue %>〜<%= f.text_field :to_time_tue, rows: "1", maxlength: "2", placeholder: "0", value: @schedule.to_time_tue %>
       </div>
       <div class="wed-new">
-        水曜日:<%= f.text_field :from_time_wed, rows: "1", maxlength: "2", placeholder: "0", value: @schedule.from_time_wed %>〜<%= f.text_field :to_time_wed, rows: "1", maxlength: "2", placeholder: "0", value: @schedule.to_time_wed %>
+        水曜日: <%= f.text_field :from_time_wed, rows: "1", maxlength: "2", placeholder: "0", value: @schedule.from_time_wed %>〜<%= f.text_field :to_time_wed, rows: "1", maxlength: "2", placeholder: "0", value: @schedule.to_time_wed %>
       </div>
       <div class="thu-new">
-        木曜日:<%= f.text_field :from_time_thu, rows: "1", maxlength: "2", placeholder: "0", value: @schedule.from_time_thu %>〜<%= f.text_field :to_time_thu, rows: "1", maxlength: "2", placeholder: "0", value: @schedule.to_time_thu %>
+        木曜日: <%= f.text_field :from_time_thu, rows: "1", maxlength: "2", placeholder: "0", value: @schedule.from_time_thu %>〜<%= f.text_field :to_time_thu, rows: "1", maxlength: "2", placeholder: "0", value: @schedule.to_time_thu %>
       </div>
       <div class="fri-new">
-        金曜日:<%= f.text_field :from_time_fri, rows: "1", maxlength: "2", placeholder: "0", value: @schedule.from_time_fri %>〜<%= f.text_field :to_time_fri, rows: "1", maxlength: "2", placeholder: "0", value: @schedule.to_time_fri %>
+        金曜日: <%= f.text_field :from_time_fri, rows: "1", maxlength: "2", placeholder: "0", value: @schedule.from_time_fri %>〜<%= f.text_field :to_time_fri, rows: "1", maxlength: "2", placeholder: "0", value: @schedule.to_time_fri %>
       </div>
       <div class="sat-new">
-        土曜日:<%= f.text_field :from_time_sat, rows: "1", maxlength: "2", placeholder: "0", value: @schedule.from_time_sat %>〜<%= f.text_field :to_time_sat, rows: "1", maxlength: "2", placeholder: "0", value: @schedule.to_time_sat %>
+        土曜日: <%= f.text_field :from_time_sat, rows: "1", maxlength: "2", placeholder: "0", value: @schedule.from_time_sat %>〜<%= f.text_field :to_time_sat, rows: "1", maxlength: "2", placeholder: "0", value: @schedule.to_time_sat %>
       </div>
       <div class="location">
         居住地：<%= f.text_field :location, rows: "1", maxlength: "10", placeholder: "東京", value: @schedule.location %>
