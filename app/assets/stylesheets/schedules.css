@@ -450,7 +450,7 @@ input[type="text"]:focus{
   display: flex;
   justify-content: center;
   font-size: 25px;
-  padding: 20px 0;
+
 }
 
 .u-f{
@@ -1219,3 +1219,54 @@ a:active {
   display: flex;
   justify-content: center;
 }
+
+/* 吹き出し */
+
+.index-bubble{
+  color: rgb(212, 81, 48);
+}
+
+.index-bubble:hover .balloon {
+  display: inline;
+}
+
+.balloon {
+  position   : absolute;
+  display: none;
+  padding: 2px;
+  background-color: rgb(232, 231, 231);
+  bottom: 100px;
+  left: 230px;
+}
+.balloon:after{
+  border-top: 12px solid rgb(235, 233, 233);
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  bottom: -12px;
+  left : 5%;
+  content: "";
+  position: absolute;
+}
+
+.in-each:hover .balloon-tl{
+  display: inline;
+  color: red;
+}
+
+.balloon-tl {
+  position   : absolute;
+  display: none;
+  margin: 0 0 130px 190px;
+  background-color: rgba(213, 228, 243, 0.612);
+  border-radius: 10px;
+}
+.balloon-tl:after{
+  border-top: 12px solid rgba(223, 237, 252, 0.612);
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  bottom: -12px;
+  left : 5%;
+  content: "";
+  position: absolute;
+}
+

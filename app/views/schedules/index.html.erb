@@ -1,8 +1,7 @@
   <div class="sec-wrapper">
     <% if current_user.schedule %>
       <div class="hello-user">
-        <%= "〜こんにちは#{current_user.name}さん〜" %>
-      </div>
+         〜こんにちは<span class="index-bubble"><%= current_user.name %><span class="balloon"><%= "フォロー：#{current_user.follow_count}, フォロワー： #{current_user.followers_count}"%></span></span>さん〜</div>
       <div class="new-notifications">
         <%= link_to "通知",  notifications_path, method: :get, class: "notification-index_link" %>
       </div>
