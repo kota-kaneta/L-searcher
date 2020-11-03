@@ -17,11 +17,21 @@
               <div class="room-list-name">
                 <a href="/rooms/<%= room.room_id %>">
                 <%= "★#{user.name}のルーム★" %>
+                <% if user.messages.present? %>
+                  <span class="balloon-room"><%= "最終メッセージ：#{time_ago_in_words(user.messages.max.created_at)}前" %></span>
+                <% else %>
+                  <span class="balloon-room">メッセージはありません</span>
+                <% end %>
               </div>
             <% else %>
               <div class="room-list-name">
                 <a href="/rooms/<%= room.room_id %>">
                 <%= "#{user.name}のルーム" %>
+                <% if user.messages.present? %>
+                  <span class="balloon-room"><%= "最終メッセージ：#{time_ago_in_words(user.messages.max.created_at)}前" %></span>
+                <% else %>
+                  <span class="balloon-room">メッセージはありません</span>
+                <% end %>
               </div>
             <% end %>
           <% end %>

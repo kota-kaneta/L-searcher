@@ -1,6 +1,7 @@
 html, body {
   overflow: scroll;
   text-shadow : 0 1px 1px #3d3c3c;
+  background-color: #bdb294;
 }
 
 h2{
@@ -55,7 +56,8 @@ a.title_link:active{
 .dm-room,
 .tl-each,
 .new_schedule,
-.new-notification-list{
+.new-notification-list,
+.edit-user-title{
   text-shadow : 3px 5px 14px #ffff1a;
 }
 
@@ -179,9 +181,9 @@ input[type="text"]:focus{
 }
 
 .edit-user-title{
-  position: absolute;
-  top: -100px;
-  left: -30px;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 100px;
 }
 
 .guest-alert{
@@ -1234,12 +1236,15 @@ a:active {
   position   : absolute;
   display: none;
   padding: 2px;
-  background-color: rgb(232, 231, 231);
+  background-color: rgba(232, 231, 231, 0.297);
   bottom: 100px;
   left: 230px;
+  border-radius: 10px;
+  padding: 0 10px;
 }
+
 .balloon:after{
-  border-top: 12px solid rgb(235, 233, 233);
+  border-top: 12px solid rgba(235, 233, 233, 0.345);
   border-left: 10px solid transparent;
   border-right: 10px solid transparent;
   bottom: -12px;
@@ -1259,6 +1264,7 @@ a:active {
   margin: 0 0 130px 190px;
   background-color: rgba(213, 228, 243, 0.612);
   border-radius: 10px;
+  padding: 0 10px;
 }
 .balloon-tl:after{
   border-top: 12px solid rgba(223, 237, 252, 0.612);
@@ -1270,3 +1276,31 @@ a:active {
   position: absolute;
 }
 
+.room-list-name{
+  position: relative;
+}
+
+.room-list-name:hover .balloon-room{
+  display: inline;
+  color: rgb(231, 120, 23);
+}
+
+.balloon-room {
+  position   : absolute;
+  display: none;
+  top: -50px;
+  left: 40px;
+  width: max-content;
+  background-color: rgba(213, 228, 243, 0.612);
+  border-radius: 10px;
+  padding: 0 10px;
+}
+.balloon-room:after{
+  border-top: 12px solid rgba(223, 237, 252, 0.612);
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  bottom: -12px;
+  left : 5%;
+  content: "";
+  position: absolute;
+}
