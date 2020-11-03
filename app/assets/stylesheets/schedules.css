@@ -280,7 +280,7 @@ input[type="text"]:focus{
 
 .hello-user{
   font-size: 30px;
-  padding: 40px 0 40px 30px;
+  padding: 40px 0 70px 30px;
   color: #3d3c3c;
   position: relative;
 }
@@ -445,8 +445,12 @@ input[type="text"]:focus{
   display: flex;
   justify-content: center;
   font-size: 33px;
-  height: 80px;
+  height: 150px;
   padding-top: 30px;
+}
+
+.name-color{
+  color: rgb(212, 81, 48);
 }
 
 .follow-list{
@@ -570,8 +574,8 @@ input[type="text"]:focus{
   background-color: rgb(64, 156, 118);
   height: 55px;
   width: 110px;
-  left: 450px;
-  top: -90px;
+  left: 1500px;
+  top: -120px;
   box-shadow    : 8px 8px 8px #666666;
 }
 
@@ -901,8 +905,8 @@ a:active {
   border: rgb(58, 153, 55) 2px solid;
   border-radius: 20px;
   box-shadow    : 8px 8px 8px #666666;
-  margin: 15px 10px 10px 26vw;
-  max-width: 48vw;
+  margin: 15px 10px 10px 24vw;
+  max-width: 55vw;
   background-color: rgb(131, 201, 117);
   position: relative;
 } 
@@ -914,15 +918,17 @@ a:active {
 
 .v-name{
   padding-left: 20px;
-  width: 250px;
+  width: 270px;
 }
 
 .v-name-dm{
   color: rgb(21, 21, 202);
+  padding-left: 80px;
 }
 
 .v-name-follow{
   color: rgb(194, 20, 20);
+  padding-left: 80px;
 }
 
 .notification-nothing{
@@ -937,8 +943,8 @@ a:active {
 .favorite-link{
   font-size: 45px;
   position: relative;
-  top: -150px;
-  left: 600px;
+  top: 3px;
+  left: 330px;
   text-shadow: 8px 8px 8px #666666;
 }
 
@@ -1244,7 +1250,7 @@ a:active {
   display: none;
   padding: 2px;
   background-color: rgba(232, 231, 231, 0.297);
-  bottom: 100px;
+  top: -20px;
   left: 230px;
   border-radius: 10px;
   padding: 0 10px;

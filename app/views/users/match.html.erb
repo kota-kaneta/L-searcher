@@ -3,11 +3,11 @@
   <% unless @user.id == current_user.id%>
   <% if current_user.making_ids.include?(@user.id) %>
     <div class="match-user">
-      <%= "★#{@user.name}さん★のページ"%>
+      <span class="name-color">★<%= @user.name %>★</span>さんのユーザーIDと一致しました
     </div>
   <% else %>
     <div class="match-user">
-      <%= "#{@user.name}さんのページ"%>
+      <span class="name-color"><%= @user.name %></span>さんのユーザーIDと一致しました
     </div>
   <% end %>
 

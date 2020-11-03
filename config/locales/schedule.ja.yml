@@ -1,0 +1,19 @@
+ja:
+ activerecord:
+   attributes:
+     schedule:
+      location: 居住地
+      from_time_sun: スケジュールの時間
+      to_time_sun: スケジュールの時間
+      from_time_mon: スケジュールの時間
+      to_time_mon: スケジュールの時間
+      from_time_tue: スケジュールの時間
+      to_time_tue: スケジュールの時間
+      from_time_wed: スケジュールの時間
+      to_time_wed: スケジュールの時間
+      from_time_thu: スケジュールの時間
+      to_time_thu: スケジュールの時間
+      from_time_fri: スケジュールの時間
+      to_time_fri: スケジュールの時間
+      from_time_sat: スケジュールの時間
+      to_time_sat: スケジュールの時間

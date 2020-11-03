@@ -1,13 +1,27 @@
 <% visitor = notification.visitor %>
 <% visited = notification.visited %>
-<div class="notification">
-  <%= link_to user_path(visitor) do %>
+<% if current_user.making_ids.include?(visitor.id) %>
+  <div class="notification">
+    <%= link_to user_path(visitor) do %>
+    <div class="v-name">★<%= visitor.name %>さん★</div>
+    <% end %>
+    <% if notification.action=='direct' %>
+      <div class="v-name-dm">からDMが届きました。</div>
+    <% else notification.action=='follow'%>
+      <div class="v-name-follow">があなたをフォローしました。</div>
+    <% end %>
+    <span class="time-notification"><%= "#{time_ago_in_words(notification.created_at)}前"%>
+  </div>
+  <% else %>
+  <div class="notification">
+    <%= link_to user_path(visitor) do %>
     <div class="v-name"><%= visitor.name %>さん</div>
-  <% end %>
-  <% if notification.action=='direct' %>
-    <div class="v-name-dm">からDMが届きました。</div>
-  <% else notification.action=='follow'%>
-    <div class="v-name-follow">があなたをフォローしました。</div>
-  <% end %>
-  <span class="time-notification"><%= "#{time_ago_in_words(notification.created_at)}前"%>
-</div>
+    <% end %>
+    <% if notification.action=='direct' %>
+      <div class="v-name-dm">からDMが届きました。</div>
+    <% else notification.action=='follow'%>
+      <div class="v-name-follow">があなたをフォローしました。</div>
+    <% end %>
+    <span class="time-notification"><%= "#{time_ago_in_words(notification.created_at)}前"%>
+  </div>
+<% end %>

@@ -3,11 +3,11 @@
   <div class="schedule-top">
   <% if current_user.making_ids.include?(@user.id) %>
     <div class="apotime">
-      ★<%= @user.name %>のマイページ★
+      <span class="name-color">★<%= @user.name %>★</span>のマイページ
     </div>
   <% else %>
     <div class="apotime">
-      <%= @user.name %>のマイページ
+      <span class="name-color"><%= @user.name %></span>のマイページ
     </div>
   <% end %>
     <div class="current_search_number">
