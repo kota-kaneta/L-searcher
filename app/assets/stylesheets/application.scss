@@ -21,6 +21,18 @@
   .f-link{
     text-decoration: none;
   }
+  display  : inline-block;
+  animation: rollkAnime 2s linear infinite;
+  color    : #6666ff;
 }
-
+@keyframes rollkAnime{
+   50% {
+         color    : #66ff66;
+         transform: rotateY(180deg);
+       }
+  100% {
+         color    : #6666ff;
+         transform: rotateY(360deg);
+       }
+}
 @import "bootstrap";  
