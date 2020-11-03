@@ -39,7 +39,7 @@
                     <%= schedule.location %>
                   </div>
                 </div>
-                <span class="balloon-tl"><%= "スケジュール最終更新日：#{user.schedule.updated_at.strftime("%m月 %d日")}" %></span>
+                <span class="balloon-tl"><%= "スケジュール最終更新日：#{time_ago_in_words(user.schedule.updated_at)}前" %></span>
               </div>
             <% elsif Date.today.wday == 1 && schedule.from_time_mon != nil && schedule.to_time_mon != nil%>
               <div class="in-each">
@@ -64,7 +64,7 @@
                     <%= schedule.location %>
                   </div>
                 </div>
-                <span class="balloon-tl"><%= "スケジュール最終更新日：#{user.schedule.updated_at.strftime("%m月 %d日")}" %></span>
+                <span class="balloon-tl"><%= "スケジュール最終更新日：#{time_ago_in_words(user.schedule.updated_at)}前" %></span>
               </div>
             <% elsif Date.today.wday == 2 && schedule.from_time_tue != nil && schedule.to_time_tue != nil%>
               <div class="in-each">
@@ -89,7 +89,7 @@
                     <%= schedule.location %>
                   </div>
                 </div>
-                <span class="balloon-tl"><%= "スケジュール最終更新日：#{user.schedule.updated_at.strftime("%m月 %d日")}" %></span>
+                <span class="balloon-tl"><%= "スケジュール最終更新日：#{time_ago_in_words(user.schedule.updated_at)}前" %></span>
               </div>
             <% elsif Date.today.wday == 3 && schedule.from_time_wed != nil && schedule.to_time_wed != nil%>
               <div class="in-each">
@@ -114,7 +114,7 @@
                     <%= schedule.location %>
                   </div>
                 </div>
-                <span class="balloon-tl"><%= "スケジュール最終更新日：#{user.schedule.updated_at.strftime("%m月 %d日")}" %></span>
+                <span class="balloon-tl"><%= "スケジュール最終更新日：#{time_ago_in_words(user.schedule.updated_at)}前" %></span>
               </div>
             <% elsif Date.today.wday == 4 && schedule.from_time_thu != nil && schedule.to_time_thu != nil%>
               <div class="in-each">
@@ -139,7 +139,7 @@
                     <%= schedule.location %>
                   </div>
                 </div>
-                <span class="balloon-tl"><%= "スケジュール最終更新日：#{user.schedule.updated_at.strftime("%m月 %d日")}" %></span>
+                <span class="balloon-tl"><%= "スケジュール最終更新日：#{time_ago_in_words(user.schedule.updated_at)}前" %></span>
               </div>
             <% elsif Date.today.wday == 5 && schedule.from_time_fri != nil && schedule.to_time_fri != nil%>
               <div class="in-each">
@@ -164,7 +164,7 @@
                     <%= schedule.location %>
                   </div>
                 </div>
-                <span class="balloon-tl"><%= "スケジュール最終更新日：#{user.schedule.updated_at.strftime("%m月 %d日")}" %></span>
+                <span class="balloon-tl"><%= "スケジュール最終更新日：#{time_ago_in_words(user.schedule.updated_at)}前" %></span>
               </div>
             <% elsif Date.today.wday == 6 && schedule.from_time_sat != nil && schedule.to_time_sat != nil%>
               <div class="in-each">
@@ -189,7 +189,7 @@
                     <%= schedule.location %>
                   </div>
                 </div>
-                <span class="balloon-tl"><%= "スケジュール最終更新日：#{user.schedule.updated_at.strftime("%m月 %d日")}" %></span>
+                <span class="balloon-tl"><%= "スケジュール最終更新日：#{time_ago_in_words(user.schedule.updated_at)}前" %></span>
               </div>
             <% end %>
           <% end %>

@@ -29,6 +29,7 @@ h2{
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-left: 100px;
   text-shadow    : 
   2px  2px 1px rgba(255, 77, 77, 0.57),
  -2px  2px 1px rgba(255, 77, 77, 0.57),
@@ -900,10 +901,16 @@ a:active {
   border: rgb(58, 153, 55) 2px solid;
   border-radius: 20px;
   box-shadow    : 8px 8px 8px #666666;
-  margin: 15px 10px 10px 30vw;
-  width: 38vw;
+  margin: 15px 10px 10px 26vw;
+  max-width: 48vw;
   background-color: rgb(131, 201, 117);
+  position: relative;
 } 
+
+.time-notification{
+  position: absolute;
+  right: 20px;
+}
 
 .v-name{
   padding-left: 20px;
