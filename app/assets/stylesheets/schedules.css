@@ -164,8 +164,8 @@ input[type="text"]:focus{
 .user-wrap{
   height: 100vh;
   position: absolute;
-  top: 250px;
-  left: 51%;
+  top: 350px;
+  left: 50%;
   transform: translateX(-50%);
   -webkit-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
@@ -184,7 +184,7 @@ input[type="text"]:focus{
 .edit-user-title{
   display: flex;
   justify-content: center;
-  padding-bottom: 100px;
+  padding: 80px 0;
 }
 
 .guest-alert{
@@ -245,8 +245,10 @@ input[type="text"]:focus{
 }
 
 .please{
-  padding: 10px;
-  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  padding-top: 100px;
+  font-size: 25px;
   color: red;
 }
 
@@ -524,17 +526,14 @@ input[type="text"]:focus{
 }
 
 .button-favo-time{
-  position: fixed;
-  right: 100px;
-  top: 210px;
-  display       : inline-block;
+  position: relative;
+  left: 75vw;
+  top: -30px;
+  display       : inline;
   font-size     : 18pt;
   text-align    : center;
-  cursor        : pointer;
   padding       : 12px 13px;
   background    : #d5eeee;
-  line-height   : 1em;
-  transition    : .3s;
   box-shadow    : 8px 8px 8px #666666;
   border        : 5px solid #3158d8;
   border-radius: 18px;
@@ -940,6 +939,10 @@ a:active {
 
 /* お気に入り */
 
+.space{
+  width: 160px;
+}
+
 .favorite-link{
   font-size: 45px;
   position: relative;
@@ -950,6 +953,7 @@ a:active {
 
 .favorite-all{
   height: 100vh;
+  position: relative;
   overflow: scroll;
   background-color: rgb(138, 192, 199);
 }
@@ -977,6 +981,7 @@ a:active {
   border: rgb(114, 142, 219) 3px solid;
   background-color: rgb(221, 228, 220);
   width: 300px;
+  box-shadow    : 8px 8px 8px #666666;
 }
 
 .making-link{
@@ -1204,6 +1209,20 @@ a:active {
 
 /* ルーム一覧 */
 
+.room-count{
+  font-size: 28px;
+  padding: 5px 20px;
+  width: max-content;
+  position: relative;
+  top: -65px;
+  left: 83vw;
+  box-shadow    : 8px 8px 8px #666666;
+  border-radius: 18px;
+  border: rgb(82, 136, 85) 3px solid;
+  background-color: rgb(125, 194, 112);
+  color: #0a6425;
+}
+
 .room-list{
   height: 100vh;
   overflow: scroll;
@@ -1215,7 +1234,7 @@ a:active {
   display: flex;
   justify-content: center;
   font-size: 35px;
-  padding-top: 30px;
+  padding: 40px 0 10px 0;
 }
 
 .room-list-name-wrap{
@@ -1228,11 +1247,12 @@ a:active {
 
 .room-list-name{
   margin: 10px;
-  border: rgb(114, 189, 120) 3px solid;
+  border: rgb(82, 136, 85) 3px solid;
   background-color: rgb(125, 194, 112);
   width: 300px;
   display: flex;
   justify-content: center;
+  box-shadow    : 8px 8px 8px #666666;
 }
 
 /* 吹き出し */
@@ -1289,6 +1309,29 @@ a:active {
   position: absolute;
 }
 
+.favorite-user:hover .balloon-favorite{
+  display: inline;
+  color: rgb(231, 120, 23);
+}
+
+.balloon-favorite {
+  position   : absolute;
+  display: none;
+  margin: 0 0 130px 0;
+  background-color: rgba(213, 228, 243, 0.824);
+  border-radius: 10px;
+  padding: 0 10px;
+}
+.balloon-favorite:after{
+  border-top: 12px solid rgba(223, 237, 252, 0.612);
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  bottom: -12px;
+  left : 47%;
+  content: "";
+  position: absolute;
+}
+
 .room-list-name{
   position: relative;
 }
@@ -1304,7 +1347,7 @@ a:active {
   top: -50px;
   left: 40px;
   width: max-content;
-  background-color: rgba(213, 228, 243, 0.612);
+  background-color: rgba(213, 228, 243, 0.817);
   border-radius: 10px;
   padding: 0 10px;
 }
@@ -1316,4 +1359,15 @@ a:active {
   left : 5%;
   content: "";
   position: absolute;
+}
+
+.edit-user-wrapper{
+  height: 100vh;
+  position: absolute;
+  top: 350px;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  overflow: scroll;
 }

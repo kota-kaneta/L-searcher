@@ -2,15 +2,16 @@
 <div class="favorite-all">
 <% if @users.present? %>
   <div class="favorite-title">★お気に入りのユーザー★</div>
-  <div class="button-favo-time">
+  <span class="button-favo-time">
     <%= link_to "お気に入りタイムラインへ", favorite_path(current_user.id)%>
-  </div>
+  </span>
 <% end %>
 <div class="favorites">
 <% @users.each do |user|%>
   <% if user.present? %>
     <div class="favorite-user">
       <%= link_to "★#{user.name}さん★", user_path(user.id) %>
+      <span class="balloon-favorite"><%= "スケジュール最終更新：#{time_ago_in_words(user.schedule.updated_at)}前" %></span>
     </div>
   <% end %>
 <% end %>

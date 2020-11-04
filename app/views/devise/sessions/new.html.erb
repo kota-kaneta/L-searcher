@@ -11,8 +11,9 @@
       <%= link_to 'Facebookでログイン', user_facebook_omniauth_authorize_path, method: :post, class: "button"%>
     </div>
   </div>
+  <h2 class="please">※はじめて利用する方は新規登録をしてください</h2>
+
 <div class="user-wrap">
-<h2 class="please">※はじめて利用する方は新規登録をしてください</h2>
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
 
