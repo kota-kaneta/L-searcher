@@ -1342,7 +1342,7 @@ a:active {
 }
 
 .balloon-room {
-  position   : absolute;
+  position : absolute;
   display: none;
   top: -50px;
   left: 40px;
@@ -1370,4 +1370,35 @@ a:active {
   -webkit-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
   overflow: scroll;
+}
+
+.location{
+  padding-top: 5px;
+}
+
+.location-select{
+  display: flex;
+  padding-top: 10px;
+}
+
+.cp_ipselect {
+  overflow: hidden;
+}
+
+.cp_ipselect select {
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: transparent;
+}
+.cp_ipselect.cp_sl04 {
+  border: 2px solid #1e6bb9;
+  border-radius: 20px;
+  background: #ffffff;
+}
+
+.cp_ipselect.cp_sl04 select {
+  padding: 8px 8px 8px 8px;
 }
