@@ -19,7 +19,7 @@
 - 通知機能
 - お気に入り機能
 
-# URL：
+# URL：http://l-searcher.com/
 
 # テストアカウント
 
