@@ -72,7 +72,7 @@
 - （本番環境）MariaDB : 5.5.64
 
 ## インフラ  
-- AWS (EC2, Route53, ALB)
+- AWS (EC2, VPC, Route53, ALB, ACM)
 - Git, GitHub
 - CircleCI : 2.1
 - Capistrano : 3.14.1
