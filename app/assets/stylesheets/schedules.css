@@ -68,10 +68,25 @@ a.title_link:active{
   right: -550px; 
 }
 
+.users-home{
+  size: 200 * 50;
+  position: relative;
+  right: -580px; 
+}
+
 .home-top{
   position: relative;
-  top: -30px;
+  top: -25px;
   right: -487px;
+  color: #3380d8;
+  font-size: 16px;
+  text-shadow: none;
+}
+
+.users-home-link{
+  position: relative;
+  top: -40px;
+  right: -502px;
   color: #3380d8;
   font-size: 16px;
   text-shadow: none;
@@ -948,6 +963,14 @@ a:active {
   position: relative;
   top: 3px;
   left: 330px;
+  text-shadow: 8px 8px 8px #666666;
+}
+
+.users-link{
+  font-size: 45px;
+  position: absolute;
+  top: 30px;
+  left: 1000px;
   text-shadow: 8px 8px 8px #666666;
 }
 

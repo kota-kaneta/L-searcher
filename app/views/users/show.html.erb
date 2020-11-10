@@ -1,5 +1,12 @@
 <% breadcrumb :mypage %>
 <div class=my-page>   
+<div class="users-link">
+<%= link_to image_tag("home.png", size: '50x40'), user_path(current_user.id), class: "users-home" %> 
+        <span class="users-home-link">マイページ</span>
+        <b class="favorite-link">
+          <%= link_to "★",{controller: :users,action: :makings,user_id: current_user.id}, method: :get, class: "f-link" %>
+        </b>
+</div>
   <div class="schedule-top">
   <% if current_user.making_ids.include?(@user.id) %>
     <div class="apotime">

@@ -14,10 +14,10 @@
   <div class="wrapper"> 
     <div class="title">
       <i><%= link_to "L-searcher", root_path, class: "title_link"%></i>
+      <% unless request.path.include?("users") %>
       <% if user_signed_in? && current_user.schedule.present? %>
         <%= link_to image_tag("home.png", size: '50x40'), user_path(current_user.id), class: "home" %> 
         <span class="home-top">マイページ</span>
-        <% unless current_page?(edit_user_registration_path(current_user.id)) %>
         <b class="favorite-link">
           <%= link_to "★",{controller: :users,action: :makings,user_id: current_user.id}, method: :get, class: "f-link" %>
         </b>
