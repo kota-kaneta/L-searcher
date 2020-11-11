@@ -7,7 +7,11 @@
 
   <div class="join">⬇︎参加者⬇︎</div>
   <% @entries.each do |e| %>
+  <% unless current_user.making_ids.include?(e.user.id) %>
     <div class="join-member"><strong><a href="/users/<%= e.user.id %>"><%= e.user.name%>さん</a></strong></div>
+  <% else %>
+    <div class="join-member"><strong><a href="/users/<%= e.user.id %>">★<%= e.user.name%>さん★</a></strong></div>
+  <% end %>
   <% end %>
 
 <div class="text-field-size">
