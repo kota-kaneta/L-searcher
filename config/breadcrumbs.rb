@@ -48,8 +48,13 @@ crumb :match do
 end
 
 crumb :mypage do
-  link "マイページ", user_path(current_user.id)
+  link "マイページ", :back
   parent :root
+end
+
+crumb :schedule_show do
+  link "週のスケジュール"
+  parent :mypage
 end
 
 crumb :following do

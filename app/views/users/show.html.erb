@@ -1,5 +1,5 @@
 <% breadcrumb :mypage %>
-<div class=my-page>   
+<div class=my-page>
 <div class="users-link">
 <%= link_to image_tag("home.png", size: '50x40'), user_path(current_user.id), class: "users-home" %> 
         <span class="users-home-link">マイページ</span>
@@ -120,3 +120,8 @@
     <% end %>
   <% end %>
 </div>
+<% unless @user.id == current_user.id%>
+  <div class="week-of-schedule-show">
+    <%= link_to "週のスケジュールへ", schedule_path(@user), class: "schedule-show-link" %>
+  </div>
+<% end %>

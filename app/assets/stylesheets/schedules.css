@@ -58,8 +58,17 @@ a.title_link:active{
 .tl-each,
 .new_schedule,
 .new-notification-list,
-.edit-user-title{
+.edit-user-title,
+.schedule-show{
   text-shadow : 3px 5px 14px #ffff1a;
+}
+
+.schedule-show{
+  font-size: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
 }
 
 .home{
@@ -330,7 +339,8 @@ input[type="text"]:focus{
 
 /* マイページ */
 
-.my-page{
+.my-page,
+.my-page-schedule{
   height: 100vh;
   background-color: rgb(136, 175, 143);
   overflow: scroll;
@@ -490,19 +500,47 @@ input[type="text"]:focus{
 }
 
 .unless-follow{
+  
+}
+
+a.follow-now:link,
+a.follow-now:visited,
+a.follow-now:hover,
+a.follow-now:active{
+  color: rgb(210, 195, 195);
+}
+
+a.no-follow-now-link:link,
+a.no-follow-now-link:visited,
+a.no-follow-now-link:hover,
+a.no-follow-now-link:active{
+  color: rgb(227, 234, 252);
+}
+
+.follow-link{
+  background-color: royalblue;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 25px;
-  width: 35vw;
+  width: 30vw;
   height: 50px;
-  border: cornflowerblue;
-  background-color: darksalmon;
+  border: rgb(100, 194, 237) 2px solid;
   border-radius: 20px;
+  box-shadow    : 8px 8px 8px #666666;
 }
 
-.follow_form{
-
+.follow-release{
+  background-color: rgb(228, 49, 49);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  width: 30vw;
+  height: 50px;
+  border: rgb(237, 173, 100) 2px solid;
+  border-radius: 20px;
+  box-shadow    : 8px 8px 8px #666666;
 }
 
 /* リンク */
@@ -1424,4 +1462,28 @@ a:active {
 
 .cp_ipselect.cp_sl04 select {
   padding: 8px 8px 8px 8px;
+}
+
+a.schedule-show-link:link,
+a.schedule-show-link:visited,
+a.schedule-show-link:hover,
+a.schedule-show-link:active{
+  color: wheat;
+}
+
+
+
+.week-of-schedule-show{
+  position: relative;
+  top: -300px;
+  left: 1080px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 350px;
+  font-size: 30px;
+  background-color: #31a9d8;
+  border-radius: 10px;
+  box-shadow    : 8px 8px 8px #666666;
+  border        : 2px solid #00b3b3;
 }

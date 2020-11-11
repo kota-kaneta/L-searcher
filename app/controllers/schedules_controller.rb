@@ -1,7 +1,7 @@
 class SchedulesController < ApplicationController
   before_action :set_schedule, only: [:edit, :update]
   before_action :move_to_index
-  before_action :set_root, only: [:new, :edit]
+  before_action :set_root, only: [:new, :edit, :show]
 
   def index
   end
@@ -18,6 +18,11 @@ class SchedulesController < ApplicationController
       @schedule = Schedule.new
       render action: :new
     end
+  end
+
+  def show
+    @user = User.find(params[:id])
+    @schedule = @user.schedule
   end
 
   def edit

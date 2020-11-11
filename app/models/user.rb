@@ -15,9 +15,9 @@ class User < ApplicationRecord
   has_many :passive_notifications, class_name: 'Notification', foreign_key: 'visited_id', dependent: :destroy
   has_many :sns_credentials
 
-  has_many :making_relationships,foreign_key: "maked_id", class_name: "Favorite", dependent: :destroy
+  has_many :making_relationships, foreign_key: 'maked_id', class_name: 'Favorite', dependent: :destroy
   has_many :makings, through: :making_relationships
-  has_many :maked_relationships,foreign_key: "making_id",class_name: "Favorite", dependent: :destroy
+  has_many :maked_relationships, foreign_key: 'making_id', class_name: 'Favorite', dependent: :destroy
   has_many :makeds, through: :maked_relationships
 
   acts_as_followable
@@ -78,14 +78,14 @@ class User < ApplicationRecord
 
   # お気に入り
   def making?(other_user)
-    self.makings.include?(other_user)
+    makings.include?(other_user)
   end
 
   def make(other_user)
-    self.making_relationships.create(making_id: other_user.id)
+    making_relationships.create(making_id: other_user.id)
   end
 
   def release(other_user)
-    self.making_relationships.find_by(making_id: other_user.id).destroy
+    making_relationships.find_by(making_id: other_user.id).destroy
   end
 end
