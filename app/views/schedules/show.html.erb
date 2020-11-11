@@ -1,7 +1,11 @@
 <% breadcrumb :schedule_show %>
 <div class=my-page-schedule>
 <div class="schedule-show">
-  <%= "〜#{@user.name}さんのスケジュール〜"%>
+<% unless current_user.making_ids.include?(@user.id) %>
+  <span class="name-color"><%= @user.name %>さん</span>のスケジュール
+<% else %>
+  <span class="name-color">★<%= @user.name %>さん★</span>のスケジュール
+<% end %>
 </div>
 <div class="week-of-schedule">
     <div class="sunday">
