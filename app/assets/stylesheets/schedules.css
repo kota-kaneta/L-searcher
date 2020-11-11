@@ -17,9 +17,11 @@ h2{
   width: 100vw;
   height: 100vh;
   overflow: scroll;
+
 }
 
 .title{
+  border        : 7px dotted #88867a;
   font-family: 'Open Sans', sans-serif;
   font-family: 'Noto Serif JP', serif;
   background-color: #ddc9a6;
@@ -61,6 +63,9 @@ a.title_link:active{
 .edit-user-title,
 .schedule-show{
   text-shadow : 3px 5px 14px #ffff1a;
+  font-weight       : bold;
+  letter-spacing    : 3px;
+  text-anchor       : middle;
 }
 
 .schedule-show{
@@ -622,7 +627,8 @@ a.no-follow-now-link:active{
   right: 330px;
 }
 
-.button:hover {
+.button:hover,
+.button-center:hover {
   box-shadow    : none;
   color         : #00b3b3;
   background    : #ffffff;
@@ -687,6 +693,7 @@ a.my-page_link:hover{
   font-size: 25px;
   background-color: #cab899; 
   display: flex;
+  border        : 2px solid #cac6af;
 }
 
 .how-to{
