@@ -113,7 +113,7 @@
         <%= fields_for @entry do |e| %>
         <%= e.hidden_field :user_id, :value=> @user.id %>
         <% end %>
-        <div class="to-chat">
+        <div class="create-dm-room">
           <%= f.submit "DMルーム作成", class: "button" %>
         </div>
       <% end %>

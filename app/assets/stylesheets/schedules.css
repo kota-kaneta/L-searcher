@@ -564,6 +564,19 @@ a.no-follow-now-link:active{
   -ms-transform: translateX(-50%);
 }
 
+.create-dm-room{
+  display       : inline-block;
+  font-size     : 18pt;
+  text-align    : center;
+  cursor        : pointer;
+  padding       : 12px 13px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+}
+
 .button {
   display       : inline-block;
   font-size     : 18pt;
