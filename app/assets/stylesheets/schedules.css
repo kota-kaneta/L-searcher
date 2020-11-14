@@ -940,8 +940,8 @@ a:active {
 .no-room{
   display: flex;
   justify-content: center;
-  font-size: 30px;
-  padding-top: 250px;
+  font-size: 35px;
+  padding-top: 70px;
 }
 
 .nothing-message{

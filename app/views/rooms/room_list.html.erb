@@ -7,7 +7,7 @@
     <%= "作成されたルーム数：#{@room.count}" %>
   </div>
   <% unless @room.present?%>
-    <div class="no-room">まだルームはありません</div>
+    <div class="no-room">※まだルームはありません</div>
   <% end %>
   <div class="room-list-name-wrap">
     <% current_user.all_following.each do |user| %>
