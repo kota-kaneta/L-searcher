@@ -5,6 +5,7 @@
   <% @room = Entry.where(user_id: current_user.id) %>
   <div class="room-count">
     <%= "作成されたルーム数：#{@room.count}" %>
+    <span class="balloon-room-list">※ルーム数は第三者からの作成もカウントされます。</span>
   </div>
   <% unless @room.present?%>
     <div class="no-room">※まだルームはありません</div>
