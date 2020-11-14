@@ -1442,6 +1442,33 @@ a:active {
   position: absolute;
 }
 
+
+.room-count:hover .balloon-room-list{
+  display: inline;
+  color: rgb(231, 61, 23);
+}
+
+.balloon-room-list {
+  position : absolute;
+  display: none;
+  top: 80px;
+  right: 30px;
+  width: max-content;
+  background-color: rgba(213, 228, 243, 0.817);
+  border-radius: 10px;
+  padding: 0 10px;
+}
+
+.balloon-room-list:after{
+  border-bottom: 20px solid rgba(228, 228, 250, 0.824);
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  top: -20px;
+  left : 83%;  
+  content: "";
+  position: absolute;
+}
+
 .edit-user-wrapper{
   height: 100vh;
   position: absolute;
