@@ -78,7 +78,6 @@
 ## インフラ  
 - AWS (EC2, VPC, Route53, ALB, ACM)
 - Git, GitHub
-- CircleCI : 2.1
 - Capistrano : 3.14.1
 
 ## ER図
