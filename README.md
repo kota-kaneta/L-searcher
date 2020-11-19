@@ -26,7 +26,7 @@
 
 # 利用方法
 
-![ER](/app/assets/images/LSearcher (6).webm)
+![result](/app/assets/images/LSearcher(6).webm)
 - 新規登録後、”スケジュール登録”から各曜日ごとに暇な時間帯と居住地を記入します。（※ゲストユーザーは登録済み）
  
   "スケジュールの変更"のリンクから変更ができます。
