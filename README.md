@@ -1,5 +1,5 @@
 # L-searcher
-# URL:https://l-searcher.com/
+# URL：https://l-searcher.com/
 # URL：https://l-searcher.herokuapp.com/
 ## ※2021年1月10日にデプロイ先をAWSからherokuに変更いたしました。
 
