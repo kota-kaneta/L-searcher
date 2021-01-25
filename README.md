@@ -60,7 +60,6 @@
 
 ## フロントエンド  
 - HTML/CSS
-- JavaScript
 
 ## バックエンド  
 - Ruby 2.6.5
