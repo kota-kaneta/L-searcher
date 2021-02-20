@@ -3,6 +3,7 @@
 # URL：https://l-searcher.herokuapp.com/
 ## ※2021年1月10日にデプロイをAWSからHerokuに変更いたしました。
 ## （旧URL：https://l-searcher.com/）
+![ER](/app/assets/images/l-searcher-logo.png)
 
 # アプリケーション概要
 - 知人の暇な時間帯を簡単に確認できるアプリケーションです。いつ誰が暇なのかを把握することで、知人に予定を確認する手間などを省くことを目的として作成しました。（登録したスケジュールがタイムラインに表示されます。）
