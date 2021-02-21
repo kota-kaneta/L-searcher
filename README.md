@@ -3,7 +3,6 @@
 # URL：https://l-searcher.herokuapp.com/
 ## ※2021年1月10日にデプロイをAWSからHerokuに変更いたしました。
 ## （旧URL：https://l-searcher.com/）
-![ER](/app/assets/images/l-searcher-logo.png)
 ![ER](/app/assets/images/wood.png)
 
 # アプリケーション概要
